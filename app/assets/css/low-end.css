@@ -1,0 +1,42 @@
+/* Low-end device performance profile: disable heavy effects */
+html.low-end *, html.low-end *::before, html.low-end *::after {
+  animation: none !important;
+  transition-duration: 0.01s !important;
+  transition-property: opacity, transform, filter, box-shadow, background-color, color, border-color !important;
+}
+
+/* Shadows off */
+html.low-end .shadow, html.low-end .shadow-sm, html.low-end .shadow-md,
+html.low-end .shadow-lg, html.low-end .shadow-xl, html.low-end .shadow-2xl,
+html.low-end [class*="shadow-"] {
+  box-shadow: none !important;
+}
+
+/* Disable blurs and heavy filters */
+html.low-end .backdrop-blur, html.low-end [class*="backdrop-blur"],
+html.low-end .blur, html.low-end [class*="blur-"],
+html.low-end .drop-shadow, html.low-end [class*="drop-shadow"] {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Avoid 3D and large transforms */
+html.low-end .transform, html.low-end [class*="transform"],
+html.low-end [class*="translate-"], html.low-end [class*="scale-"],
+html.low-end [class*="rotate-"], html.low-end [class*="skew-"],
+html.low-end [class*="perspect"], html.low-end [class*="3d"],
+html.low-end [style*="transform"] {
+  transform: none !important;
+}
+
+/* Reduce parallax and animated pulses */
+html.low-end [class*="animate-"], html.low-end .motion-safe\:animate-none {
+  animation: none !important;
+}
+
+/* Prefer content-visibility to skip rendering below-the-fold */
+html.low-end [data-heavy], html.low-end .heavy-section {
+  content-visibility: auto !important;
+  contain-intrinsic-size: 1px 600px !important;
+}

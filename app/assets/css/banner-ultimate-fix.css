@@ -1,0 +1,59 @@
+/* BANNER ULTIMATE FIX - MAXIMUM SPECIFICITY */
+
+/* Align banner positioning flush with header */
+html body div.simple-banner-container,
+html body div.banner-container,
+html body div.banner-slider-container,
+html body main.banner-slide-container,
+html body div.banner-slide-container {
+  margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Force border fix */
+html body div.simple-banner-container {
+  border: none !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  html body div.simple-banner-container,
+  html body div.banner-container,
+  html body div.banner-slider-container,
+  html body main.banner-slide-container,
+  html body div.banner-slide-container {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body div.simple-banner-container,
+  html body div.banner-container,
+  html body div.banner-slider-container,
+  html body main.banner-slide-container,
+  html body div.banner-slide-container {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.86rem)) !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html body div.simple-banner-container,
+  html body div.banner-container,
+  html body div.banner-slider-container,
+  html body main.banner-slide-container,
+  html body div.banner-slide-container {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.8rem)) !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}

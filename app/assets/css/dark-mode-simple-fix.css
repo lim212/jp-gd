@@ -1,0 +1,115 @@
+/* ========================================
+   DARK MODE - SIMPLE FIX (SUPER PRIORITY)
+   File ini HARUS ter-load PALING AKHIR!
+   ======================================== */
+
+/* ===================================
+   CRITICAL: BANNER SLIDER DARK
+   =================================== */
+
+.dark .modern-banner-container {
+  background: #0D0D12 !important;
+}
+
+.dark .banner-stage {
+  background: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+  border-color: rgba(233, 30, 99, 0.4) !important;
+}
+
+.dark .modern-banner-loading {
+  background: linear-gradient(135deg, #0D0D12 0%, #1A1A24 50%, #22222E 100%) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+/* Navigation Buttons */
+.dark .nav-button {
+  background: rgba(26, 26, 36, 0.95) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .nav-icon {
+  color: rgba(233, 30, 99, 0.9) !important;
+}
+
+/* Dot Indicators */
+.dark .dot-indicator {
+  background: rgba(26, 26, 36, 0.9) !important;
+  border-color: rgba(233, 30, 99, 0.3) !important;
+}
+
+.dark .dot-indicator.active {
+  background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%) !important;
+  border-color: rgba(233, 30, 99, 0.8) !important;
+}
+
+/* Slide Counter */
+.dark .slide-counter {
+  background: rgba(26, 26, 36, 0.92) !important;
+  border-color: rgba(233, 30, 99, 0.4) !important;
+  color: #FAFAFA !important;
+}
+
+.dark .counter-current {
+  color: #FDA4AF !important;
+}
+
+/* ===================================
+   BODY & MAIN BACKGROUND
+   =================================== */
+
+.dark,
+.dark body {
+  background: #0D0D12 !important;
+}
+
+.dark main {
+  background: transparent !important;
+}
+
+/* ===================================
+   OVERRIDE ALL BLUE/LIGHT BACKGROUNDS
+   =================================== */
+
+.dark [class*="bg-blue"],
+.dark [class*="bg-indigo"],
+.dark [class*="bg-purple"],
+.dark [class*="bg-sky"],
+.dark [class*="bg-cyan"] {
+  background: rgba(26, 26, 36, 0.9) !important;
+}
+
+.dark [class*="from-blue"],
+.dark [class*="from-indigo"],
+.dark [class*="from-purple"] {
+  background: linear-gradient(135deg, #0D0D12 0%, #1A1A24 100%) !important;
+}
+
+/* ===================================
+   TEXT VISIBILITY
+   =================================== */
+
+.dark .banner-stage h1,
+.dark .banner-stage h2,
+.dark .banner-stage h3,
+.dark .banner-stage p,
+.dark .banner-stage span {
+  color: #FAFAFA !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ===================================
+   HELP BOX
+   =================================== */
+
+.dark .ultra-clean-help-box {
+  background: rgba(26, 26, 36, 0.95) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .help-item {
+  background: rgba(26, 26, 36, 0.8) !important;
+  border-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+/* FORCE RELOAD: dark-simple-fix-v1-2225 */
+

@@ -1,0 +1,7 @@
+const data = await useFetch('https://testimonial.jasapembayaran.id/testimoni/0/12', {
+  server: false,
+  onRequestError() {
+    return { data: [] }
+  }
+})
+

@@ -1,0 +1,22 @@
+/* ========================================
+   MOBILE - CLEAN SPACING V3
+   No full-width breakout, proper padding
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Clean - no negative positioning */
+  .banner-full-vw,
+  .bantuan-full-vw {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* FORCE RELOAD MARKER */
+/* full-width-v3-clean-2138 */

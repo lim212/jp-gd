@@ -1,0 +1,379 @@
+/* =====================================================
+   PROFESSIONAL FLOATING BUTTONS - CLEAN & RESPONSIVE
+   =====================================================
+   File ini berisi styling untuk floating buttons yang bersih,
+   profesional, dan responsive untuk semua device.
+   
+   Fitur:
+   - Icon yang keren dan profesional
+   - Posisi responsive otomatis
+   - WhatsApp icon hijau super keren
+   - Tanpa animasi yang mengganggu
+   ===================================================== */
+
+/* ===== CONTAINER ===== */
+.floating-actions-container {
+  position: fixed !important;
+  left: 1rem !important;
+  bottom: 1rem !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  align-items: center !important;
+}
+
+/* ===== BASE BUTTON STYLES ===== */
+.floating-btn {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  border-radius: 50% !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* ===== ICON STYLES ===== */
+.floating-icon {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Icon color untuk dark mode - soft & professional */
+.dark .floating-icon {
+  color: #e5e7eb !important;
+}
+
+/* ===== WHATSAPP BUTTON - SUPER KEREN GREEN ===== */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%) !important;
+}
+
+.whatsapp-btn:active {
+  transform: translateY(0) scale(0.95) !important;
+}
+
+/* ===== SCROLL UP BUTTON ===== */
+.scroll-up-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.scroll-up-btn:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%) !important;
+}
+
+.scroll-up-btn:active {
+  transform: translateY(0) scale(0.95) !important;
+}
+
+/* ===== SCROLL DOWN BUTTON ===== */
+.scroll-down-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.scroll-down-btn:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+}
+
+.scroll-down-btn:active {
+  transform: translateY(0) scale(0.95) !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+  .floating-actions-container {
+    left: 0.75rem !important;
+    bottom: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+  
+  .floating-btn {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .floating-icon {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .floating-actions-container {
+    left: 1.25rem !important;
+    bottom: 1.25rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .floating-btn {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+  }
+  
+  .floating-icon {
+    width: 1.375rem !important;
+    height: 1.375rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .floating-actions-container {
+    left: 1.5rem !important;
+    bottom: 1.5rem !important;
+    gap: 1rem !important;
+  }
+  
+  .floating-btn {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+  
+  .floating-icon {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
+/* =====================================================
+   DARK MODE SUPPORT - SUPER KEREN & PROFESSIONAL
+   =====================================================
+   Dark mode dengan warna yang sophisticated dan tidak
+   menggunakan putih untuk menghindari clash.
+   
+   Fitur:
+   - Gradient colors yang lebih gelap & rich
+   - Border dengan opacity rendah untuk subtle look
+   - Shadow yang lebih dramatis
+   - Hover effects yang smooth & professional
+   ===================================================== */
+
+.dark .floating-btn {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), 
+              0 2px 4px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* WhatsApp Button - Dark Mode: Emerald Gradient */
+.dark .whatsapp-btn {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  border: 2px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .whatsapp-btn:hover {
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.6),
+              0 4px 8px rgba(5, 150, 105, 0.4) !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  border: 2px solid rgba(16, 185, 129, 0.5) !important;
+  transform: translateY(-3px) scale(1.08) !important;
+}
+
+/* Scroll Up Button - Dark Mode: Deep Blue Gradient */
+.dark .scroll-up-btn {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .scroll-up-btn:hover {
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.6),
+              0 4px 8px rgba(30, 64, 175, 0.4) !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.5) !important;
+  transform: translateY(-3px) scale(1.08) !important;
+}
+
+/* Scroll Down Button - Dark Mode: Deep Indigo Gradient */
+.dark .scroll-down-btn {
+  background: linear-gradient(135deg, #3730a3 0%, #312e81 100%) !important;
+  border: 2px solid rgba(99, 102, 241, 0.3) !important;
+}
+
+.dark .scroll-down-btn:hover {
+  box-shadow: 0 8px 24px rgba(67, 56, 202, 0.6),
+              0 4px 8px rgba(67, 56, 202, 0.4) !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%) !important;
+  border: 2px solid rgba(99, 102, 241, 0.5) !important;
+  transform: translateY(-3px) scale(1.08) !important;
+}
+
+/* Active State untuk Dark Mode */
+.dark .whatsapp-btn:active,
+.dark .scroll-up-btn:active,
+.dark .scroll-down-btn:active {
+  transform: translateY(0) scale(0.98) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Focus States untuk Dark Mode - Accessibility */
+.dark .floating-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4), 
+              0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .whatsapp-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4), 
+              0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .scroll-up-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4), 
+              0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .scroll-down-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4), 
+              0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ===== FOCUS STATES FOR ACCESSIBILITY ===== */
+.floating-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.whatsapp-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.5), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.scroll-up-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.scroll-down-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ===== GLOW EFFECT FOR DARK MODE ===== */
+/* Subtle glow effect yang membuat buttons pop di dark mode */
+.dark .whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dark .whatsapp-btn:hover::before {
+  opacity: 1;
+}
+
+.dark .scroll-up-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dark .scroll-up-btn:hover::before {
+  opacity: 1;
+}
+
+.dark .scroll-down-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dark .scroll-down-btn:hover::before {
+  opacity: 1;
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+/* Light mode high contrast */
+@media (prefers-contrast: high) {
+  .floating-btn {
+    border: 3px solid rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+/* Dark mode high contrast - menggunakan warna yang lebih terang */
+@media (prefers-contrast: high) {
+  .dark .floating-btn {
+    border: 3px solid rgba(229, 231, 235, 0.6) !important;
+  }
+  
+  .dark .whatsapp-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  }
+  
+  .dark .scroll-up-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  }
+  
+  .dark .scroll-down-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .floating-btn {
+    transition: none !important;
+  }
+  
+  .floating-btn:hover {
+    transform: none !important;
+  }
+  
+  /* Disable glow effects di reduced motion */
+  .dark .floating-btn::before {
+    display: none !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .floating-actions-container {
+    display: none !important;
+  }
+}
+
+/* ===== OVERRIDE LEGACY STYLES ===== */
+/* Ensure floating actions are visible */
+#floating-actions {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}

@@ -1,0 +1,216 @@
+{
+  "icons": [
+    {
+      "id": 1,
+      "filename": "profile-icon-1.svg",
+      "url": "/images/profile-icons/profile-icon-1.svg",
+      "name": "Admin",
+      "color": "#667eea"
+    },
+    {
+      "id": 2,
+      "filename": "profile-icon-2.svg",
+      "url": "/images/profile-icons/profile-icon-2.svg",
+      "name": "Writer",
+      "color": "#764ba2"
+    },
+    {
+      "id": 3,
+      "filename": "profile-icon-3.svg",
+      "url": "/images/profile-icons/profile-icon-3.svg",
+      "name": "Author",
+      "color": "#ff6b6b"
+    },
+    {
+      "id": 4,
+      "filename": "profile-icon-4.svg",
+      "url": "/images/profile-icons/profile-icon-4.svg",
+      "name": "Editor",
+      "color": "#4ecdc4"
+    },
+    {
+      "id": 5,
+      "filename": "profile-icon-5.svg",
+      "url": "/images/profile-icons/profile-icon-5.svg",
+      "name": "Blogger",
+      "color": "#45b7d1"
+    },
+    {
+      "id": 6,
+      "filename": "profile-icon-6.svg",
+      "url": "/images/profile-icons/profile-icon-6.svg",
+      "name": "Content Creator",
+      "color": "#96ceb4"
+    },
+    {
+      "id": 7,
+      "filename": "profile-icon-7.svg",
+      "url": "/images/profile-icons/profile-icon-7.svg",
+      "name": "JasaPembayaran",
+      "color": "#feca57"
+    },
+    {
+      "id": 8,
+      "filename": "profile-icon-8.svg",
+      "url": "/images/profile-icons/profile-icon-8.svg",
+      "name": "Team",
+      "color": "#ff9ff3"
+    },
+    {
+      "id": 9,
+      "filename": "profile-icon-9.svg",
+      "url": "/images/profile-icons/profile-icon-9.svg",
+      "name": "Staff",
+      "color": "#54a0ff"
+    },
+    {
+      "id": 10,
+      "filename": "profile-icon-10.svg",
+      "url": "/images/profile-icons/profile-icon-10.svg",
+      "name": "Manager",
+      "color": "#5f27cd"
+    },
+    {
+      "id": 11,
+      "filename": "profile-icon-11.svg",
+      "url": "/images/profile-icons/profile-icon-11.svg",
+      "name": "Developer",
+      "color": "#2c3e50"
+    },
+    {
+      "id": 12,
+      "filename": "profile-icon-12.svg",
+      "url": "/images/profile-icons/profile-icon-12.svg",
+      "name": "Designer",
+      "color": "#34495e"
+    },
+    {
+      "id": 13,
+      "filename": "profile-icon-13.svg",
+      "url": "/images/profile-icons/profile-icon-13.svg",
+      "name": "Marketing",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": 14,
+      "filename": "profile-icon-14.svg",
+      "url": "/images/profile-icons/profile-icon-14.svg",
+      "name": "Support",
+      "color": "#95a5a6"
+    },
+    {
+      "id": 15,
+      "filename": "profile-icon-15.svg",
+      "url": "/images/profile-icons/profile-icon-15.svg",
+      "name": "Customer",
+      "color": "#bdc3c7"
+    },
+    {
+      "id": 16,
+      "filename": "profile-icon-16.svg",
+      "url": "/images/profile-icons/profile-icon-16.svg",
+      "name": "User",
+      "color": "#e74c3c"
+    },
+    {
+      "id": 17,
+      "filename": "profile-icon-17.svg",
+      "url": "/images/profile-icons/profile-icon-17.svg",
+      "name": "Guest",
+      "color": "#e67e22"
+    },
+    {
+      "id": 18,
+      "filename": "profile-icon-18.svg",
+      "url": "/images/profile-icons/profile-icon-18.svg",
+      "name": "Member",
+      "color": "#f39c12"
+    },
+    {
+      "id": 19,
+      "filename": "profile-icon-19.svg",
+      "url": "/images/profile-icons/profile-icon-19.svg",
+      "name": "Expert",
+      "color": "#f1c40f"
+    },
+    {
+      "id": 20,
+      "filename": "profile-icon-20.svg",
+      "url": "/images/profile-icons/profile-icon-20.svg",
+      "name": "Specialist",
+      "color": "#2ecc71"
+    },
+    {
+      "id": 21,
+      "filename": "profile-icon-21.svg",
+      "url": "/images/profile-icons/profile-icon-21.svg",
+      "name": "Consultant",
+      "color": "#1abc9c"
+    },
+    {
+      "id": 22,
+      "filename": "profile-icon-22.svg",
+      "url": "/images/profile-icons/profile-icon-22.svg",
+      "name": "Advisor",
+      "color": "#3498db"
+    },
+    {
+      "id": 23,
+      "filename": "profile-icon-23.svg",
+      "url": "/images/profile-icons/profile-icon-23.svg",
+      "name": "Helper",
+      "color": "#9b59b6"
+    },
+    {
+      "id": 24,
+      "filename": "profile-icon-24.svg",
+      "url": "/images/profile-icons/profile-icon-24.svg",
+      "name": "Guide",
+      "color": "#34495e"
+    },
+    {
+      "id": 25,
+      "filename": "profile-icon-25.svg",
+      "url": "/images/profile-icons/profile-icon-25.svg",
+      "name": "Professional",
+      "color": "#e74c3c"
+    },
+    {
+      "id": 26,
+      "filename": "profile-icon-26.svg",
+      "url": "/images/profile-icons/profile-icon-26.svg",
+      "name": "Expert",
+      "color": "#f39c12"
+    },
+    {
+      "id": 27,
+      "filename": "profile-icon-27.svg",
+      "url": "/images/profile-icons/profile-icon-27.svg",
+      "name": "Master",
+      "color": "#2ecc71"
+    },
+    {
+      "id": 28,
+      "filename": "profile-icon-28.svg",
+      "url": "/images/profile-icons/profile-icon-28.svg",
+      "name": "Guru",
+      "color": "#3498db"
+    },
+    {
+      "id": 29,
+      "filename": "profile-icon-29.svg",
+      "url": "/images/profile-icons/profile-icon-29.svg",
+      "name": "Leader",
+      "color": "#9b59b6"
+    },
+    {
+      "id": 30,
+      "filename": "profile-icon-30.svg",
+      "url": "/images/profile-icons/profile-icon-30.svg",
+      "name": "Hero",
+      "color": "#2c3e50"
+    }
+  ],
+  "total": 30,
+  "created": "2025-09-30T15:29:08.092Z"
+}

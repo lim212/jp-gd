@@ -1,0 +1,664 @@
+/* ========================================
+   LIGHT MODE IMPROVEMENTS - PROFESSIONAL BOX STYLING
+   ======================================== */
+
+/* ===== LIGHT MODE COLOR PALETTE ===== */
+:root {
+  /* Professional Light Palette - Modern & Clean */
+  --lm-bg: #ffffff;              /* Pure white background */
+  --lm-surface: #f8fafc;         /* Light gray surface */
+  --lm-surface-elevated: #ffffff; /* Elevated cards */
+  --lm-subtle: #f1f5f9;          /* Subtle backgrounds */
+  --lm-border: #e2e8f0;          /* Soft borders */
+  --lm-border-accent: #cbd5e1;   /* Accent borders */
+  --lm-text: #0f172a;            /* Deep blue-gray text */
+  --lm-text-muted: #475569;      /* Muted text */
+  --lm-text-subtle: #64748b;     /* Subtle text */
+  
+  /* Accent Colors - Vibrant & Modern */
+  --lm-primary: #3b82f6;         /* Blue primary */
+  --lm-primary-light: #60a5fa;   /* Light blue */
+  --lm-primary-dark: #2563eb;    /* Dark blue */
+  --lm-secondary: #0ea5e9;       /* Sky blue secondary */
+  --lm-accent-cyan: #06b6d4;     /* Cyan accent */
+  --lm-accent-indigo: #6366f1;   /* Indigo accent */
+  --lm-accent-teal: #14b8a6;     /* Teal accent */
+  --lm-accent-sky: #0284c7;      /* Sky accent */
+  
+  /* Gradient Definitions */
+  --lm-gradient-blue: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  --lm-gradient-sky: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  --lm-gradient-cyan: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
+  --lm-gradient-indigo: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  --lm-gradient-teal: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+  --lm-gradient-emerald: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  --lm-gradient-amber: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  
+  /* Shadow System */
+  --lm-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --lm-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --lm-shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.10);
+  --lm-shadow-xl: 0 12px 32px rgba(15, 23, 42, 0.12);
+  --lm-shadow-2xl: 0 20px 48px rgba(15, 23, 42, 0.15);
+  
+  /* Colored Shadows */
+  --lm-shadow-blue: 0 8px 24px rgba(59, 130, 246, 0.15);
+  --lm-shadow-sky: 0 8px 24px rgba(14, 165, 233, 0.15);
+  --lm-shadow-cyan: 0 8px 24px rgba(6, 182, 212, 0.15);
+  --lm-shadow-teal: 0 8px 24px rgba(20, 184, 166, 0.15);
+  --lm-shadow-emerald: 0 8px 24px rgba(16, 185, 129, 0.15);
+}
+
+/* ===== BASE LIGHT MODE STYLING ===== */
+html:not(.dark) body,
+html:not(.dark) #__nuxt,
+html:not(.dark) .min-h-screen {
+  background: var(--lm-bg);
+  color: var(--lm-text);
+}
+
+/* ===== BOX & CARD COMPONENTS - ENHANCED ===== */
+
+/* Standard Box/Card Styling */
+html:not(.dark) .ui-box,
+html:not(.dark) .card,
+html:not(.dark) .panel,
+html:not(.dark) .box,
+html:not(.dark) [class*="card"],
+html:not(.dark) [class*="box"] {
+  background: var(--lm-surface-elevated) !important;
+  border: 2px solid var(--lm-border) !important;
+  border-radius: 1rem !important;
+  box-shadow: var(--lm-shadow-md) !important;
+  padding: 1.5rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Box Hover Effects */
+html:not(.dark) .ui-box:hover,
+html:not(.dark) .card:hover,
+html:not(.dark) .panel:hover,
+html:not(.dark) .box:hover {
+  border-color: var(--lm-primary-light) !important;
+  box-shadow: var(--lm-shadow-blue) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ===== SECTION CONTAINERS ===== */
+html:not(.dark) section,
+html:not(.dark) .section,
+html:not(.dark) [class*="section"] {
+  background: var(--lm-surface);
+  border-radius: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+/* ===== INFORMATION BOXES - SPECIAL STYLING ===== */
+html:not(.dark) .information-card,
+html:not(.dark) .info-box,
+html:not(.dark) [class*="info-card"],
+html:not(.dark) [class*="information"] .card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%) !important;
+  border: 2px solid #bae6fd !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 
+    0 8px 24px rgba(56, 189, 248, 0.12),
+    0 4px 12px rgba(59, 130, 246, 0.08) !important;
+  padding: 2rem !important;
+  position: relative;
+  overflow: hidden;
+}
+
+html:not(.dark) .information-card::before,
+html:not(.dark) .info-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #0ea5e9);
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+html:not(.dark) .information-card:hover,
+html:not(.dark) .info-box:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 
+    0 12px 32px rgba(56, 189, 248, 0.18),
+    0 6px 16px rgba(59, 130, 246, 0.12) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* ===== BLOG CARDS - ENHANCED ===== */
+html:not(.dark) .blog-card,
+html:not(.dark) .news-card,
+html:not(.dark) .article-card,
+html:not(.dark) [class*="blog"] .card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%) !important;
+  border: 2px solid #bae6fd !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 
+    0 8px 24px rgba(14, 165, 233, 0.12),
+    0 4px 12px rgba(56, 189, 248, 0.08) !important;
+  padding: 1.75rem !important;
+  overflow: hidden;
+  position: relative;
+}
+
+html:not(.dark) .blog-card::after,
+html:not(.dark) .news-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+html:not(.dark) .blog-card:hover,
+html:not(.dark) .news-card:hover {
+  border-color: #7dd3fc !important;
+  box-shadow: 
+    0 12px 32px rgba(14, 165, 233, 0.18),
+    0 6px 16px rgba(56, 189, 248, 0.12) !important;
+  transform: translateY(-4px) scale(1.02) !important;
+}
+
+/* ===== TESTIMONIAL CARDS ===== */
+html:not(.dark) .testimonial-card,
+html:not(.dark) [class*="testimonial"] .card,
+html:not(.dark) [class*="testimoni"] .card {
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 100%) !important;
+  border: 2px solid #fde68a !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 
+    0 8px 24px rgba(59, 130, 246, 0.12),
+    0 4px 12px rgba(251, 191, 36, 0.08) !important;
+  padding: 2rem !important;
+  position: relative;
+}
+
+html:not(.dark) .testimonial-card::before {
+  content: '❝';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 4rem;
+  color: rgba(59, 130, 246, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+html:not(.dark) .testimonial-card:hover {
+  border-color: #fbbf24 !important;
+  box-shadow: 
+    0 12px 32px rgba(59, 130, 246, 0.18),
+    0 6px 16px rgba(251, 191, 36, 0.12) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ===== SERVICE CARDS ===== */
+html:not(.dark) .service-card,
+html:not(.dark) [class*="service"] .card {
+  background: linear-gradient(135deg, #ffffff 0%, #dcfce7 100%) !important;
+  border: 2px solid #bbf7d0 !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 
+    0 8px 24px rgba(16, 185, 129, 0.12),
+    0 4px 12px rgba(34, 197, 94, 0.08) !important;
+  padding: 2rem !important;
+  position: relative;
+  overflow: hidden;
+}
+
+html:not(.dark) .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #22c55e, #34d399);
+}
+
+html:not(.dark) .service-card:hover {
+  border-color: #86efac !important;
+  box-shadow: 
+    0 12px 32px rgba(16, 185, 129, 0.18),
+    0 6px 16px rgba(34, 197, 94, 0.12) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* ===== PRICING CARDS ===== */
+html:not(.dark) .pricing-card,
+html:not(.dark) [class*="pricing"] .card,
+html:not(.dark) [class*="price"] .card {
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%) !important;
+  border: 2px solid #bae6fd !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 
+    0 8px 24px rgba(14, 165, 233, 0.12),
+    0 4px 12px rgba(56, 189, 248, 0.08) !important;
+  padding: 2.5rem !important;
+  position: relative;
+}
+
+html:not(.dark) .pricing-card:hover {
+  border-color: #7dd3fc !important;
+  box-shadow: 
+    0 12px 32px rgba(14, 165, 233, 0.18),
+    0 6px 16px rgba(56, 189, 248, 0.12) !important;
+  transform: translateY(-4px) scale(1.03) !important;
+}
+
+/* ===== TITLE STYLING - PROFESSIONAL ===== */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) .title,
+html:not(.dark) [class*="title"] {
+  color: var(--lm-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.2 !important;
+}
+
+/* Card Titles - Special Styling */
+html:not(.dark) .card h1,
+html:not(.dark) .card h2,
+html:not(.dark) .card h3,
+html:not(.dark) .box h1,
+html:not(.dark) .box h2,
+html:not(.dark) .box h3,
+html:not(.dark) .panel h1,
+html:not(.dark) .panel h2,
+html:not(.dark) .panel h3 {
+  color: transparent !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #0ea5e9 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Section Titles - Enhanced */
+html:not(.dark) section h1,
+html:not(.dark) section h2,
+html:not(.dark) .section h1,
+html:not(.dark) .section h2 {
+  color: transparent !important;
+  background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 900 !important;
+  font-size: 2.25rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+html:not(.dark) section h1::after,
+html:not(.dark) section h2::after,
+html:not(.dark) .section h1::after,
+html:not(.dark) .section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9, #06b6d4);
+  border-radius: 2px;
+}
+
+/* ===== CONTENT TEXT STYLING ===== */
+html:not(.dark) p,
+html:not(.dark) .text,
+html:not(.dark) .description {
+  color: var(--lm-text-muted) !important;
+  line-height: 1.7 !important;
+  font-size: 1rem !important;
+}
+
+/* Card Content */
+html:not(.dark) .card p,
+html:not(.dark) .box p,
+html:not(.dark) .panel p {
+  color: var(--lm-text-muted) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* ===== BUTTON STYLING - MODERN ===== */
+html:not(.dark) button,
+html:not(.dark) .btn,
+html:not(.dark) [class*="button"] {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  box-shadow: 
+    0 4px 12px rgba(59, 130, 246, 0.3),
+    0 2px 6px rgba(37, 99, 235, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+
+html:not(.dark) button:hover,
+html:not(.dark) .btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  box-shadow: 
+    0 6px 16px rgba(59, 130, 246, 0.4),
+    0 3px 8px rgba(37, 99, 235, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Secondary Buttons */
+html:not(.dark) .btn-secondary,
+html:not(.dark) [class*="secondary"] {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+  box-shadow: 
+    0 4px 12px rgba(14, 165, 233, 0.3),
+    0 2px 6px rgba(2, 132, 199, 0.2) !important;
+}
+
+html:not(.dark) .btn-secondary:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  box-shadow: 
+    0 6px 16px rgba(14, 165, 233, 0.4),
+    0 3px 8px rgba(2, 132, 199, 0.3) !important;
+}
+
+/* ===== LINK STYLING ===== */
+html:not(.dark) a {
+  color: var(--lm-primary) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+html:not(.dark) a:hover {
+  color: var(--lm-primary-dark) !important;
+  text-decoration: underline !important;
+}
+
+/* Card Links */
+html:not(.dark) .card a,
+html:not(.dark) .box a {
+  color: var(--lm-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* ===== BADGE & TAG STYLING ===== */
+html:not(.dark) .badge,
+html:not(.dark) .tag,
+html:not(.dark) [class*="badge"],
+html:not(.dark) [class*="tag"] {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  color: #1e40af !important;
+  border: 1px solid #93c5fd !important;
+  border-radius: 9999px !important;
+  padding: 0.375rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+}
+
+/* ===== LIST STYLING ===== */
+html:not(.dark) ul,
+html:not(.dark) ol {
+  color: var(--lm-text-muted) !important;
+  line-height: 1.75 !important;
+}
+
+html:not(.dark) li {
+  margin-bottom: 0.5rem !important;
+  color: var(--lm-text-muted) !important;
+}
+
+/* Feature Lists */
+html:not(.dark) .features li,
+html:not(.dark) [class*="feature"] li {
+  padding-left: 1.75rem !important;
+  position: relative !important;
+}
+
+html:not(.dark) .features li::before,
+html:not(.dark) [class*="feature"] li::before {
+  content: '✓' !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #10b981 !important;
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+}
+
+/* ===== ICON STYLING ===== */
+html:not(.dark) .icon,
+html:not(.dark) [class*="icon"] {
+  color: var(--lm-primary) !important;
+  filter: none !important;
+}
+
+/* Card Icons */
+html:not(.dark) .card .icon,
+html:not(.dark) .box .icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  padding: 0.75rem !important;
+  border-radius: 0.75rem !important;
+  color: #1e40af !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* ===== DIVIDER STYLING ===== */
+html:not(.dark) hr,
+html:not(.dark) .divider {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent) !important;
+  margin: 2rem 0 !important;
+}
+
+/* ===== TABLE STYLING ===== */
+html:not(.dark) table {
+  background: var(--lm-surface-elevated) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: var(--lm-shadow-md) !important;
+}
+
+html:not(.dark) th {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+  color: var(--lm-text) !important;
+  font-weight: 700 !important;
+  padding: 1rem !important;
+  border-bottom: 2px solid var(--lm-border) !important;
+}
+
+html:not(.dark) td {
+  color: var(--lm-text-muted) !important;
+  padding: 0.875rem 1rem !important;
+  border-bottom: 1px solid var(--lm-border) !important;
+}
+
+html:not(.dark) tr:hover {
+  background: var(--lm-subtle) !important;
+}
+
+/* ===== FORM ELEMENTS ===== */
+html:not(.dark) input,
+html:not(.dark) textarea,
+html:not(.dark) select {
+  background: var(--lm-surface-elevated) !important;
+  border: 2px solid var(--lm-border) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem 1rem !important;
+  color: var(--lm-text) !important;
+  transition: all 0.2s ease !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) textarea:focus,
+html:not(.dark) select:focus {
+  outline: none !important;
+  border-color: var(--lm-primary) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ===== ALERT & NOTIFICATION BOXES ===== */
+html:not(.dark) .alert,
+html:not(.dark) .notification,
+html:not(.dark) [class*="alert"] {
+  border-radius: 1rem !important;
+  padding: 1.25rem 1.5rem !important;
+  border-left: 4px solid !important;
+  box-shadow: var(--lm-shadow-md) !important;
+}
+
+/* Success Alert */
+html:not(.dark) .alert-success,
+html:not(.dark) .success {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+  border-left-color: #22c55e !important;
+  color: #15803d !important;
+}
+
+/* Info Alert */
+html:not(.dark) .alert-info,
+html:not(.dark) .info {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+  border-left-color: #3b82f6 !important;
+  color: #1e40af !important;
+}
+
+/* Warning Alert */
+html:not(.dark) .alert-warning,
+html:not(.dark) .warning {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+  border-left-color: #f59e0b !important;
+  color: #92400e !important;
+}
+
+/* Error Alert */
+html:not(.dark) .alert-error,
+html:not(.dark) .error,
+html:not(.dark) .danger {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%) !important;
+  border-left-color: #ef4444 !important;
+  color: #991b1b !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  html:not(.dark) section h1,
+  html:not(.dark) section h2,
+  html:not(.dark) .section h1,
+  html:not(.dark) .section h2 {
+    font-size: 1.875rem !important;
+  }
+  
+  html:not(.dark) .card,
+  html:not(.dark) .box,
+  html:not(.dark) .panel {
+    padding: 1.25rem !important;
+    border-radius: 0.875rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html:not(.dark) section h1,
+  html:not(.dark) section h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  html:not(.dark) .card,
+  html:not(.dark) .box {
+    padding: 1rem !important;
+  }
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+html:not(.dark) * {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 200ms !important;
+}
+
+/* ===== ACCESSIBILITY ===== */
+html:not(.dark) :focus-visible {
+  outline: 2px solid var(--lm-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+html:not(.dark) ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: var(--lm-subtle);
+  border-radius: 6px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 6px;
+  border: 2px solid var(--lm-subtle);
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+/* ===== ANIMATION CLASSES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+html:not(.dark) .animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  html:not(.dark) .card,
+  html:not(.dark) .box,
+  html:not(.dark) .panel {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+  }
+}
+
+

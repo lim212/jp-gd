@@ -1,0 +1,130 @@
+/* ========================================
+   DARK MODE - BODY & MAIN BACKGROUND FIX
+   Force Dark Background untuk HTML, Body, Main
+   ======================================== */
+
+/* ===================================
+   HTML & BODY DARK BACKGROUND
+   =================================== */
+
+html.dark,
+html.dark body,
+html.dark #__nuxt {
+  background: #0D0D12 !important;
+  background-color: #0D0D12 !important;
+  background-image: linear-gradient(135deg, 
+    #0D0D12 0%, 
+    #13131A 25%,
+    #1A1A24 50%,
+    #22222E 75%,
+    #18181B 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Main Content Background */
+html.dark main,
+html.dark main.banner-slide-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Override Light Mode Gradients */
+html.dark main.bg-gradient-to-br,
+html.dark main[class*="from-blue"],
+html.dark main[class*="via-indigo"],
+html.dark main[class*="to-purple"] {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Force Remove ALL Light Gradients */
+html.dark [class*="bg-gradient-to"],
+html.dark [class*="from-blue"],
+html.dark [class*="from-indigo"],
+html.dark [class*="from-sky"],
+html.dark [class*="from-cyan"],
+html.dark [class*="via-blue"],
+html.dark [class*="via-indigo"],
+html.dark [class*="to-blue"],
+html.dark [class*="to-indigo"],
+html.dark [class*="to-purple"] {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Add Mesh Gradient Overlay */
+html.dark body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(233, 30, 99, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(233, 30, 99, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(233, 30, 99, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Ensure Content is Above Overlay */
+html.dark #__nuxt {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================
+   PAGE CONTAINERS
+   =================================== */
+
+html.dark .banner-content-wrapper,
+html.dark .page-container,
+html.dark .main-container {
+  background: transparent !important;
+}
+
+/* ===================================
+   RESPONSIVE BACKGROUNDS
+   =================================== */
+
+/* Mobile */
+@media (max-width: 640px) {
+  html.dark,
+  html.dark body {
+    background-image: linear-gradient(135deg, 
+      #0D0D12 0%, 
+      #1A1A24 100%) !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  html.dark,
+  html.dark body {
+    background-image: linear-gradient(135deg, 
+      #0D0D12 0%, 
+      #13131A 50%,
+      #1A1A24 100%) !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  html.dark,
+  html.dark body {
+    background-image: linear-gradient(135deg, 
+      #0D0D12 0%, 
+      #13131A 25%,
+      #1A1A24 50%,
+      #22222E 75%,
+      #18181B 100%) !important;
+  }
+}
+
+/* FORCE RELOAD MARKER */
+/* dark-body-bg-v1-2200 */
+

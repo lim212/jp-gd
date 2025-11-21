@@ -1,0 +1,162 @@
+/* ============================================
+   DESKTOP & TABLET BANNER SPACING - FORCE OVERRIDE
+   Memastikan banner selalu turun dan tidak terpotong
+   Kompensasi untuk header yang FIXED/STICKY
+   ============================================ */
+
+/* RESPONSIVE SPACING untuk tablet dan desktop - ZERO GAP! */
+@media screen and (min-width: 768px) {
+  /* Triple selector untuk force override */
+  body main .hero-offset,
+  main .hero-offset,
+  div.hero-offset,
+  .hero-offset,
+  [class*="hero-offset"] {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+  
+  body main .banner-container-zero,
+  main .banner-container-zero,
+  div.banner-container-zero,
+  .banner-container-zero,
+  [class*="banner-container-zero"] {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Force pada semua kemungkinan wrapper */
+  body div.hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Tablet - Spacing ZERO GAP di bawah header */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+  }
+  
+  .banner-container-zero {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Desktop Small - Spacing ZERO GAP di bawah header */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+  }
+  
+  .banner-container-zero {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Desktop Medium - Spacing ZERO GAP di bawah header */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+  }
+  
+  .banner-container-zero {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Desktop Large - Spacing ZERO GAP di bawah header */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+  }
+  
+  .banner-container-zero {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Desktop XL - Spacing ZERO GAP di bawah header */
+@media (min-width: 1920px) {
+  .hero-offset {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+  }
+  
+  .banner-container-zero {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Force z-index untuk memastikan banner di bawah header */
+@media (min-width: 768px) {
+  .hero-offset {
+    z-index: 0 !important;
+  }
+  
+  .banner-slider-wrapper {
+    z-index: 1 !important;
+  }
+}
+
+/* Hapus semua negative margin di desktop/tablet */
+@media (min-width: 768px) {
+  .hero-offset {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Override inline styles - ZERO GAP di bawah header */
+@media (min-width: 768px) {
+  [class*="hero-offset"] {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+  
+  [class*="banner-container-zero"] {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* FORCE OVERRIDE - Pastikan tidak ada yang override ini */
+@media (min-width: 768px) {
+  div.hero-offset,
+  .hero-offset.banner-container-zero,
+  div[class~="hero-offset"] {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-offset,
+  [class*="hero-offset"],
+  [class*="banner-container-zero"] {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.78rem)) !important;
+    padding-top: 0 !important;
+  }
+}
+

@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-10-20T20:01:12.786Z",
+    "total": 10,
+    "passed": 0,
+    "failed": 10,
+    "averageScore": 0,
+    "scores": []
+  },
+  {
+    "date": "2025-10-19T20:01:20.670Z",
+    "total": 10,
+    "passed": 0,
+    "failed": 10,
+    "averageScore": 0,
+    "scores": []
+  },
+  {
+    "date": "2025-10-17T20:01:18.460Z",
+    "total": 10,
+    "passed": 0,
+    "failed": 10,
+    "averageScore": 0,
+    "scores": []
+  }
+]

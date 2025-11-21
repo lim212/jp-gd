@@ -1,0 +1,109 @@
+/* ========================================
+   MOBILE - DARK MODE - BURGUNDY THEME V4
+   ======================================== */
+
+@media (max-width: 768px) {
+  .dark {
+    /* HIDE BADGES */
+    .logo-text-only + *,
+    .logo-text-only ~ div[class*="flex"],
+    span[class*="Berkualitas"],
+    span[class*="Terpercaya"],
+    span[class*="Fast Response"],
+    span[class*="Profesional"] {
+      display: none !important;
+    }
+    
+    /* CLEAN - No negative margins */
+    main,
+    main > div,
+    .mobile-page-wrapper,
+    .mobile-banner-wrapper,
+    .mobile-banner-container {
+      margin-top: 0 !important;
+    }
+  }
+  
+  /* ===================================
+     MOBILE DARK MODE ENHANCEMENTS
+     =================================== */
+  
+  /* Banner & Hero Section */
+  .dark .hero-offset,
+  .dark .banner-container-zero {
+    background: transparent !important;
+  }
+  
+  .dark .banner-container-wrapper,
+  .dark .professional-cta-container {
+    border-width: 1.5px !important;
+    background: linear-gradient(135deg, 
+      rgba(26, 26, 36, 0.95) 0%, 
+      rgba(34, 34, 46, 0.9) 100%) !important;
+  }
+  
+  /* Help Box Mobile */
+  .dark .ultra-clean-help-box {
+    border-width: 1.5px !important;
+    background: rgba(26, 26, 36, 0.95) !important;
+  }
+  
+  .dark .help-item {
+    border-width: 1px !important;
+    background: rgba(34, 34, 46, 0.85) !important;
+  }
+  
+  /* Cards Mobile */
+  .dark .feature-card,
+  .dark .service-card,
+  .dark .info-card {
+    border-width: 1px !important;
+  }
+  
+  /* Typography Mobile */
+  .dark h1,
+  .dark h2,
+  .dark h3 {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  /* Buttons Mobile */
+  .dark .btn,
+  .dark button {
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba(233, 30, 99, 0.15) !important;
+  }
+  
+  /* Navigation Mobile */
+  .dark .mobile-menu {
+    background: rgba(18, 18, 20, 0.98) !important;
+    border-bottom: 1.5px solid rgba(233, 30, 99, 0.35) !important;
+    backdrop-filter: blur(16px) !important;
+  }
+  
+  /* Force no bright backgrounds on mobile */
+  .dark [class*="bg-blue"],
+  .dark [class*="bg-indigo"],
+  .dark [class*="bg-sky"],
+  .dark [class*="bg-cyan"] {
+    background: linear-gradient(135deg, 
+      rgba(26, 26, 36, 0.9) 0%, 
+      rgba(34, 34, 46, 0.85) 100%) !important;
+  }
+}
+
+/* Tablet Portrait - 768px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dark .banner-container-wrapper,
+  .dark .professional-cta-container {
+    border-width: 2px !important;
+  }
+  
+  .dark .ultra-clean-help-box {
+    border-width: 2px !important;
+  }
+}
+
+/* FORCE RELOAD MARKER */
+/* dark-v4-burgundy-mobile-2158 */

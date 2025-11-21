@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Prioritize important pages for jasa paypal
+Allow: /jasa-paypal
+Allow: /tentang-kami
+Allow: /blog/
+Allow: /blog/jasa-paypal-terpercaya-indonesia
+Allow: /blog/cara-bayar-paypal-tanpa-kartu-kredit
+Allow: /blog/jasa-top-up-paypal-murah
+Allow: /blog/jasa-transfer-paypal-aman
+Allow: /blog/paypal-di-indonesia
+Allow: /blog/jasa-isi-saldo-paypal
+Allow: /blog/jasa-paypal-indonesia
+
+# Disallow admin and build directories
+Disallow: /admin/
+Disallow: /.nuxt/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /_nuxt/
+
+# Sitemap location
+Sitemap: https://jasapembayaran.com/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1

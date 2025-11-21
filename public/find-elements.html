@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>🔍 Find Elements Tool</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 20px;
+        }
+        button {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .result {
+            background: #000;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #00ff00;
+            white-space: pre-wrap;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 FIND ELEMENTS - Cari Selector Yang Benar</h1>
+    <button onclick="findElements()">FIND SECTIONS</button>
+    <button onclick="window.location.href='http://localhost:3000/'">GO TO HOMEPAGE</button>
+    <div id="result" class="result"></div>
+
+    <script>
+        function findElements() {
+            const result = document.getElementById('result');
+            let output = '=== SEARCHING FOR SECTIONS ===\n\n';
+            
+            // Berbagai kemungkinan selector
+            const possibleSelectors = [
+                // Original selectors
+                '.help-section-wrapper',
+                '.trusted-partners-wrapper',
+                '.about-section-wrapper',
+                '.homepage-sections-container',
+                
+                // Alternative selectors
+                '[class*="help"]',
+                '[class*="trusted"]',
+                '[class*="about"]',
+                '[class*="section"]',
+                '#trusted-partners-section',
+                '#about-section',
+                
+                // Component selectors
+                '[data-v-*]',
+                '.w-full.mt-0',
+                '.w-full.pt-0',
+                
+                // Generic container selectors
+                'main > div',
+                '.container',
+                'section'
+            ];
+            
+            output += 'Checking selectors...\n\n';
+            
+            possibleSelectors.forEach(selector => {
+                try {
+                    const elements = document.querySelectorAll(selector);
+                    if (elements.length > 0) {
+                        output += `✅ FOUND: "${selector}" (${elements.length} elements)\n`;
+                        elements.forEach((el, idx) => {
+                            const classes = el.className || '[no class]';
+                            const id = el.id || '[no id]';
+                            output += `   [${idx}] tag: ${el.tagName}, id: ${id}, classes: ${classes.substring(0, 100)}\n`;
+                        });
+                        output += '\n';
+                    }
+                } catch (e) {
+                    // Skip invalid selectors
+                }
+            });
+            
+            output += '\n=== LOOKING FOR CONTENT TEXT ===\n\n';
+            
+            // Cari berdasarkan text content
+            const allDivs = document.querySelectorAll('div');
+            allDivs.forEach((div, idx) => {
+                const text = div.textContent || '';
+                if (text.includes('Butuh Bantuan') || text.includes('Trusted Partners') || text.includes('JASA PAYPAL')) {
+                    const classes = div.className || '[no class]';
+                    const id = div.id || '[no id]';
+                    output += `✅ Found content: "${text.substring(0, 30)}..."\n`;
+                    output += `   Classes: ${classes.substring(0, 150)}\n`;
+                    output += `   ID: ${id}\n`;
+                    output += `   Parent: ${div.parentElement?.tagName} .${div.parentElement?.className?.substring(0, 50)}\n\n`;
+                }
+            });
+            
+            result.textContent = output;
+            
+            // Redirect ke homepage untuk run fix
+            setTimeout(() => {
+                if (confirm('Element ditemukan! Redirect ke homepage untuk apply fix?')) {
+                    // Save selector info to localStorage
+                    localStorage.setItem('debug_selectors', output);
+                    window.location.href = 'http://localhost:3000/';
+                }
+            }, 2000);
+        }
+        
+        // Auto run on load
+        window.addEventListener('load', () => {
+            const savedOutput = localStorage.getItem('debug_selectors');
+            if (savedOutput) {
+                document.getElementById('result').textContent = '=== SAVED RESULTS ===\n\n' + savedOutput;
+            }
+        });
+    </script>
+</body>
+</html>
+

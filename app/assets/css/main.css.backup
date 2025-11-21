@@ -1,0 +1,1717 @@
+@import "tailwindcss";
+@import "@nuxt/ui-pro";
+@import "./section-spacing-fix.css";
+@import "./scroll-buttons.css";
+@import "./spacing-optimization.css";
+
+/* Content source and theme configuration */
+/* @source "../../../content/"; */
+
+/* @theme {
+  --font-sans: 'Poppins', 'Inter', sans-serif;
+  --font-nunito: 'Poppins', 'Inter', sans-serif;
+  --font-exo: 'Poppins', 'Inter', sans-serif;
+  --font-plus-jakarta-sans: 'Poppins', 'Inter', sans-serif;
+  --font-montserrat: 'Poppins', 'Inter', sans-serif;
+} */
+
+:root {
+  /* Light mode refreshed palette — clean, lively, professional */
+  /* Core backgrounds */
+  --bg: #F8FAFC;           /* Light slate */
+  --surface: #FFFFFF;      /* Pure white surfaces */
+  --subtle-bg: #F1F5F9;    /* Subtle section background */
+
+  /* Text colors */
+  --text: #0F172A;         /* Slate-900 */
+  --text-secondary: #475569; /* Slate-600 */
+  --heading: #0B1220;      /* Deep heading */
+
+  /* Links (Brand accent - Professional Blue) */
+  --link: #3b82f6;         /* Blue 500 */
+  --link-hover: #2563eb;   /* Blue 600 */
+
+  /* Call-to-Action (Professional Blue) */
+  --cta-bg: #3b82f6;       /* Blue 500 */
+  --cta-bg-hover: #2563eb; /* Blue 600 on hover */
+  --cta-text: #FFFFFF;     /* White text on Blue for perfect contrast */
+
+  /* Borders and separators */
+  --border: #E5E7EB;       /* Neutral light border */
+
+  /* Icons */
+  --icon: #0F172A;         /* Match text */
+  --icon-hover: #000000;   /* Pure black on hover */
+
+  /* Existing UI token fallback */
+  --ui-bg: var(--bg);
+
+  /* Page background gradient (subtle, airy) */
+  --bg-gradient: radial-gradient(1100px 520px at 110% -10%, color-mix(in oklab, var(--cta-bg), #fff 96%), transparent 55%),
+                  radial-gradient(900px 420px at -10% 0%, color-mix(in oklab, var(--link), #fff 97%), transparent 60%),
+                  linear-gradient(180deg, color-mix(in oklab, #FFFFFF, var(--bg) 80%), var(--bg));
+}
+
+/* Base typography */
+html, body {
+  line-height: 1.6;
+}
+
+.dark {
+  /* Dark mode overrides - refreshed cool palette */
+  --bg: #0b0f14;
+  --surface: #11161c;
+  --subtle-bg: #0d1419;
+
+  --text: #e6edf3;
+  --text-secondary: #9fb1c1;
+  --heading: #eaf2ff;
+
+  --link: #58a6ff;
+  --link-hover: #79c0ff;
+
+  --cta-bg: #22c55e;
+  --cta-bg-hover: #16a34a;
+  --cta-text: #FFFFFF;
+
+  --border: #26313e;
+
+  --icon: #e6edf3;
+  --icon-hover: #FFFFFF;
+
+  --ui-bg: var(--bg);
+
+  /* Page background gradient (dark) */
+  --bg-gradient: radial-gradient(1100px 520px at 110% -10%, color-mix(in oklab, var(--link), transparent 82%), transparent 55%),
+                  radial-gradient(900px 420px at -10% 0%, color-mix(in oklab, var(--cta-bg), transparent 84%), transparent 60%),
+                  linear-gradient(180deg, color-mix(in oklab, #0b0f14, #11161c 50%), var(--bg));
+}
+
+/* Base application colors */
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  background-image: var(--bg-gradient);
+  background-repeat: no-repeat;
+  transition: background-color .25s ease, color .2s ease, border-color .2s ease, background-image .3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+}
+
+/* Secondary text helper */
+.text-secondary, .muted, .subtitle {
+  color: var(--text-secondary);
+}
+
+/* Links */
+a[href]:not(.btn-cta):not(.no-link-style) {
+  color: var(--link) !important;
+}
+a[href]:not(.btn-cta):not(.no-link-style):hover,
+a[href]:not(.btn-cta):not(.no-link-style):focus {
+  color: var(--link-hover) !important;
+}
+
+/*
+  Unified Box Utilities
+  - Use to give all cards/boxes a consistent, modern look across light/dark, mobile/desktop
+  - Apply class="ui-box" to container elements or UPageCard via class prop
+*/
+.ui-box {
+  /* Base surface */
+  background: color-mix(in oklab, var(--surface), transparent 0%);
+  border: 1px solid color-mix(in oklab, var(--border), transparent 0%);
+  border-radius: 16px; /* rounded-2xl */
+  box-shadow: 0 6px 24px -6px color-mix(in oklab, #000, transparent 85%);
+  transition: box-shadow .25s ease, transform .2s ease, background-color .25s ease, border-color .25s ease;
+  backdrop-filter: saturate(120%) blur(2px);
+}
+.ui-box:hover {
+  box-shadow: 0 10px 32px -6px color-mix(in oklab, #000, transparent 80%);
+  transform: translateY(-2px);
+}
+.ui-box:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--link), transparent 60%), 0 10px 32px -6px color-mix(in oklab, #000, transparent 80%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-box { transition: background-color .1s ease, border-color .1s ease; }
+  .ui-box:hover { transform: none; }
+}
+
+/* Softer variant for content heavy sections */
+.ui-box-soft {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--surface), transparent 0%),
+    color-mix(in oklab, var(--subtle-bg), transparent 0%) 100%);
+  border: 1px solid color-mix(in oklab, var(--border), transparent 0%);
+  border-radius: 20px; /* rounded-3xl */
+  box-shadow: 0 4px 18px -6px color-mix(in oklab, #000, transparent 87%);
+  transition: box-shadow .25s ease, transform .2s ease, background .3s ease;
+}
+.ui-box-soft:hover { transform: translateY(-2px); box-shadow: 0 10px 28px -6px color-mix(in oklab, #000, transparent 80%); }
+
+/* Accent border variant */
+.ui-box-accent {
+  border: 1px solid color-mix(in oklab, var(--link), transparent 50%);
+  box-shadow: 0 6px 22px -6px color-mix(in oklab, var(--link), transparent 70%);
+}
+
+/* Partner card tune-up (scoped component also applies Tailwind, this is a gentle enhancement) */
+.trusted-partners-swiper .partner-card {
+  padding: .75rem; /* better spacing for logos */
+}
+.trusted-partners-swiper .partner-logo {
+  max-height: 44px;
+}
+@media (min-width: 768px) {
+  .trusted-partners-swiper .partner-logo { max-height: 54px; }
+}
+
+/* ================
+   Global Icon/Loader Utilities
+   - Centering, sizing, and non-overlap rules
+   - Usable across all pages and inside blog .post-content
+   ================ */
+.icon-center, .post-content .icon-center {
+  display: inline-grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.icon-stack-safe, .post-content .icon-stack-safe {
+  display: inline-grid;
+  justify-items: center;
+  align-items: center;
+  gap: clamp(8px, 2vw, 16px);
+  width: 100%;
+}
+
+/* Default loader variables */
+:root {
+  --icon-size: 64px;
+  --icon-color: var(--cta-bg);
+  --icon-bg: color-mix(in oklab, var(--icon-color), #fff 90%);
+}
+
+/* Default smaller size on very small screens (ignored when inline style overrides) */
+@media (max-width: 480px) {
+  .icon-center, .post-content .icon-center {
+    --icon-size: 56px;
+  }
+}
+
+/* Book Loading (CSS only) */
+.jp-book-loader {
+  position: relative;
+  width: var(--icon-size);
+  height: calc(var(--icon-size) * 0.72);
+  perspective: 600px;
+}
+.jp-book-loader .book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--icon-bg), #fff);
+  box-shadow: 0 6px 18px rgba(0,0,0,.1), inset 0 0 0 2px color-mix(in oklab, var(--icon-color), #000 10%);
+}
+.jp-book-loader .spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  background: color-mix(in oklab, var(--icon-color), #000 20%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.jp-book-loader .page {
+  position: absolute;
+  top: 6%;
+  bottom: 6%;
+  left: 12%;
+  right: 4%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+  transform-origin: left center;
+}
+.jp-book-loader .page.animate {
+  animation: jpPageFlip 1.2s ease-in-out infinite;
+}
+.jp-book-loader .page.p2 { animation-delay: .2s; }
+.jp-book-loader .page.p3 { animation-delay: .4s; }
+
+@keyframes jpPageFlip {
+  0%   { transform: rotateY(0deg); }
+  40%  { transform: rotateY(-160deg); }
+  60%  { transform: rotateY(-160deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+/* Cool Loading (conic spinner) */
+.jp-cool-loader {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--icon-color) 0 60%, transparent 60% 100%);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 58%, #000 60%);
+          mask-image: radial-gradient(closest-side, transparent 58%, #000 60%);
+  animation: jpSpin 1s linear infinite;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.12));
+}
+@keyframes jpSpin { to { transform: rotate(360deg); } }
+
+/* Progress ring base */
+.jp-progress {
+  --ring-size: var(--icon-size);
+  --ring-color: var(--icon-color);
+  width: var(--ring-size);
+  height: var(--ring-size);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.jp-progress svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.jp-progress .bg {
+  stroke: color-mix(in oklab, var(--ring-color), #000 88%);
+  opacity: .15;
+}
+.jp-progress .bar {
+  stroke: var(--ring-color);
+  transition: stroke-dashoffset .3s ease;
+}
+.jp-progress .label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text);
+}
+.jp-progress .label small {
+  display: block;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .jp-cool-loader { animation-duration: 2.4s; }
+  .jp-book-loader .page.animate { animation-duration: 2s; }
+}
+
+/* Divider */
+hr {
+  border-color: var(--border);
+}
+
+/* Header surface and dropdowns */
+#stickyHeader {
+  background-color: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+#stickyHeader .menu, #stickyHeader .dropdown, #stickyHeader .popover, #stickyHeader .group-hover\:block, #stickyHeader .bg-white {
+  background-color: var(--surface) !important;
+  color: var(--text);
+  border-color: var(--border) !important;
+}
+
+/* Map common utility classes to theme tokens */
+.bg-white {
+  background-color: var(--surface) !important;
+}
+.text-gray-800, .text-gray-700, .text-black {
+  color: var(--text) !important;
+}
+.border-gray-200, .border-gray-100 {
+  border-color: var(--border) !important;
+}
+
+/* CTA button utility */
+.btn-cta {
+  background-color: var(--cta-bg);
+  color: var(--cta-text);
+  border: 1px solid color-mix(in oklab, var(--cta-bg), #000 15%);
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: var(--cta-bg-hover);
+}
+
+/* Icons using currentColor (only when no explicit text-* utility provided) */
+svg:not([class*="text-"]), [class^="i-"]:not([class*="text-"]), [class*=" i-"]:not([class*="text-"]) {
+  color: var(--icon);
+}
+svg:not([class*="text-"]):hover, [class^="i-"]:not([class*="text-"]):hover, [class*=" i-"]:not([class*="text-"]):hover {
+  color: var(--icon-hover);
+}
+/* Subtle icon interactions */
+[class^="i-"], [class*=" i-"], svg { transition: color .2s ease, transform .2s ease, filter .2s ease; }
+[class^="i-"]:hover, [class*=" i-"]:hover, svg:hover { transform: translateY(-1px); }
+.dark [class^="i-"]:hover, .dark [class*=" i-"]:hover, .dark svg:hover { filter: drop-shadow(0 0 8px rgba(255,255,255,0.09)); }
+
+/* Ensure icons look great on dark even if text-blue-* is used */
+.dark svg[class*="text-blue-"],
+.dark [class^="i-"][class*="text-blue-"],
+.dark [class*=" i-"][class*="text-blue-"] {
+  color: var(--icon) !important;
+}
+.dark svg[class*="text-blue-"]:hover,
+.dark [class^="i-"][class*="text-blue-"]:hover,
+.dark [class*=" i-"][class*="text-blue-"]:hover {
+  color: var(--icon-hover) !important;
+}
+
+/* Subtle banners/sliders background helpers */
+.banner-dark, .slider-dark {
+  background-color: var(--surface);
+}
+
+
+/* Additional utility mappings for theme consistency */
+.text-gray-600, .text-gray-500, .text-gray-400, .text-gray-300 { color: var(--text-secondary) !important; }
+.bg-gray-100, .bg-gray-50 { background-color: var(--subtle-bg) !important; }
+
+/* Extra helpers to align Nuxt UI Pro utilities with theme tokens */
+.bg-elevated { background-color: var(--surface) !important; }
+.bg-elevated\/50 { background-color: color-mix(in oklab, var(--surface), transparent 50%) !important; }
+.ring-default { --tw-ring-color: var(--border) !important; }
+.border-default { border-color: var(--border) !important; }
+/* Normalize common dark utilities to theme tokens */
+.dark .bg-gray-800 { background-color: var(--surface) !important; }
+.dark .bg-gray-800\/90 { background-color: color-mix(in oklab, var(--surface), transparent 10%) !important; }
+.dark .bg-gray-900 { background-color: var(--bg) !important; }
+.dark .hover\:bg-gray-800:hover { background-color: var(--surface) !important; }
+.dark .border-gray-700, .dark .border-gray-600 { border-color: var(--border) !important; }
+
+/* Adjust blue-tint helpers in dark mode to subtle glaze */
+.dark .hover\:bg-blue-50:hover { background-color: rgba(29, 161, 242, 0.08) !important; }
+.dark .bg-blue-50 { background-color: rgba(29, 161, 242, 0.06) !important; }
+
+/* Override gradient strips in header to dark surfaces */
+.dark #stickyHeader .bg-gradient-to-r { background-image: linear-gradient(90deg, #0b0f14, #11161c) !important; }
+
+/* Map semi-transparent white backgrounds to dark surfaces in dark mode */
+.dark .bg-white\/90 { background-color: rgba(22, 27, 34, 0.9) !important; }
+.dark .bg-white\/80 { background-color: rgba(22, 27, 34, 0.8) !important; }
+.dark .bg-white\/70 { background-color: rgba(22, 27, 34, 0.7) !important; }
+
+/* Fix white and amber backgrounds in dark mode */
+.dark .bg-white { background-color: var(--surface) !important; }
+.dark .bg-gradient-to-br.from-amber-50.to-white {
+  background-image: linear-gradient(to bottom right, var(--surface), var(--bg)) !important;
+}
+.dark .bg-gradient-to-br.from-white.to-amber-50 {
+  background-image: linear-gradient(to bottom right, var(--surface), var(--bg)) !important;
+}
+.dark .bg-amber-50 { background-color: var(--surface) !important; }
+.dark .bg-amber-100 { background-color: color-mix(in oklab, var(--surface), #000 10%) !important; }
+.dark .hover\:bg-amber-50:hover { background-color: color-mix(in oklab, var(--surface), #fff 5%) !important; }
+.dark .hover\:bg-amber-100:hover { background-color: color-mix(in oklab, var(--surface), #fff 10%) !important; }
+
+/* Fix amber borders in dark mode */
+.dark .border-amber-200 { border-color: color-mix(in oklab, var(--border), #000 10%) !important; }
+.dark .hover\:border-amber-400:hover { border-color: color-mix(in oklab, var(--border), #fff 10%) !important; }
+
+/* Fix amber text in dark mode for better visibility */
+.dark .text-amber-600, .dark .text-amber-700 { color: var(--link) !important; }
+.dark .hover\:text-amber-700:hover { color: var(--link-hover) !important; }
+
+
+/* THEME: Light/Dark tokens override and accessibility (appended) */
+:root {
+  /* Light mode refreshed palette — clean, lively, professional (synced) */
+  /* Core backgrounds */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --subtle-bg: #F1F5F9;
+
+  /* Text colors */
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --heading: #0B1220;
+
+  /* Links (Professional Blue accent) */
+  --link: #3b82f6;
+  --link-hover: #2563eb;
+
+  /* Call-to-Action (Professional Blue) */
+  --cta-bg: #3b82f6;
+  --cta-bg-hover: #2563eb;
+  --cta-text: #FFFFFF;
+
+  /* Borders and separators */
+  --border: #E5E7EB;
+
+  /* Icons */
+  --icon: #0F172A;
+  --icon-hover: #000000;
+
+  /* UI tokens */
+  --ui-bg: var(--bg);
+  --ui-primary: #3b82f6;
+  --bg-gradient: radial-gradient(1100px 520px at 110% -10%, color-mix(in oklab, var(--cta-bg), #fff 96%), transparent 55%),
+                  radial-gradient(900px 420px at -10% 0%, color-mix(in oklab, var(--link), #fff 97%), transparent 60%),
+                  linear-gradient(180deg, color-mix(in oklab, #FFFFFF, var(--bg) 80%), var(--bg));
+}
+
+.dark {
+  /* Dark mode overrides - refreshed cool palette */
+  --bg: #0b0f14;
+  --surface: #11161c;
+  --subtle-bg: #0d1419;
+
+  --text: #e6edf3;
+  --text-secondary: #9fb1c1;
+  --heading: #eaf2ff;
+
+  --link: #58a6ff;
+  --link-hover: #79c0ff;
+
+  --cta-bg: #22c55e;
+  --cta-bg-hover: #16a34a;
+  --cta-text: #FFFFFF;
+
+  --border: #26313e;
+
+  --icon: #e6edf3;
+  --icon-hover: #ffffff;
+
+  /* UI tokens */
+  --ui-bg: var(--bg);
+  --ui-primary: #58a6ff;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
+/* System color scheme and accent for better native UI integration */
+:root { color-scheme: light dark; accent-color: var(--link); }
+.dark { color-scheme: dark; }
+.light { color-scheme: light; }
+
+/* Text selection colors for better UX in both modes */
+::selection { background-color: color-mix(in oklab, var(--link), #000 20%); color: #ffffff; }
+
+
+/* Light mode remap: Tailwind blue utilities -> brand gold palette */
+html.light .text-blue-600, html:not(.dark) .text-blue-600 { color: var(--link) !important; }
+html.light .hover\:text-blue-600:hover, html:not(.dark) .hover\:text-blue-600:hover { color: var(--link-hover) !important; }
+html.light .text-blue-500, html:not(.dark) .text-blue-500 { color: var(--link) !important; }
+html.light .text-blue-400, html:not(.dark) .text-blue-400 { color: color-mix(in oklab, var(--link), #000 15%) !important; }
+html.light .text-blue-800, html:not(.dark) .text-blue-800 { color: color-mix(in oklab, var(--link), #000 30%) !important; }
+
+/* Dark mode text-white fixes - ensure white text is visible on dark backgrounds */
+.dark .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Dark mode text visibility improvements for cards and containers */
+.dark .bg-black\/60 .text-white,
+.dark .bg-black\/50 .text-white,
+.dark .bg-black\/40 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode button text improvements */
+.dark .bg-gradient-to-r .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-green-500 .text-white,
+.dark .bg-blue-500 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode icon visibility improvements */
+.dark .text-white svg,
+.dark .text-white [class^="i-"],
+.dark .text-white [class*=" i-"] {
+  color: #ffffff !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8)) !important;
+}
+
+/* Dark mode blog card text improvements */
+.dark .blog-card-body .text-white,
+.dark .blog-card-body h3.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Dark mode search and input improvements */
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+/* Dark mode scroll button improvements */
+.dark .scroll-button-icon {
+  color: #ffffff !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
+}
+
+/* Dark mode general text improvements */
+.dark .text-white,
+.dark .text-white * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Dark mode button and interactive element improvements */
+.dark button.text-white,
+.dark a.text-white,
+.dark .btn.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode card and container text improvements */
+.dark .card .text-white,
+.dark .container .text-white,
+.dark .bg-gradient-to-r .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode header and title improvements */
+.dark h1.text-white,
+.dark h2.text-white,
+.dark h3.text-white,
+.dark h4.text-white,
+.dark h5.text-white,
+.dark h6.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode paragraph and body text improvements */
+.dark p.text-white,
+.dark span.text-white,
+.dark div.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 500 !important;
+}
+
+/* Dark mode specific background combinations */
+.dark .bg-black .text-white,
+.dark .bg-gray-900 .text-white,
+.dark .bg-gray-800 .text-white,
+.dark .bg-slate-900 .text-white,
+.dark .bg-slate-800 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode gradient background text improvements */
+.dark .bg-gradient-to-r .text-white,
+.dark .bg-gradient-to-l .text-white,
+.dark .bg-gradient-to-t .text-white,
+.dark .bg-gradient-to-b .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode overlay text improvements */
+.dark .bg-black\/60 .text-white,
+.dark .bg-black\/50 .text-white,
+.dark .bg-black\/40 .text-white,
+.dark .bg-black\/30 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode icon improvements */
+.dark .text-white svg,
+.dark .text-white [class^="i-"],
+.dark .text-white [class*=" i-"],
+.dark .text-white .icon {
+  color: #ffffff !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8)) !important;
+}
+
+/* Dark mode link improvements */
+.dark a.text-white,
+.dark a.text-white:hover,
+.dark a.text-white:focus {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode colored background text improvements */
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-green-500 .text-white,
+.dark .bg-green-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-pink-500 .text-white,
+.dark .bg-pink-600 .text-white,
+.dark .bg-red-500 .text-white,
+.dark .bg-red-600 .text-white,
+.dark .bg-yellow-500 .text-white,
+.dark .bg-yellow-600 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode button text improvements */
+.dark .btn-primary .text-white,
+.dark .btn-secondary .text-white,
+.dark .btn-success .text-white,
+.dark .btn-danger .text-white,
+.dark .btn-warning .text-white,
+.dark .btn-info .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode card and panel text improvements */
+.dark .card .text-white,
+.dark .panel .text-white,
+.dark .modal .text-white,
+.dark .popover .text-white,
+.dark .tooltip .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode navigation text improvements */
+.dark .navbar .text-white,
+.dark .nav .text-white,
+.dark .menu .text-white,
+.dark .breadcrumb .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode form text improvements */
+.dark .form-control .text-white,
+.dark .input .text-white,
+.dark .textarea .text-white,
+.dark .select .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 500 !important;
+}
+
+/* Dark mode transparent background text improvements */
+.dark .bg-transparent .text-white,
+.dark .bg-opacity-0 .text-white,
+.dark .bg-opacity-10 .text-white,
+.dark .bg-opacity-20 .text-white,
+.dark .bg-opacity-30 .text-white,
+.dark .bg-opacity-40 .text-white,
+.dark .bg-opacity-50 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode backdrop blur text improvements */
+.dark .backdrop-blur .text-white,
+.dark .backdrop-blur-sm .text-white,
+.dark .backdrop-blur-md .text-white,
+.dark .backdrop-blur-lg .text-white,
+.dark .backdrop-blur-xl .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode glass effect text improvements */
+.dark .glass .text-white,
+.dark .glassmorphism .text-white,
+.dark .bg-white\/10 .text-white,
+.dark .bg-white\/20 .text-white,
+.dark .bg-white\/30 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode overlay and mask text improvements */
+.dark .overlay .text-white,
+.dark .mask .text-white,
+.dark .bg-black\/20 .text-white,
+.dark .bg-black\/30 .text-white,
+.dark .bg-black\/40 .text-white,
+.dark .bg-black\/50 .text-white,
+.dark .bg-black\/60 .text-white,
+.dark .bg-black\/70 .text-white,
+.dark .bg-black\/80 .text-white,
+.dark .bg-black\/90 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode specific component text improvements */
+.dark .hero .text-white,
+.dark .banner .text-white,
+.dark .slider .text-white,
+.dark .carousel .text-white,
+.dark .gallery .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background text improvements */
+.dark .bg-indigo-500 .text-white,
+.dark .bg-indigo-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-cyan-500 .text-white,
+.dark .bg-cyan-600 .text-white,
+.dark .bg-teal-500 .text-white,
+.dark .bg-teal-600 .text-white,
+.dark .bg-emerald-500 .text-white,
+.dark .bg-emerald-600 .text-white,
+.dark .bg-lime-500 .text-white,
+.dark .bg-lime-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-amber-500 .text-white,
+.dark .bg-amber-600 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special gradient text improvements */
+.dark .bg-gradient-to-r .text-white,
+.dark .bg-gradient-to-l .text-white,
+.dark .bg-gradient-to-t .text-white,
+.dark .bg-gradient-to-b .text-white,
+.dark .bg-gradient-to-tr .text-white,
+.dark .bg-gradient-to-tl .text-white,
+.dark .bg-gradient-to-br .text-white,
+.dark .bg-gradient-to-bl .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special shadow text improvements */
+.dark .shadow-lg .text-white,
+.dark .shadow-xl .text-white,
+.dark .shadow-2xl .text-white,
+.dark .shadow-inner .text-white,
+.dark .shadow-outline .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special border text improvements */
+.dark .border .text-white,
+.dark .border-2 .text-white,
+.dark .border-4 .text-white,
+.dark .border-8 .text-white,
+.dark .ring .text-white,
+.dark .ring-2 .text-white,
+.dark .ring-4 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special rounded text improvements */
+.dark .rounded .text-white,
+.dark .rounded-lg .text-white,
+.dark .rounded-xl .text-white,
+.dark .rounded-2xl .text-white,
+.dark .rounded-3xl .text-white,
+.dark .rounded-full .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations */
+.dark .bg-slate-500 .text-white,
+.dark .bg-slate-600 .text-white,
+.dark .bg-gray-500 .text-white,
+.dark .bg-gray-600 .text-white,
+.dark .bg-zinc-500 .text-white,
+.dark .bg-zinc-600 .text-white,
+.dark .bg-neutral-500 .text-white,
+.dark .bg-neutral-600 .text-white,
+.dark .bg-stone-500 .text-white,
+.dark .bg-stone-600 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with opacity */
+.dark .bg-slate-500\/50 .text-white,
+.dark .bg-slate-600\/50 .text-white,
+.dark .bg-gray-500\/50 .text-white,
+.dark .bg-gray-600\/50 .text-white,
+.dark .bg-zinc-500\/50 .text-white,
+.dark .bg-zinc-600\/50 .text-white,
+.dark .bg-neutral-500\/50 .text-white,
+.dark .bg-neutral-600\/50 .text-white,
+.dark .bg-stone-500\/50 .text-white,
+.dark .bg-stone-600\/50 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with high opacity */
+.dark .bg-slate-500\/80 .text-white,
+.dark .bg-slate-600\/80 .text-white,
+.dark .bg-gray-500\/80 .text-white,
+.dark .bg-gray-600\/80 .text-white,
+.dark .bg-zinc-500\/80 .text-white,
+.dark .bg-zinc-600\/80 .text-white,
+.dark .bg-neutral-500\/80 .text-white,
+.dark .bg-neutral-600\/80 .text-white,
+.dark .bg-stone-500\/80 .text-white,
+.dark .bg-stone-600\/80 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with full opacity */
+.dark .bg-slate-500\/100 .text-white,
+.dark .bg-slate-600\/100 .text-white,
+.dark .bg-gray-500\/100 .text-white,
+.dark .bg-gray-600\/100 .text-white,
+.dark .bg-zinc-500\/100 .text-white,
+.dark .bg-zinc-600\/100 .text-white,
+.dark .bg-neutral-500\/100 .text-white,
+.dark .bg-neutral-600\/100 .text-white,
+.dark .bg-stone-500\/100 .text-white,
+.dark .bg-stone-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors */
+.dark .bg-rose-500 .text-white,
+.dark .bg-rose-600 .text-white,
+.dark .bg-fuchsia-500 .text-white,
+.dark .bg-fuchsia-600 .text-white,
+.dark .bg-sky-500 .text-white,
+.dark .bg-sky-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-indigo-500 .text-white,
+.dark .bg-indigo-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white,
+.dark .bg-blue-500 .text-white,
+.dark .bg-blue-600 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and opacity */
+.dark .bg-rose-500\/50 .text-white,
+.dark .bg-rose-600\/50 .text-white,
+.dark .bg-fuchsia-500\/50 .text-white,
+.dark .bg-fuchsia-600\/50 .text-white,
+.dark .bg-sky-500\/50 .text-white,
+.dark .bg-sky-600\/50 .text-white,
+.dark .bg-blue-500\/50 .text-white,
+.dark .bg-blue-600\/50 .text-white,
+.dark .bg-indigo-500\/50 .text-white,
+.dark .bg-indigo-600\/50 .text-white,
+.dark .bg-blue-500\/50 .text-white,
+.dark .bg-blue-600\/50 .text-white,
+.dark .bg-blue-500\/50 .text-white,
+.dark .bg-blue-600\/50 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with special colors and high opacity */
+.dark .bg-rose-500\/80 .text-white,
+.dark .bg-rose-600\/80 .text-white,
+.dark .bg-fuchsia-500\/80 .text-white,
+.dark .bg-fuchsia-600\/80 .text-white,
+.dark .bg-sky-500\/80 .text-white,
+.dark .bg-sky-600\/80 .text-white,
+.dark .bg-blue-500\/80 .text-white,
+.dark .bg-blue-600\/80 .text-white,
+.dark .bg-indigo-500\/80 .text-white,
+.dark .bg-indigo-600\/80 .text-white,
+.dark .bg-blue-500\/80 .text-white,
+.dark .bg-blue-600\/80 .text-white,
+.dark .bg-blue-500\/80 .text-white,
+.dark .bg-blue-600\/80 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and full opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/20 .text-white,
+.dark .bg-rose-600\/20 .text-white,
+.dark .bg-fuchsia-500\/20 .text-white,
+.dark .bg-fuchsia-600\/20 .text-white,
+.dark .bg-sky-500\/20 .text-white,
+.dark .bg-sky-600\/20 .text-white,
+.dark .bg-blue-500\/20 .text-white,
+.dark .bg-blue-600\/20 .text-white,
+.dark .bg-indigo-500\/20 .text-white,
+.dark .bg-indigo-600\/20 .text-white,
+.dark .bg-blue-500\/20 .text-white,
+.dark .bg-blue-600\/20 .text-white,
+.dark .bg-blue-500\/20 .text-white,
+.dark .bg-blue-600\/20 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/30 .text-white,
+.dark .bg-rose-600\/30 .text-white,
+.dark .bg-fuchsia-500\/30 .text-white,
+.dark .bg-fuchsia-600\/30 .text-white,
+.dark .bg-sky-500\/30 .text-white,
+.dark .bg-sky-600\/30 .text-white,
+.dark .bg-blue-500\/30 .text-white,
+.dark .bg-blue-600\/30 .text-white,
+.dark .bg-indigo-500\/30 .text-white,
+.dark .bg-indigo-600\/30 .text-white,
+.dark .bg-blue-500\/30 .text-white,
+.dark .bg-blue-600\/30 .text-white,
+.dark .bg-blue-500\/30 .text-white,
+.dark .bg-blue-600\/30 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/40 .text-white,
+.dark .bg-rose-600\/40 .text-white,
+.dark .bg-fuchsia-500\/40 .text-white,
+.dark .bg-fuchsia-600\/40 .text-white,
+.dark .bg-sky-500\/40 .text-white,
+.dark .bg-sky-600\/40 .text-white,
+.dark .bg-blue-500\/40 .text-white,
+.dark .bg-blue-600\/40 .text-white,
+.dark .bg-indigo-500\/40 .text-white,
+.dark .bg-indigo-600\/40 .text-white,
+.dark .bg-blue-500\/40 .text-white,
+.dark .bg-blue-600\/40 .text-white,
+.dark .bg-blue-500\/40 .text-white,
+.dark .bg-blue-600\/40 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/60 .text-white,
+.dark .bg-rose-600\/60 .text-white,
+.dark .bg-fuchsia-500\/60 .text-white,
+.dark .bg-fuchsia-600\/60 .text-white,
+.dark .bg-sky-500\/60 .text-white,
+.dark .bg-sky-600\/60 .text-white,
+.dark .bg-blue-500\/60 .text-white,
+.dark .bg-blue-600\/60 .text-white,
+.dark .bg-indigo-500\/60 .text-white,
+.dark .bg-indigo-600\/60 .text-white,
+.dark .bg-blue-500\/60 .text-white,
+.dark .bg-blue-600\/60 .text-white,
+.dark .bg-blue-500\/60 .text-white,
+.dark .bg-blue-600\/60 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/70 .text-white,
+.dark .bg-rose-600\/70 .text-white,
+.dark .bg-fuchsia-500\/70 .text-white,
+.dark .bg-fuchsia-600\/70 .text-white,
+.dark .bg-sky-500\/70 .text-white,
+.dark .bg-sky-600\/70 .text-white,
+.dark .bg-blue-500\/70 .text-white,
+.dark .bg-blue-600\/70 .text-white,
+.dark .bg-indigo-500\/70 .text-white,
+.dark .bg-indigo-600\/70 .text-white,
+.dark .bg-blue-500\/70 .text-white,
+.dark .bg-blue-600\/70 .text-white,
+.dark .bg-blue-500\/70 .text-white,
+.dark .bg-blue-600\/70 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/90 .text-white,
+.dark .bg-rose-600\/90 .text-white,
+.dark .bg-fuchsia-500\/90 .text-white,
+.dark .bg-fuchsia-600\/90 .text-white,
+.dark .bg-sky-500\/90 .text-white,
+.dark .bg-sky-600\/90 .text-white,
+.dark .bg-blue-500\/90 .text-white,
+.dark .bg-blue-600\/90 .text-white,
+.dark .bg-indigo-500\/90 .text-white,
+.dark .bg-indigo-600\/90 .text-white,
+.dark .bg-blue-500\/90 .text-white,
+.dark .bg-blue-600\/90 .text-white,
+.dark .bg-blue-500\/90 .text-white,
+.dark .bg-blue-600\/90 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/95 .text-white,
+.dark .bg-rose-600\/95 .text-white,
+.dark .bg-fuchsia-500\/95 .text-white,
+.dark .bg-fuchsia-600\/95 .text-white,
+.dark .bg-sky-500\/95 .text-white,
+.dark .bg-sky-600\/95 .text-white,
+.dark .bg-blue-500\/95 .text-white,
+.dark .bg-blue-600\/95 .text-white,
+.dark .bg-indigo-500\/95 .text-white,
+.dark .bg-indigo-600\/95 .text-white,
+.dark .bg-blue-500\/95 .text-white,
+.dark .bg-blue-600\/95 .text-white,
+.dark .bg-blue-500\/95 .text-white,
+.dark .bg-blue-600\/95 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/98 .text-white,
+.dark .bg-rose-600\/98 .text-white,
+.dark .bg-fuchsia-500\/98 .text-white,
+.dark .bg-fuchsia-600\/98 .text-white,
+.dark .bg-sky-500\/98 .text-white,
+.dark .bg-sky-600\/98 .text-white,
+.dark .bg-blue-500\/98 .text-white,
+.dark .bg-blue-600\/98 .text-white,
+.dark .bg-indigo-500\/98 .text-white,
+.dark .bg-indigo-600\/98 .text-white,
+.dark .bg-blue-500\/98 .text-white,
+.dark .bg-blue-600\/98 .text-white,
+.dark .bg-blue-500\/98 .text-white,
+.dark .bg-blue-600\/98 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/99 .text-white,
+.dark .bg-rose-600\/99 .text-white,
+.dark .bg-fuchsia-500\/99 .text-white,
+.dark .bg-fuchsia-600\/99 .text-white,
+.dark .bg-sky-500\/99 .text-white,
+.dark .bg-sky-600\/99 .text-white,
+.dark .bg-blue-500\/99 .text-white,
+.dark .bg-blue-600\/99 .text-white,
+.dark .bg-indigo-500\/99 .text-white,
+.dark .bg-indigo-600\/99 .text-white,
+.dark .bg-blue-500\/99 .text-white,
+.dark .bg-blue-600\/99 .text-white,
+.dark .bg-blue-500\/99 .text-white,
+.dark .bg-blue-600\/99 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+/* Dark mode special background combinations with special colors and special opacity */
+.dark .bg-rose-500\/100 .text-white,
+.dark .bg-rose-600\/100 .text-white,
+.dark .bg-fuchsia-500\/100 .text-white,
+.dark .bg-fuchsia-600\/100 .text-white,
+.dark .bg-sky-500\/100 .text-white,
+.dark .bg-sky-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-indigo-500\/100 .text-white,
+.dark .bg-indigo-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white,
+.dark .bg-blue-500\/100 .text-white,
+.dark .bg-blue-600\/100 .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+html.light .bg-blue-50, html:not(.dark) .bg-blue-50 { background-color: color-mix(in oklab, var(--cta-bg), #fff 94%) !important; }
+html.light .bg-blue-100, html:not(.dark) .bg-blue-100 { background-color: color-mix(in oklab, var(--cta-bg), #fff 90%) !important; }
+html.light .hover\:bg-blue-50:hover, html:not(.dark) .hover\:bg-blue-50:hover { background-color: color-mix(in oklab, var(--cta-bg), #fff 94%) !important; }
+
+html.light .border-blue-200, html:not(.dark) .border-blue-200 { border-color: color-mix(in oklab, var(--cta-bg), #fff 80%) !important; }
+html.light .ring-blue-100, html:not(.dark) .ring-blue-100 { --tw-ring-color: color-mix(in oklab, var(--cta-bg), #fff 80%) !important; }
+
+html.light .bg-blue-500, html:not(.dark) .bg-blue-500 { background-color: var(--cta-bg) !important; }
+html.light .bg-blue-600, html:not(.dark) .bg-blue-600 { background-color: var(--cta-bg-hover) !important; }
+
+/* Gradients */
+html.light .from-blue-50, html:not(.dark) .from-blue-50 {
+  --tw-gradient-from: color-mix(in oklab, var(--cta-bg), #fff 94%) !important;
+  --tw-gradient-to: color-mix(in oklab, var(--cta-bg), #fff 98%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+html.light .from-blue-500, html:not(.dark) .from-blue-500 {
+  --tw-gradient-from: var(--cta-bg) !important;
+  --tw-gradient-to: color-mix(in oklab, var(--cta-bg), transparent 100%) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+html.light .to-blue-50, html:not(.dark) .to-blue-50 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg), #fff 94%) !important; }
+html.light .to-indigo-50, html:not(.dark) .to-indigo-50 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg), #fff 96%) !important; }
+html.light .to-blue-600, html:not(.dark) .to-blue-600 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg-hover), #000 8%) !important; }
+
+
+/* Light mode remap (extended): gradients and semi-transparent utilities */
+/* Gradient FROM mappings */
+html.light .from-blue-400, html:not(.dark) .from-blue-400 { --tw-gradient-from: color-mix(in oklab, var(--cta-bg), #000 5%) !important; --tw-gradient-to: color-mix(in oklab, var(--cta-bg), transparent 100%) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+html.light .from-blue-600, html:not(.dark) .from-blue-600 { --tw-gradient-from: var(--cta-bg-hover) !important; --tw-gradient-to: color-mix(in oklab, var(--cta-bg-hover), transparent 100%) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+html.light .from-blue-400\/5, html:not(.dark) .from-blue-400\/5 { --tw-gradient-from: color-mix(in oklab, var(--cta-bg), transparent 95%) !important; --tw-gradient-to: color-mix(in oklab, var(--cta-bg), transparent 100%) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+
+/* Gradient TO mappings */
+html.light .to-blue-400, html:not(.dark) .to-blue-400 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg), #000 5%) !important; }
+html.light .to-blue-700, html:not(.dark) .to-blue-700 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg-hover), #000 15%) !important; }
+html.light .to-blue-100\/40, html:not(.dark) .to-blue-100\/40 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg), transparent 60%) !important; }
+html.light .to-blue-50\/50, html:not(.dark) .to-blue-50\/50 { --tw-gradient-to: color-mix(in oklab, var(--cta-bg), transparent 50%) !important; }
+
+/* Gradient VIA mappings */
+html.light .via-blue-500, html:not(.dark) .via-blue-500 { --tw-gradient-stops: var(--tw-gradient-from), var(--ui-primary), var(--tw-gradient-to) !important; }
+html.light .via-blue-400, html:not(.dark) .via-blue-400 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg), #000 5%), var(--tw-gradient-to) !important; }
+html.light .via-blue-50\/30, html:not(.dark) .via-blue-50\/30 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg), transparent 70%), var(--tw-gradient-to) !important; }
+html.light .via-blue-300\/50, html:not(.dark) .via-blue-300\/50 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg), transparent 50%), var(--tw-gradient-to) !important; }
+html.light .via-blue-300\/40, html:not(.dark) .via-blue-300\/40 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg), transparent 60%), var(--tw-gradient-to) !important; }
+html.light .via-blue-500\/20, html:not(.dark) .via-blue-500\/20 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg-hover), transparent 80%), var(--tw-gradient-to) !important; }
+html.light .via-blue-500\/30, html:not(.dark) .via-blue-500\/30 { --tw-gradient-stops: var(--tw-gradient-from), color-mix(in oklab, var(--cta-bg-hover), transparent 70%), var(--tw-gradient-to) !important; }
+
+/* Semi-transparent backgrounds */
+html.light .bg-blue-500\/5, html:not(.dark) .bg-blue-500\/5 { background-color: color-mix(in oklab, var(--cta-bg), transparent 95%) !important; }
+html.light .bg-blue-500\/15, html:not(.dark) .bg-blue-500\/15 { background-color: color-mix(in oklab, var(--cta-bg), transparent 85%) !important; }
+
+/* Borders with opacity variants */
+html.light .border-blue-200\/50, html:not(.dark) .border-blue-200\/50 { border-color: color-mix(in oklab, var(--cta-bg), #fff 85%) !important; }
+html.light .border-blue-200\/70, html:not(.dark) .border-blue-200\/70 { border-color: color-mix(in oklab, var(--cta-bg), #fff 82%) !important; }
+
+
+/* Footer readability overrides: apply tokens per color mode for footer */
+.dark .footer-theme {
+  /* On dark backgrounds, keep light, readable tokens */
+  --text: #e6edf3;
+  --text-secondary: #cbd5e1;
+  --heading: #eaf2ff;
+  --icon: #e6edf3;
+  --icon-hover: #ffffff;
+
+  /* Modern dark footer background */
+  background-color: #0b1220 !important;
+  background-image:
+    radial-gradient(1200px 320px at 50% -80px, color-mix(in oklab, var(--ui-primary), transparent 86%), transparent 70%),
+    linear-gradient(180deg, #0a0f1e 0%, #0b1326 55%, #0a0f1e 100%) !important;
+  /* Soft, subtle top border for separation */
+  border-color: color-mix(in oklab, #f59e0b, transparent 78%) !important;
+}
+/* Light mode footer uses standard site tokens for high contrast on white background */
+html.light .footer-theme, html:not(.dark) .footer-theme {
+  --text: #1A1A1A;
+  --text-secondary: #666666;
+  --heading: #111111;
+  --icon: #1A1A1A;
+  --icon-hover: #000000;
+}
+/* Ensure utility classes don't force unreadable white text on light footer */
+html.light .footer-theme .text-white,
+html:not(.dark) .footer-theme .text-white {
+  color: var(--text) !important;
+}
+
+
+/* Form placeholder readability across light and dark modes */
+input::placeholder,
+textarea::placeholder,
+input[type="search"]::placeholder {
+  color: color-mix(in oklab, var(--text-secondary), transparent 35%) !important;
+  opacity: 1; /* ensure not dimmed by browser defaults */
+}
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark input[type="search"]::placeholder {
+  color: color-mix(in oklab, var(--text-secondary), transparent 20%) !important;
+  opacity: 1;
+}
+
+
+/* ===== Light Footer Theming Overrides (fresh, cohesive, not dark) ===== */
+html.light .footer-theme, html:not(.dark) .footer-theme {
+  /* Softer warm gradient so it doesn't look plain white */
+  background-color: #FFFDF7 !important;
+  background-image:
+    radial-gradient(900px 260px at 50% -60px, color-mix(in oklab, var(--cta-bg), #fff 85%), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--cta-bg), #fff 93%), color-mix(in oklab, var(--link), #fff 97%)) !important;
+  border-color: color-mix(in oklab, var(--cta-bg), #000 14%) !important;
+}
+html.light .footer-theme .bg-gradient-to-b:not(.bg-clip-text),
+html:not(.dark) .footer-theme .bg-gradient-to-b:not(.bg-clip-text),
+html.light .footer-theme .bg-gradient-to-br:not(.bg-clip-text),
+html:not(.dark) .footer-theme .bg-gradient-to-br:not(.bg-clip-text),
+html.light .footer-theme .bg-gradient-to-r:not(.bg-clip-text),
+html:not(.dark) .footer-theme .bg-gradient-to-r:not(.bg-clip-text),
+html.light .footer-theme .from-gray-900:not(.bg-clip-text),
+html:not(.dark) .footer-theme .from-gray-900:not(.bg-clip-text),
+html.light .footer-theme .via-gray-800:not(.bg-clip-text),
+html:not(.dark) .footer-theme .via-gray-800:not(.bg-clip-text),
+html.light .footer-theme .to-gray-900:not(.bg-clip-text),
+html:not(.dark) .footer-theme .to-gray-900:not(.bg-clip-text),
+html.light .footer-theme .from-gray-800:not(.bg-clip-text),
+html:not(.dark) .footer-theme .from-gray-800:not(.bg-clip-text) {
+  background-image: none !important;
+  /* Use a very soft, warm-tinted surface for cards/boxes in the footer */
+  background-color: color-mix(in oklab, var(--cta-bg), #fff 97%) !important;
+}
+html.light .footer-theme .border-gray-700\/80,
+html:not(.dark) .footer-theme .border-gray-700\/80 {
+  border-color: color-mix(in oklab, var(--cta-bg), #000 16%) !important;
+}
+html.light .footer-theme .bg-black\/30,
+html:not(.dark) .footer-theme .bg-black\/30,
+html.light .footer-theme .dark\:bg-black\/40,
+html:not(.dark) .footer-theme .dark\:bg-black\/40 {
+  background-color: color-mix(in oklab, var(--cta-bg), transparent 90%) !important;
+}
+html.light .footer-theme .hover\:bg-gray-800\/70:hover,
+html:not(.dark) .footer-theme .hover\:bg-gray-800\/70:hover {
+  background-color: color-mix(in oklab, var(--cta-bg), transparent 82%) !important;
+}
+/* Pattern layer subtlety in light/dark for better look */
+html.light .footer-theme .pattern-layer { opacity: .06 !important; }
+.dark .footer-theme .pattern-layer { opacity: .12 !important; }
+
+/* Additional mappings for blue utilities often used in components */
+html.light .text-blue-300, html:not(.dark) .text-blue-300 { color: color-mix(in oklab, var(--link), #fff 25%) !important; }
+html.light .text-blue-700, html:not(.dark) .text-blue-700 { color: color-mix(in oklab, var(--link), #000 20%) !important; }
+html.light .hover\:text-blue-700:hover, html:not(.dark) .hover\:text-blue-700:hover { color: color-mix(in oklab, var(--link), #000 25%) !important; }
+
+
+/* Footer, light mode: normalize very light yellow text classes for better contrast */
+html.light .footer-theme .text-yellow-50,
+html:not(.dark) .footer-theme .text-yellow-50 { color: var(--text) !important; }
+html.light .footer-theme .hover\:text-yellow-50:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-50:hover { color: var(--heading) !important; }
+html.light .footer-theme .group:hover .group-hover\:text-yellow-50,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-50 { color: var(--heading) !important; }
+
+/* Footer, light mode: remap yellow hover utilities to accessible dark text for readability (keep static gold accents) */
+html.light .footer-theme .hover\:text-yellow-300:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-300:hover,
+html.light .footer-theme .hover\:text-yellow-400:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-400:hover,
+html.light .footer-theme .hover\:text-yellow-500:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-500:hover,
+html.light .footer-theme .hover\:text-yellow-600:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-600:hover,
+html.light .footer-theme .hover\:text-yellow-600\/70:hover,
+html:not(.dark) .footer-theme .hover\:text-yellow-600\/70:hover { color: var(--heading) !important; }
+
+html.light .footer-theme .group:hover .group-hover\:text-yellow-300,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-300,
+html.light .footer-theme .group:hover .group-hover\:text-yellow-400,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-400,
+html.light .footer-theme .group:hover .group-hover\:text-yellow-500,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-500,
+html.light .footer-theme .group:hover .group-hover\:text-yellow-600,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-600,
+html.light .footer-theme .group:hover .group-hover\:text-yellow-600\/70,
+html:not(.dark) .footer-theme .group:hover .group-hover\:text-yellow-600\/70 { color: var(--heading) !important; }
+
+
+/* Footer, light mode: neutralize dark left-right gradients used in footer titles (keep golden accents intact) */
+html.light .footer-theme .bg-gradient-to-r.from-gray-900,
+html:not(.dark) .footer-theme .bg-gradient-to-r.from-gray-900,
+html.light .footer-theme .bg-gradient-to-r.from-gray-800,
+html:not(.dark) .footer-theme .bg-gradient-to-r.from-gray-800,
+html.light .footer-theme .bg-gradient-to-r.to-gray-900,
+html:not(.dark) .footer-theme .bg-gradient-to-r.to-gray-900,
+html.light .footer-theme .bg-gradient-to-r.to-gray-800,
+html:not(.dark) .footer-theme .bg-gradient-to-r.to-gray-800,
+html.light .footer-theme .bg-gradient-to-r.via-gray-900,
+html:not(.dark) .footer-theme .bg-gradient-to-r.via-gray-900,
+html.light .footer-theme .bg-gradient-to-r.via-gray-800,
+html:not(.dark) .footer-theme .bg-gradient-to-r.via-gray-800 {
+  background-image: none !important;
+  background-color: var(--surface) !important;
+}
+
+/* Footer, light mode: readable default text colors for light background */
+html.light .footer-theme .text-gray-200,
+html:not(.dark) .footer-theme .text-gray-200 { color: var(--text) !important; }
+html.light .footer-theme .text-gray-300,
+html:not(.dark) .footer-theme .text-gray-300 { color: var(--text-secondary) !important; }
+
+
+/* Network/Device-aware performance adjustments for slow internet and low-spec devices */
+html.net-slow .animate-marquee,
+html.low-cpu .animate-marquee {
+  /* Slow down marquee to reduce CPU/GPU use on constrained devices */
+  animation-duration: 60s !important;
+}
+
+html.net-slow .carousel,
+html.low-cpu .carousel,
+html.net-slow .swiper,
+html.low-cpu .swiper {
+  /* Make transitions cheaper */
+  transition-duration: .2s !important;
+}
+
+html.net-slow .aos-animate,
+html.low-cpu .aos-animate {
+  transition-duration: .2s !important;
+}
+
+/* Help the browser skip rendering offscreen slide images */
+.banner-slider .slide-img {
+  content-visibility: auto;
+}
+
+
+/* Light mode header polish */
+html:not(.dark) .fancy-header {
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.07), 0 1px 0 var(--border) !important;
+  backdrop-filter: saturate(140%) blur(8px);
+}
+
+html:not(.dark) .footer-theme .pattern-layer { opacity: .06 !important; filter: saturate(110%); }
+html:not(.dark) .footer-theme .bg-gradient-to-br { background-image: linear-gradient(180deg, #FFFFFF, #F8FAFC) !important; }
+html:not(.dark) .footer-theme .bg-black\/30 { background-color: rgba(15, 23, 42, 0.02) !important; }
+html:not(.dark) .footer-theme [class*="border-gray-700"],
+html:not(.dark) .footer-theme [class*="border-gray-600"],
+html:not(.dark) .footer-theme [class*="border-gray-800"] { border-color: var(--border) !important; }
+
+/* Light mode text polish inside footer */
+html:not(.dark) .footer-theme .text-gray-300,
+html:not(.dark) .footer-theme .text-gray-200,
+html:not(.dark) .footer-theme .text-gray-400 { color: var(--text-secondary) !important; }
+html:not(.dark) .footer-theme .text-gray-100,
+html:not(.dark) .footer-theme .text-white { color: var(--text) !important; }
+
+/* Light mode cards inside footer slightly elevated */
+html:not(.dark) .footer-theme .rounded-xl,
+html:not(.dark) .footer-theme .rounded-lg { box-shadow: 0 10px 24px -8px rgba(2, 6, 23, 0.10); }
+
+
+/* Dark mode readability improvements: upgrade silver-ish gray-300 text inside popovers */
+html.dark #desktop-clock-popover .text-gray-300,
+html.dark #mobile-clock-popover .text-gray-300,
+html.dark [role="tooltip"] .text-gray-300 {
+  color: #e5e7eb; /* Tailwind gray-200 for better contrast on dark backgrounds */
+}
+
+
+/* ==============================================
+   Footer polish: elegant link underline, focus rings,
+   and light-mode hover color harmonization
+   ============================================== */
+
+/* Animated underline for footer links (menu items, categories, generic links) */
+.footer-theme .ui-link-footer-menu .footer-link-text,
+.footer-theme .ui-link-footer-menu-category .footer-link-text,
+.footer-theme a.footer-underline,
+.footer-theme .prose a {
+  position: relative;
+  text-decoration: none !important;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .28s ease-in-out, color .2s ease;
+}
+.footer-theme .ui-link-footer-menu:hover .footer-link-text,
+.footer-theme .ui-link-footer-menu:focus-visible .footer-link-text,
+.footer-theme .ui-link-footer-menu-category:hover .footer-link-text,
+.footer-theme .ui-link-footer-menu-category:focus-visible .footer-link-text,
+.footer-theme a.footer-underline:hover,
+.footer-theme a.footer-underline:focus-visible,
+.footer-theme .prose a:hover,
+.footer-theme .prose a:focus-visible {
+  background-size: 100% 2px;
+}
+
+/* Subtle focus rings for accessibility, harmonized with brand amber */
+.footer-theme .ui-link-footer-menu:focus-visible,
+.footer-theme .ui-link-footer-menu-category:focus-visible,
+.footer-theme a:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px color-mix(in oklab, #f59e0b, transparent 75%) !important;
+  border-color: color-mix(in oklab, #f59e0b, transparent 60%) !important;
+}
+
+/* Harmonize hover colors with brand amber and ensure coverage for all footer links */
+html.light body .footer-theme .group:hover .footer-section-title,
+html:not(.dark) body .footer-theme .group:hover .footer-section-title { color: #f59e0b !important; }
+html.light body .footer-theme .group:hover .footer-section-icon,
+html:not(.dark) body .footer-theme .group:hover .footer-section-icon { color: #f59e0b !important; }
+/* Light mode: menu item links */
+html.light body .footer-theme .ui-link-footer-menu:hover,
+html:not(.dark) body .footer-theme .ui-link-footer-menu:hover { color: #d97706 !important; }
+html.light body .footer-theme .ui-link-footer-menu:focus-visible,
+html:not(.dark) body .footer-theme .ui-link-footer-menu:focus-visible { color: #d97706 !important; }
+html.light body .footer-theme .ui-link-footer-menu:active,
+html:not(.dark) body .footer-theme .ui-link-footer-menu:active { color: #b45309 !important; }
+/* Light mode: category links */
+html.light body .footer-theme .ui-link-footer-menu-category:hover,
+html:not(.dark) body .footer-theme .ui-link-footer-menu-category:hover { color: #d97706 !important; }
+html.light body .footer-theme .ui-link-footer-menu-category:focus-visible,
+html:not(.dark) body .footer-theme .ui-link-footer-menu-category:focus-visible { color: #d97706 !important; }
+html.light body .footer-theme .ui-link-footer-menu-category:active,
+html:not(.dark) body .footer-theme .ui-link-footer-menu-category:active { color: #b45309 !important; }
+/* Dark mode: soften with warm yellow */
+html.dark body .footer-theme .ui-link-footer-menu:hover,
+html.dark body .footer-theme .ui-link-footer-menu:focus-visible,
+html.dark body .footer-theme .ui-link-footer-menu:active,
+html.dark body .footer-theme .ui-link-footer-menu-category:hover,
+html.dark body .footer-theme .ui-link-footer-menu-category:focus-visible,
+html.dark body .footer-theme .ui-link-footer-menu-category:active { color: #fde68a !important; }
+
+/* Slightly softer divider utility when needed */
+.footer-theme .divider-soft { border-color: color-mix(in oklab, #f59e0b, transparent 84%) !important; }
+
+/* Lift effect on footer cards across modes (subtle) */
+.footer-theme .card-hoverable { transition: transform .25s ease, box-shadow .25s ease; }
+.footer-theme .card-hoverable:hover { transform: translateY(-6px); box-shadow: 0 18px 36px -12px rgba(0,0,0,.35); }
+
+
+/* Flag icon alignment for language buttons */
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Mobile/small-screen optimization: hide decorative elements and heavy animations */
+@media (max-width: 768px) {
+  /* Explicitly mark decorative elements to hide on small screens */
+  .decorative-mobile { display: none !important; }
+
+  /* Disable heavy animated backgrounds and big decorative overlays */
+  .animated-bg, .parallax-bg, .hero-bg { background-image: none !important; animation: none !important; }
+  .trusted-card::before, .trusted-card::after { animation: none !important; background: none !important; content: none !important; }
+}
+
+/* Data Saver mode: keep UI lightweight */
+html.data-saver, html[data-data-saver="1"] {
+  /* Reduce/disable non-essential visuals globally when Data Saver is active */
+  background-image: none !important;
+}
+html.data-saver .decorative-only,
+html[data-data-saver="1"] .decorative-only,
+html.data-saver .animated-bg,
+html[data-data-saver="1"] .animated-bg,
+html.data-saver .parallax-bg,
+html[data-data-saver="1"] .parallax-bg,
+html.data-saver .hero-bg,
+html[data-data-saver="1"] .hero-bg {
+  background-image: none !important;
+  animation: none !important;
+}
+html.data-saver .trusted-card::before,
+html.data-saver .trusted-card::after,
+html[data-data-saver="1"] .trusted-card::before,
+html[data-data-saver="1"] .trusted-card::after {
+  animation: none !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* Text-only mode: aggressively hide media to show only text */
+html.data-saver-text img,
+html[data-data-saver-level="text"] img,
+html.data-saver-text picture,
+html[data-data-saver-level="text"] picture,
+html.data-saver-text video,
+html[data-data-saver-level="text"] video,
+html.data-saver-text canvas,
+html[data-data-saver-level="text"] canvas,
+html.data-saver-text svg.image,
+html[data-data-saver-level="text"] svg.image {
+  display: none !important;
+}
+
+
+/* Desktop visual improvements (Aug 2025)
+   - TrustedPartners: larger logos and gaps on wide screens
+   - Footer: more gap on very large screens
+   - Blog: improved desktop typography scale & spacing */
+@media (min-width: 1024px) {
+  /* Trusted Partners: more generous logo sizing and padding on desktop */
+  .trusted-partners-swiper .partner-card { padding: 1rem; }
+  .trusted-partners-swiper .partner-logo { max-height: 64px; }
+}
+@media (min-width: 1280px) {
+  .trusted-partners-swiper .partner-card { padding: 1.1rem; }
+  .trusted-partners-swiper .partner-logo { max-height: 72px; }
+  .trusted-partners-swiper .swiper-slide .grid { gap: 1.25rem; }
+
+  /* Footer widgets: add breathing room on very large screens */
+  .site-footer-widgets { gap: 1.75rem; }
+}
+
+/* Blog desktop readability enhancements */
+@media (min-width: 1024px) {
+  .post-content { font-size: 1.075rem !important; line-height: 1.9 !important; }
+  .post-content p { margin-block-end: 1.1rem; }
+}
+@media (min-width: 1280px) {
+  .post-content h1 { font-size: 32px !important; }
+  .post-content h2 { font-size: 26px !important; }
+  .post-content h3 { font-size: 22px !important; }
+}

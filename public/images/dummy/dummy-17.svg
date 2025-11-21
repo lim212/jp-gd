@@ -1,0 +1,38 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad17" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#32CD32;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="groundGrad17" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <filter id="blur17">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Sky Background -->
+  <rect width="100%" height="70%" fill="url(#skyGrad17)"/>
+  
+  <!-- Ground/Water Background -->
+  <rect x="0" y="70%" width="100%" height="30%" fill="url(#groundGrad17)"/>
+  
+  
+  <!-- Hills -->
+  <path d="M0,250 L200,200 L400,230 L600,190 L800,220 L800,400 L0,400 Z" fill="#32CD32" opacity="0.8"/>
+  <path d="M0,270 L150,240 L350,260 L550,220 L800,250 L800,400 L0,400 Z" fill="#FFD700" opacity="0.6"/>
+  
+  <!-- Sun -->
+  <circle cx="600" cy="80" r="25" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Clouds -->
+  <ellipse cx="150" cy="60" rx="30" ry="15" fill="white" opacity="0.7"/>
+  <ellipse cx="450" cy="40" rx="25" ry="12" fill="white" opacity="0.6"/>
+    
+  
+  <!-- Overlay for depth -->
+  <rect width="100%" height="100%" fill="rgba(0,0,0,0.1)" opacity="0.3"/>
+</svg>

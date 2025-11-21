@@ -1,0 +1,375 @@
+@import "tailwindcss";
+
+/* Critical CSS - loaded inline */
+@import "./component-visibility-fix.css";
+@import "./section-spacing-fix.css";
+/* scroll-buttons.css - DELETED */
+@import "./mobile-menu-text-fix.css";
+@import "./sections/trusted-partners.css";
+@import "./sections/blog.css";
+@import "./sections/berita-kami.css";
+
+/* Dark Mode - Complete Implementation */
+/* @import "./dark-mode-fixes.css"; */ /* DISABLED: Using new Burgundy Dark Mode */
+
+/* Floating Buttons - Clean Implementation */
+@import "./floating-buttons-clean.css";
+
+/* Simple Navigation Fix */
+/* Navigation hover fix removed */
+
+/* 🎯 SUPER PINTAR: GLOBAL CSS Variables System */
+
+/* Global Color Variables for Light Mode */
+:root {
+  /* Mobile Menu Variables */
+  --mobile-menu-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --mobile-menu-content-bg: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  --mobile-menu-border: transparent;
+  --mobile-menu-shadow: none;
+  --mobile-nav-bg: rgba(255, 255, 255, 0.95);
+  --mobile-nav-border: rgba(229, 231, 235, 0.3);
+  --mobile-logo-filter: none;
+  --mobile-logo-bg: transparent;
+  
+  /* Global Color Variables */
+  --text-primary: #374151;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --border-primary: #e5e7eb;
+  --border-secondary: #d1d5db;
+  --border-light: #f3f4f6;
+  
+  /* Component Specific */
+  --cta-bg: #ffffff;
+  --cta-border: rgba(229, 231, 235, 0.5);
+  --cta-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --banner-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --banner-text: #1f2937;
+  --banner-overlay: rgba(0, 0, 0, 0.1);
+  --banner-border: rgba(59, 130, 246, 0.3);
+  
+  /* Running Text Variables */
+  --running-text-bg: #1f2937;
+  --running-text-text: #ffffff;
+  --running-text-border: #374151;
+  --running-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Header Variables */
+  --header-bg: linear-gradient(to-r, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.90));
+  --header-border: rgba(255, 255, 255, 0.8);
+  --header-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
+  --header-text: #374151;
+  
+  /* Footer Variables */
+  --footer-bg: #1f2937;
+  --footer-text: #ffffff;
+  --footer-border: #374151;
+  --footer-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Color Variables for Dark Mode - BURGUNDY THEME */
+.dark {
+  /* Mobile Menu Variables */
+  --mobile-menu-bg: linear-gradient(135deg, #121214 0%, #0A0A0D 100%);
+  --mobile-menu-content-bg: linear-gradient(180deg, rgba(18, 18, 20, 0.1) 0%, rgba(10, 10, 13, 0.1) 100%);
+  --mobile-menu-border: 1px solid rgba(155, 27, 48, 0.3);
+  --mobile-menu-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --mobile-nav-bg: rgba(18, 18, 20, 0.95);
+  --mobile-nav-border: rgba(155, 27, 48, 0.3);
+  --mobile-logo-filter: brightness(0) invert(1);
+  --mobile-logo-bg: rgba(155, 27, 48, 0.1);
+  
+  /* Global Color Variables */
+  --text-primary: #FAFAFA;
+  --text-secondary: #E4E4E7;
+  --text-light: #A1A1AA;
+  --bg-primary: #121214;
+  --bg-secondary: #0A0A0D;
+  --bg-tertiary: #18181B;
+  --border-primary: rgba(250, 250, 250, 0.08);
+  --border-secondary: rgba(155, 27, 48, 0.4);
+  --border-light: rgba(250, 250, 250, 0.05);
+  
+  /* Component Specific */
+  --cta-bg: rgba(18, 18, 20, 0.95);
+  --cta-border: rgba(155, 27, 48, 0.6);
+  --cta-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --banner-bg: linear-gradient(135deg, #121214 0%, #0A0A0D 100%);
+  --banner-text: #FAFAFA;
+  --banner-overlay: rgba(0, 0, 0, 0.6);
+  --banner-border: rgba(155, 27, 48, 0.6);
+  
+  /* Running Text Variables */
+  --running-text-bg: #121214;
+  --running-text-text: #FAFAFA;
+  --running-text-border: rgba(155, 27, 48, 0.3);
+  --running-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  
+  /* Header Variables */
+  --header-bg: linear-gradient(to-r, rgba(18, 18, 20, 0.95), rgba(10, 10, 13, 0.90));
+  --header-border: rgba(155, 27, 48, 0.4);
+  --header-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  --header-text: #FAFAFA;
+  
+  /* Footer Variables */
+  --footer-bg: #0A0A0D;
+  --footer-text: #FAFAFA;
+  --footer-border: rgba(155, 27, 48, 0.3);
+  --footer-shadow: 0 -2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* SUPER PINTAR: Running Text Styles using CSS Variables */
+.global-running-text {
+  background: var(--running-text-bg, #1f2937) !important;
+  color: var(--running-text-text, #ffffff) !important;
+  border-top: 1px solid var(--running-text-border, #374151) !important;
+  border-bottom: 1px solid var(--running-text-border, #374151) !important;
+  box-shadow: var(--running-text-shadow, 0 1px 4px rgba(0, 0, 0, 0.1)) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.global-running-text * {
+  color: var(--running-text-text, #ffffff) !important;
+}
+
+/* SUPER PINTAR: Header Styles using CSS Variables */
+.global-header {
+  background: var(--header-bg, linear-gradient(to-r, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.90))) !important;
+  border: 1px solid var(--header-border, rgba(255, 255, 255, 0.8)) !important;
+  box-shadow: var(--header-shadow, 0 2px 20px rgba(0, 0, 0, 0.12)) !important;
+  color: var(--header-text, #374151) !important;
+}
+
+.global-header * {
+  color: var(--header-text, #374151) !important;
+}
+
+/* SUPER PINTAR: Footer Styles using CSS Variables */
+.global-footer {
+  background: var(--footer-bg, #1f2937) !important;
+  color: var(--footer-text, #ffffff) !important;
+  border-top: 1px solid var(--footer-border, #374151) !important;
+  box-shadow: var(--footer-shadow, 0 -2px 20px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Removed global-footer * selector to allow component-level text colors */
+/* .global-footer * {
+  color: var(--footer-text, #ffffff) !important;
+} */
+
+/* Content source and theme configuration */
+/* @source "../../../content/"; */
+
+/* @theme {
+  --font-sans: 'Poppins', 'Inter', sans-serif;
+  --font-nunito: 'Poppins', 'Inter', sans-serif;
+  --font-exo: 'Poppins', 'Inter', sans-serif;
+  --font-plus-jakarta-sans: 'Poppins', 'Inter', sans-serif;
+  --font-montserrat: 'Poppins', 'Inter', sans-serif;
+} */
+
+:root {
+  /* Light mode refreshed palette — clean, lively, professional */
+  /* Core backgrounds */
+  --bg: #F8FAFC;           /* Light slate */
+  --surface: #FFFFFF;      /* Pure white surfaces */
+  --subtle-bg: #F1F5F9;    /* Subtle section background */
+
+  /* Text colors */
+  --text: #0F172A;         /* Slate-900 */
+  --text-secondary: #475569; /* Slate-600 */
+  --heading: #0B1220;      /* Deep heading */
+
+  /* Links (Brand accent - Professional Blue) */
+  --link: #3b82f6;         /* Blue 500 */
+  --link-hover: #2563eb;   /* Blue 600 */
+
+  /* Call-to-Action (Professional Blue) */
+  --cta-bg: #3b82f6;       /* Blue 500 */
+  --cta-bg-hover: #2563eb; /* Blue 600 on hover */
+  --cta-text: #FFFFFF;     /* White text on Blue for perfect contrast */
+
+  /* Borders and separators */
+  --border: #E5E7EB;       /* Neutral light border */
+
+  /* Icons */
+  --icon: #0F172A;         /* Match text */
+  --icon-hover: #000000;   /* Pure black on hover */
+
+  /* Existing UI token fallback */
+  --ui-bg: var(--bg);
+
+  /* Page background gradient (super indah biru) */
+  --bg-gradient: radial-gradient(1200px 600px at 120% -15%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+                  radial-gradient(1000px 500px at -15% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 65%),
+                  radial-gradient(800px 400px at 50% 100%, rgba(30, 64, 175, 0.04) 0%, transparent 70%),
+                  linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* =====================================================
+   DARK MODE VARIABLES - BURGUNDY THEME
+   ===================================================== */
+.dark {
+  /* Backgrounds */
+  --bg: #0A0A0D;
+  --surface: #18181B;
+  --subtle-bg: #121214;
+  
+  /* Text Colors */
+  --text: #FAFAFA;
+  --text-secondary: #E4E4E7;
+  --heading: #ffffff;
+  
+  /* Links & CTAs - BURGUNDY */
+  --link: #FB7185;
+  --link-hover: #FDA4AF;
+  --cta-bg: #9B1B30;
+  --cta-bg-hover: #DC143C;
+  --cta-text: #FAFAFA;
+  
+  /* Structure */
+  --border: rgba(250, 250, 250, 0.08);
+  --icon: #E4E4E7;
+  --icon-hover: #FAFAFA;
+  
+  /* Background Gradient - Burgundy Version */
+  --bg-gradient: radial-gradient(1200px 600px at 120% -15%, rgba(155, 27, 48, 0.12) 0%, transparent 60%),
+                  radial-gradient(1000px 500px at -15% 0%, rgba(155, 27, 48, 0.10) 0%, transparent 65%),
+                  radial-gradient(800px 400px at 50% 100%, rgba(128, 0, 32, 0.08) 0%, transparent 70%),
+                  linear-gradient(180deg, #0A0A0D 0%, #121214 100%);
+}
+
+/* Base typography */
+html, body {
+  line-height: 1.6;
+}
+
+/* Base styles */
+body {
+  background: var(--bg-gradient);
+  color: var(--text);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* Dark mode base */
+.dark body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links */
+a[href]:not(.btn-cta):not(.no-link-style) {
+  color: var(--link) !important;
+}
+a[href]:not(.btn-cta):not(.no-link-style):hover,
+a[href]:not(.btn-cta):not(.no-link-style):focus {
+  color: var(--link-hover) !important;
+}
+
+/*
+  Unified Box Utilities
+  - Use to give all cards/boxes a consistent, modern look across light/dark, mobile/desktop
+  - Apply class="ui-box" to container elements or UPageCard via class prop
+*/
+.ui-box {
+  /* Base surface */
+  background: color-mix(in oklab, var(--surface), transparent 0%);
+  border: 1px solid color-mix(in oklab, var(--border), transparent 0%);
+  border-radius: 16px; /* rounded-2xl */
+  box-shadow: 0 6px 24px -6px color-mix(in oklab, #000, transparent 85%);
+  transition: box-shadow .25s ease, transform .2s ease, background-color .25s ease, border-color .25s ease;
+  backdrop-filter: saturate(120%) blur(2px);
+}
+
+/* Dark mode specific UI box improvements */
+.dark .ui-box {
+  background: color-mix(in oklab, var(--surface), transparent 0%);
+  border: 1px solid color-mix(in oklab, var(--border), transparent 0%);
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: saturate(110%) blur(4px);
+}
+.ui-box:hover {
+  box-shadow: 0 10px 32px -6px color-mix(in oklab, #000, transparent 80%);
+  transform: translateY(-2px);
+}
+
+/* Dark mode hover improvements */
+.dark .ui-box:hover {
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+.ui-box:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--link), transparent 60%), 0 10px 32px -6px color-mix(in oklab, #000, transparent 80%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-box { transition: background-color .1s ease, border-color .1s ease; }
+  .ui-box:hover { transform: none; }
+}
+
+/* Softer variant for content heavy sections */
+.ui-box-soft {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--surface), transparent 0%) 0%,
+    color-mix(in oklab, var(--surface), transparent 5%) 100%
+  );
+  border: 1px solid color-mix(in oklab, var(--border), transparent 20%);
+  box-shadow: 0 4px 16px -4px color-mix(in oklab, #000, transparent 90%);
+}
+
+/* Dark mode soft box */
+.dark .ui-box-soft {
+  background: linear-gradient(180deg,
+    color-mix(in oklab, var(--surface), transparent 0%) 0%,
+    color-mix(in oklab, var(--surface), transparent 10%) 100%
+  );
+  border: 1px solid color-mix(in oklab, var(--border), transparent 30%);
+  box-shadow: 0 6px 24px -6px rgba(0, 0, 0, 0.7);
+}
+
+/* Enhanced button styles */
+.btn-cta {
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px color-mix(in oklab, var(--cta-bg), transparent 60%);
+}
+
+.btn-cta:hover {
+  background: var(--cta-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px color-mix(in oklab, var(--cta-bg), transparent 50%);
+}
+
+/* Dark mode button */
+.dark .btn-cta {
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.dark .btn-cta:hover {
+  background: var(--cta-bg-hover);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ui-box {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px -4px color-mix(in oklab, #000, transparent 85%);
+  }
+  
+  .dark .ui-box {
+    box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.6);
+  }
+}

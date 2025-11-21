@@ -1,0 +1,240 @@
+{
+  "navigation": {
+    "home": "Home",
+    "information": "Information",
+    "about_us": "About Us",
+    "online_transaction": "Online Transaction",
+    "paypal_service": "PayPal Service",
+    "transaction_proof": "Transaction Proof",
+    "testimonials": "Testimonials",
+    "menu": "Menu",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "help": "Help",
+    "back_to_home": "Back to Home"
+  },
+  "info": {
+    "important": "Important Information",
+    "general": "General Information",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Search..."
+  },
+  "marquee": {
+    "text": "Trusted PayPal Service #1 Indonesia - We provide trusted PayPal services and secure payment solutions for every transaction you make, including PayPal Payment Services, PayPal Top Up Services, PayPal Transfer Services, PayPal Balance Filling Services, Credit Card, Skrill, Neteller, Namecheap, LiveChat, Bitcoin, crypto, and TRC20. With high security systems, we ensure that every PayPal service is conducted safely and reliably 24 hours a day."
+  },
+  "about": {
+    "title": "Secure and reliable online payment services.",
+    "description": "Safe and trusted online transactions.",
+    "paypal_service_title": "Trusted PayPal Service",
+    "definition_title": "What is Trusted PayPal Service?",
+    "services_intro": "Trusted PayPal service is a service that helps you conduct online transactions using PayPal without needing to have your own PayPal account or credit card. We provide trusted PayPal services in Indonesia that act as intermediaries to facilitate your payments with guaranteed security. Our PayPal services include PayPal payment services, PayPal top up services, and PayPal transfer services available 24 hours a day.",
+    "services_availability": "All services are available 24/7 with responsive customer support.",
+    "paypal_services": {
+      "title": "Trusted PayPal Service",
+      "intermediary": {
+        "title": "PayPal Intermediary Service",
+        "description": "We act as intermediaries for your PayPal transactions with guaranteed security."
+      },
+      "payment": {
+        "title": "PayPal Payment Service",
+        "description": "Payment services for online transactions using PayPal quickly and securely."
+      },
+      "transfer": {
+        "title": "PayPal Transfer Service",
+        "description": "Send funds to another PayPal account quickly and securely 24 hours a day."
+      },
+      "topup": {
+        "title": "PayPal Top Up Service",
+        "description": "Easily and reliably top up your PayPal account balance."
+      },
+      "features": {
+        "topup_transfer": "Top up, transfer, and transaction intermediary",
+        "fast_secure": "Fast, secure, and documented process"
+      }
+    },
+    "bitcoin_services": {
+      "title": "Bitcoin Services",
+      "general": {
+        "title": "Bitcoin Service",
+        "description": "Transaction services using Bitcoin cryptocurrency."
+      },
+      "payment": {
+        "title": "Bitcoin Payment Service",
+        "description": "Secure online payments using Bitcoin."
+      },
+      "send": {
+        "title": "Bitcoin Sending Service",
+        "description": "Send Bitcoin to other wallets quickly."
+      },
+      "transfer": {
+        "title": "Bitcoin Transfer Service",
+        "description": "Transfer Bitcoin between wallets with low fees."
+      }
+    },
+    "trc20_services": {
+      "title": "TRC20 Services",
+      "general": {
+        "title": "TRC20 Service",
+        "description": "Transaction services using TRC20 tokens on the TRON network."
+      },
+      "transfer": {
+        "title": "TRC20 Transfer Service",
+        "description": "Transfer TRC20 tokens with low fees and fast processing."
+      },
+      "deposit": {
+        "title": "TRC20 Deposit Service",
+        "description": "Securely deposit TRC20 tokens to your account."
+      },
+      "withdraw": {
+        "title": "TRC20 Withdrawal Service",
+        "description": "Easily withdraw TRC20 tokens from your account."
+      }
+    },
+    "skrill_services": {
+      "title": "Skrill Services",
+      "payment": {
+        "title": "Skrill Payment Service",
+        "description": "Secure online payments using Skrill."
+      },
+      "transfer": {
+        "title": "Skrill Transfer Service",
+        "description": "Quick fund transfers between Skrill accounts."
+      },
+      "credit_card": {
+        "title": "Skrill Credit Card",
+        "description": "Skrill virtual credit card services for online shopping."
+      }
+    },
+    "procedure": {
+      "title": "Transaction Procedure",
+      "description": "To use our services, simply contact our team via WhatsApp or LiveChat. We will guide you through the transaction process quickly and securely."
+    },
+    "licensing": {
+      "title": "Legality & Licensing",
+      "description": "PT Jasa Gudang Indonesia is officially registered and has valid business permits to operate in Indonesia."
+    },
+    "official_documents": {
+      "title": "Official Documents",
+      "indonesia": {
+        "title": "Indonesia NIB"
+      },
+      "tangerang": {
+        "title": "Tangerang NIB"
+      },
+      "download_button": "Download Document"
+    },
+    "additional_info": {
+      "title": "Additional Information",
+      "show": "Show Additional Information",
+      "hide": "Hide Additional Information",
+      "highlight": "Trusted PayPal Service!",
+      "description": "We have served thousands of customers since 2011 with a high satisfaction rate. Security and trust are our top priorities in every PayPal service transaction."
+    },
+    "licensing_documents": {
+      "title": "Licensing Documents",
+      "indonesia": {
+        "title": "Indonesia NIB Document",
+        "description": "Business Identification Number (NIB) issued by the Indonesian government."
+      },
+      "tangerang": {
+        "title": "Tangerang NIB Document",
+        "description": "Business Identification Number (NIB) issued by the Tangerang City government."
+      },
+      "download_nib": "Download NIB Document"
+    }
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "scroll": {
+    "to_top": "Scroll to top",
+    "to_bottom": "Scroll to bottom"
+  },
+  "loading": {
+    "message": "Loading page, please wait...",
+    "online_mode": "Loading online content, please wait until all content is ready to display.",
+    "countdown": {
+      "label": "Time remaining:",
+      "unit": "seconds"
+    },
+    "slow_loading_message": "Loading taking too long? Click the button below to skip",
+    "skip_button": "Skip to Content",
+    "smart_mode_active": "Smart mode activated",
+    "loading_message": "Loading content...",
+    "please_wait": "Please wait a moment",
+    "loading": "Loading",
+    "complete": "Complete"
+  },
+  "whatsapp": {
+    "contact": "Contact via WhatsApp",
+    "default_message": "Hello JasaPembayaran.com, I would like to consult about PayPal services",
+    "contact_us": "Contact Us",
+    "chat_now": "Chat Now"
+  },
+  "static": {
+    "footer": {
+      "popular_posts": "Popular Posts",
+      "categories": "Categories",
+      "service_hours": "Service Hours",
+      "view_all": "View all",
+      "category_singular": "Category",
+      "current_time_info": "Current time information",
+      "now": "Now:",
+      "tap_outside_to_close": "Tap/click outside to close",
+      "support_admin_24_7": "Our Support & Admin are available 24/7",
+      "mon_sun_247_hours": "Mon–Sun: 24/7 HOURS",
+      "click_here": "Click Here",
+      "contact_info": "Contact Info",
+      "navigation": "Navigation",
+      "about_us": "About Us",
+      "online_transaction": "Online Transaction",
+      "transaction_proof": "Transaction Proof",
+      "testimonials_alt": "Testimonials",
+      "tags": "Tags",
+      "whatsapp_label": "WhatsApp:",
+      "contact_info_upper": "CONTACT INFO",
+      "navigation_upper": "NAVIGATION",
+      "tags_upper": "TAGS",
+      "our_services_upper": "OUR SERVICES",
+      "payment_services": "Payment Services",
+      "purchase_services": "Purchase Services",
+      "whatsapp_chat": "WhatsApp Chat",
+      "consultation_whatsapp": "Consultation & discussion via WhatsApp 24/7",
+      "whatsapp_24_7": "WhatsApp 24/7",
+      "company_tagline": "Trusted PayPal Service & Online Payments",
+      "our_domains_upper": "OUR DOMAINS",
+      "related_services": "Related services"
+    },
+    "trusted_partners": {
+      "subtitle": "We partner with trusted brands to deliver the best service."
+    }
+  },
+  "why_we": {
+    "title": "Why Choose Us?",
+    "security": {
+      "title": "Bank-Standard Security",
+      "description": "Over 12 years of experience handling online payments and purchases with multi-layered security systems. We provide professional guidance to keep your transactions safe from fraud risks, dishonest sellers, and other cyber threats."
+    },
+    "response": {
+      "title": "Super Fast Response 24/7",
+      "description": "Orders are processed immediately with an average response time of ±3 minutes. Our professional customer service team is friendly, polite, and ready to assist 24 hours a day from start to finish with international standards."
+    },
+    "service": {
+      "title": "International Standard Service",
+      "description": "Our customer service understands the unique needs of each customer. Through rigorous recruitment and training, we deliver friendly, responsive, and professional service with world-class standards and cutting-edge technology."
+    },
+    "trust": {
+      "title": "12+ Years of Proven Trust",
+      "description": "Trusted by thousands of customers in Indonesia and abroad for over 12 years. Real testimonials and a perfect track record prove our commitment to providing the best service."
+    }
+  },
+  "common": {
+    "read_more": "Read More",
+    "learn_more": "Learn More",
+    "contact_now": "Contact Now",
+    "get_started": "Get Started"
+  }
+}

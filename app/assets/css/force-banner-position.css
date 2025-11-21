@@ -1,0 +1,70 @@
+/* FORCE BANNER POSITION - ULTIMATE OVERRIDE */
+
+/* Ensure banner elements align flush beneath the header without extra gaps */
+html body main.banner-slide-container,
+html body div.banner-slide-container,
+html body .banner-slide-container,
+html body .banner-slider-container,
+html body .hero-offset,
+html body .banner-container {
+  margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Neutral override for common banner classes */
+[class*="banner"],
+[class*="hero"] {
+  margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+}
+
+/* Specific override for banner containers */
+.simple-banner-container,
+.banner-container,
+.banner-slider-container {
+  margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  transform: none !important;
+  border: none !important;
+}
+
+/* Mobile specific overrides */
+@media (max-width: 640px) {
+  html body main.banner-slide-container,
+  html body div.banner-slide-container,
+  html body .banner-slide-container,
+  html body .banner-slider-container,
+  html body .hero-offset,
+  html body .banner-container,
+  html body [class*="banner"],
+  html body [class*="hero"] {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.86rem)) !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+
+/* Small mobile overrides */
+@media (max-width: 480px) {
+  html body main.banner-slide-container,
+  html body div.banner-slide-container,
+  html body .banner-slide-container,
+  html body .banner-slider-container,
+  html body .hero-offset,
+  html body .banner-container,
+  html body [class*="banner"],
+  html body [class*="hero"] {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.8rem)) !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+

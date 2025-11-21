@@ -1,0 +1,23 @@
+title: 'Jasa Pembayaran Online - Bayar PayPal, Bitcoin, dan Layanan Digital'
+description: 'JasaPembayaran.com melayani jasa bayar PayPal, jasa Bitcoin (BTC), dan berbagai kebutuhan pembayaran online dengan aman dan cepat.'
+keywords: 'Jasa PayPal, Jasa bayar PayPal, Jasa Bitcoin, Jasa Bayar Skrill, Jasa Bayar Bitcoin, Jasa Btc, Jasa Bayar BTC, Jasa Bayar Bitcoin, Jasa livechat, jasa bayar livechat, jasa bayar domain, jasa bayar name.com, jasa bayar namecheap, jasa namecheap, jasa name.com, jasa saldo namecheap, jasa beli namecheap, Jasa Skrill, Jasa Neteller, Jasa Bayar Online, Jasa Bayar Kartu kredit, Jasa Patreon Jasa Bayar Patreon, jasa kartu kredit, jasa bayar kartu kredit, jasa titip bayar kartu kredit, jasa perantara kartu kredit, Jasa Bayar mata uang kripto / crypto'
+
+#  Old Version
+# title: 'JasaPembayaran.com Jasa PayPal #1 Pembayaran Bitcoin BTC | Skrill | Kartu Kredit'
+# description: 'Jasa Pembayaran / Pembelian, Titip Bayar, Belanja &amp; Beli / Transfer dengan PayPal, Kartu Kredit ( VISA dan MASTER CARD ) / Credit Card, Skrill, Neteller, BTC, Bitcoin, Kripto, Trc, Trc20, Zoom Pro, Namecheap, Jasa PayPal, Crypto, Hosting, Zoom Meeting, Domain, AirDroid, LiveChatinc, Live Chat, OnlyFans, Coomeet, Patreon, Skrill, Neteller, AirBnb 24 Jam Atau barang luar negeri tanpa harus memiliki Kartu Kredit / Credit Card dan PayPal'
+# keywords: 'Jasa PayPal, Jasa bayar PayPal, Jasa Bitcoin, Jasa Bayar Skrill, Jasa Bayar Bitcoin, Jasa Btc, Jasa Bayar BTC, Jasa Bayar Bitcoin, Jasa livechat, jasa bayar livechat, jasa bayar domain, jasa bayar name.com, jasa bayar namecheap, jasa namecheap, jasa name.com, jasa saldo namecheap, jasa beli namecheap, Jasa Skrill, Jasa Neteller, Jasa Bayar Online, Jasa Bayar Kartu kredit, Jasa Patreon Jasa Bayar Patreon, jasa kartu kredit, jasa bayar kartu kredit, jasa titip bayar kartu kredit, jasa perantara kartu kredit, Jasa Bayar mata uang kripto / crypto'
+
+hero:
+  # title: Build your landing with [Nuxt UI Pro]{.text-(--ui-primary)}
+  title: 'Pembayaran Online [Terbaik #1 di Indonesia]{.text-(--ui-primary)}'
+  description: 'Layanan pembayaran digital terdepan di Indonesia, menghadirkan solusi transaksi yang aman, cepat, dan terpercaya untuk individu dan pelaku usaha.'
+  links:
+    - label: Hubungi Kami
+      icon: simple-icons:whatsapp
+      trailing: true
+      variant: solid
+      to: http://wa.me/628988888250
+      target: _blank
+      size: xl
+      color: success
+      class: py-2 px-4 rounded-full text-black

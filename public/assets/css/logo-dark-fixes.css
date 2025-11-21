@@ -1,0 +1,310 @@
+/* Logo Dark Mode Fixes - JasaPembayaran.com */
+
+/* ===== LOGO AND BRAND ELEMENTS ===== */
+.dark .logo-container {
+  filter: brightness(1.2) contrast(1.1) !important;
+}
+
+.dark .logo-container img {
+  filter: brightness(1.3) contrast(1.2) saturate(1.1) !important;
+}
+
+/* Header Logo */
+.dark .app-header .logo {
+  filter: brightness(1.4) contrast(1.3) saturate(1.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .app-header .logo:hover {
+  filter: brightness(1.6) contrast(1.4) saturate(1.3) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Footer Logo */
+.dark .app-footer .logo {
+  filter: brightness(1.3) contrast(1.2) saturate(1.1) !important;
+}
+
+/* ===== NAVIGATION ELEMENTS ===== */
+.dark .nav-link {
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .nav-link:hover {
+  color: #60a5fa !important;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.5) !important;
+}
+
+.dark .nav-link.active {
+  color: #93c5fd !important;
+  text-shadow: 0 0 12px rgba(147, 197, 253, 0.6) !important;
+}
+
+/* ===== BUTTON ENHANCEMENTS ===== */
+.dark .btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.dark .btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4) !important;
+}
+
+.dark .btn-secondary {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%) !important;
+  border: 1px solid rgba(107, 114, 128, 0.4) !important;
+  box-shadow: 0 4px 6px rgba(107, 114, 128, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.dark .btn-secondary:hover {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 15px rgba(107, 114, 128, 0.4) !important;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark textarea,
+.dark select {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark input[type="text"]:focus,
+.dark input[type="email"]:focus,
+.dark input[type="password"]:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+  outline: none !important;
+}
+
+/* ===== BADGE AND TAG ELEMENTS ===== */
+.dark .badge {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(6, 182, 212, 0.4) !important;
+  box-shadow: 0 2px 4px rgba(6, 182, 212, 0.3) !important;
+}
+
+.dark .badge-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark .badge-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3) !important;
+}
+
+.dark .badge-error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* ===== ALERT AND NOTIFICATION ELEMENTS ===== */
+.dark .alert {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark .alert-success {
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+}
+
+.dark .alert-warning {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+}
+
+.dark .alert-error {
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+}
+
+/* ===== MODAL AND OVERLAY ELEMENTS ===== */
+.dark .modal-overlay {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.dark .modal-content {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* ===== DROPDOWN AND MENU ELEMENTS ===== */
+.dark .dropdown-menu {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.dark .dropdown-item {
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .dropdown-item:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: #93c5fd !important;
+}
+
+/* ===== PROGRESS AND LOADING ELEMENTS ===== */
+.dark .progress-bar {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;
+}
+
+.dark .progress-track {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark .loading-spinner {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  border-top-color: #3b82f6 !important;
+}
+
+/* ===== TOOLTIP ELEMENTS ===== */
+.dark .tooltip {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ===== TAB ELEMENTS ===== */
+.dark .tab-list {
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .tab-item {
+  color: #94a3b8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .tab-item:hover {
+  color: #60a5fa !important;
+}
+
+.dark .tab-item.active {
+  color: #93c5fd !important;
+  border-bottom-color: #3b82f6 !important;
+  text-shadow: 0 0 8px rgba(147, 197, 253, 0.5) !important;
+}
+
+/* ===== ACCORDION ELEMENTS ===== */
+.dark .accordion-header {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.6) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+
+.dark .accordion-header:hover {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.7) 100%) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+}
+
+.dark .accordion-content {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  color: #cbd5e1 !important;
+}
+
+/* ===== PAGINATION ELEMENTS ===== */
+.dark .pagination-item {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.6) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .pagination-item:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(30, 41, 59, 0.8) 100%) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  color: #93c5fd !important;
+}
+
+.dark .pagination-item.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ===== BREADCRUMB ELEMENTS ===== */
+.dark .breadcrumb-item {
+  color: #94a3b8 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .breadcrumb-item:hover {
+  color: #60a5fa !important;
+}
+
+.dark .breadcrumb-item.active {
+  color: #e2e8f0 !important;
+}
+
+.dark .breadcrumb-separator {
+  color: #64748b !important;
+}
+
+/* ===== ENHANCED ANIMATIONS ===== */
+@keyframes darkModeGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.dark .glow-effect {
+  animation: darkModeGlow 2s ease-in-out infinite !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .dark .logo-container img {
+    filter: brightness(1.2) contrast(1.1) !important;
+  }
+  
+  .dark .btn-primary,
+  .dark .btn-secondary {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dark .modal-content {
+    margin: 10px !important;
+    border-radius: 12px !important;
+  }
+  
+  .dark .dropdown-menu {
+    border-radius: 8px !important;
+  }
+}

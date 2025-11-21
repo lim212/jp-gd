@@ -1,0 +1,174 @@
+/* ========================================
+   📱 MOBILE FULL WIDTH BOXES
+   Buat kotak-kotak full width dengan space minimal
+   ======================================== */
+
+/* Mobile full width dengan padding minimal */
+@media (max-width: 768px) {
+  /* Main container - full width dengan padding minimal */
+  .banner-content-wrapper,
+  .w-full.max-w-7xl,
+  .max-w-7xl.mx-auto {
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;   /* 8px space kiri */
+    padding-right: 0.5rem !important;  /* 8px space kanan */
+  }
+
+  /* Banner slider - full width */
+  .banner-slider-wrapper,
+  .banner-container-zero {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Help box - full width dengan space minimal */
+  .ultra-clean-help-box {
+    width: calc(100% - 1rem) !important;  /* Full width minus 8px kiri kanan */
+    max-width: 100% !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  /* Trusted partners - full width */
+  [class*="trusted"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* All sections - full width dengan padding minimal */
+  #about-section,
+  #whywe-section,
+  #testimonial-section,
+  #trusted-partners-section,
+  #faq-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Cards dan boxes - full width */
+  .card,
+  .service-item,
+  .testimonial-box,
+  [class*="box"],
+  [class*="card"] {
+    width: calc(100% - 1rem) !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  /* Override any px-2, px-3, px-4 classes */
+  .px-2,
+  .px-3,
+  .px-4 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Sections wrapper - minimal padding */
+  .w-full.pt-3,
+  .w-full.pt-4,
+  div[class*="w-full pt"] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Space-y containers - full width children */
+  [class*="space-y"] > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Flex containers - full width */
+  .flex.flex-col > * {
+    width: 100% !important;
+  }
+
+  /* Grid - full width */
+  .grid {
+    width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Remove negative margins yang bikin narrow */
+  * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Restore minimal margins for specific elements */
+  .banner-content-wrapper,
+  .ultra-clean-help-box,
+  .card,
+  section {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/* Extra small screens - lebih full lagi */
+@media (max-width: 480px) {
+  .banner-content-wrapper,
+  .w-full.max-w-7xl,
+  .max-w-7xl.mx-auto,
+  section {
+    padding-left: 0.375rem !important;  /* 6px */
+    padding-right: 0.375rem !important; /* 6px */
+  }
+
+  .ultra-clean-help-box,
+  .card {
+    margin-left: 0.375rem !important;
+    margin-right: 0.375rem !important;
+  }
+}
+
+/* Very small screens - minimal space */
+@media (max-width: 360px) {
+  .banner-content-wrapper,
+  .w-full.max-w-7xl,
+  section {
+    padding-left: 0.25rem !important;  /* 4px */
+    padding-right: 0.25rem !important; /* 4px */
+  }
+
+  .ultra-clean-help-box,
+  .card {
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+  }
+}
+
+/* Force reload marker */
+/* mobile-full-width-boxes-v1 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,238 @@
+{
+  "navigation": {
+    "home": "Home",
+    "information": "Informasi",
+    "about_us": "Tentang Kami",
+    "online_transaction": "Transaksi Online",
+    "paypal_service": "Jasa PayPal",
+    "transaction_proof": "Bukti Transaksi",
+    "testimonials": "Testimoni",
+    "menu": "Menu",
+    "settings": "Pengaturan",
+    "language": "Bahasa",
+    "theme": "Tema"
+  },
+  "info": {
+    "important": "Informasi Penting",
+    "general": "Informasi Umum",
+    "contact": "Kontak"
+  },
+  "search": {
+    "placeholder": "Pencarian..."
+  },
+  "marquee": {
+    "text": "Jasa PayPal Terpercaya #1 Indonesia - Kami menyediakan jasa PayPal terpercaya dan layanan pembayaran yang aman untuk setiap transaksi Anda, termasuk Jasa Bayar PayPal, Jasa Top Up PayPal, Jasa Transfer PayPal, Jasa Isi Saldo PayPal, Kartu Kredit, Skrill, Neteller, Namecheap, LiveChat, Bitcoin, kripto, dan TRC20. Dengan sistem keamanan tinggi, kami memastikan setiap jasa PayPal dilakukan dengan aman dan terpercaya 24 jam."
+  },
+  "about": {
+    "title": "Layanan pembayaran online yang aman dan terpercaya.",
+    "description": "Transaksi online yang aman dan terpercaya.",
+    "paypal_service_title": "Jasa PayPal Terpercaya",
+    "definition_title": "Apa itu Jasa PayPal Terpercaya?",
+    "services_intro": "Jasa PayPal terpercaya kami dirancang untuk mengeksekusi pembayaran lintas negara tanpa mengharuskan Anda memiliki akun PayPal pribadi ataupun kartu kredit. Setiap transaksi dikurasi oleh tim finance bersertifikat yang bertindak sebagai perantara resmi, memastikan verifikasi data, rekonsiliasi bukti bayar, dan pelacakan status secara real-time. Layanan mencakup pembayaran invoice, isi saldo, hingga transfer antar akun PayPal selama 24 jam dengan standar keamanan berlapis.",
+    "services_availability": "Operasional 24/7 dengan tim customer success khusus, SLA respons ±3 menit, serta eskalasi prioritas untuk transaksi bernilai tinggi.",
+    "paypal_services": {
+      "title": "Layanan PayPal Terpercaya",
+      "intermediary": {
+        "title": "Jasa Perantara PayPal",
+        "description": "Validasi identitas merchant, pengecekan invoice, dan eksekusi pembayaran dilakukan oleh tim kami sehingga transaksi Anda selalu berada dalam koridor keamanan PayPal."
+      },
+      "payment": {
+        "title": "Jasa Bayar PayPal",
+        "description": "Pembayaran marketplace, subscription, dan invoice bisnis diproses cepat dengan bukti transaksi resmi serta notifikasi real-time."
+      },
+      "transfer": {
+        "title": "Jasa Transfer PayPal",
+        "description": "Pengiriman dana antar akun PayPal pribadi maupun bisnis dengan pengaturan catatan memo, split transfer, serta konfirmasi instan 24 jam."
+      },
+      "topup": {
+        "title": "Jasa Top Up PayPal",
+        "description": "Penambahan saldo PayPal melalui jaringan bank nasional dan e-wallet terpercaya dengan kurs kompetitif dan pelaporan lengkap."
+      },
+      "features": {
+        "topup_transfer": "Top up, transfer, dan perantara transaksi",
+        "fast_secure": "Proses cepat, aman, dan tercatat"
+      }
+    },
+    "bitcoin_services": {
+      "title": "Layanan Bitcoin",
+      "general": {
+        "title": "Jasa Bitcoin",
+        "description": "Eksekusi jual beli dan hedging Bitcoin dengan dukungan analisis harga realtime serta kepatuhan terhadap prosedur AML/KYC."
+      },
+      "payment": {
+        "title": "Jasa Bayar Bitcoin",
+        "description": "Pelunasan invoice internasional atau layanan digital berbasis Bitcoin dengan proses konversi yang transparan dan terdokumentasi."
+      },
+      "send": {
+        "title": "Jasa Kirim Bitcoin",
+        "description": "Distribusi Bitcoin ke wallet tujuan dengan penjadwalan fee mining optimal dan bukti broadcast jaringan."
+      },
+      "transfer": {
+        "title": "Jasa Transfer Bitcoin",
+        "description": "Rekonsiliasi dan pemindahan aset antar wallet institusi maupun individu dengan biaya kompetitif dan monitoring konfirmasi blok."
+      }
+    },
+    "trc20_services": {
+      "title": "Layanan TRC20",
+      "general": {
+        "title": "Jasa TRC20",
+        "description": "Manajemen token USDT/TRC20 pada jaringan TRON dengan dashboard pemantauan hash transaksi dan audit trail lengkap."
+      },
+      "transfer": {
+        "title": "Jasa Transfer TRC20",
+        "description": "Pengiriman token lintas wallet secara kilat dengan optimasi gas fee, anti-duplikasi alamat, dan notifikasi setiap konfirmasi blok."
+      },
+      "deposit": {
+        "title": "Jasa Deposit TRC20",
+        "description": "Penempatan saldo ke akun operasional Anda dengan pencatatan ledger, bukti blockchain, dan rekonsiliasi otomatis."
+      },
+      "withdraw": {
+        "title": "Jasa Tarik TRC20",
+        "description": "Penarikan token ke berbagai wallet tujuan dengan verifikasi multi-layer dan jaminan kepatuhan limit harian."
+      }
+    },
+    "skrill_services": {
+      "title": "Layanan Skrill",
+      "payment": {
+        "title": "Jasa Bayar Skrill",
+        "description": "Pembayaran merchant global berbasis Skrill dengan dukungan verifikasi invoice, bukti bayar resmi, dan laporan CSV siap audit."
+      },
+      "transfer": {
+        "title": "Jasa Transfer Skrill",
+        "description": "Pengiriman saldo antar akun Skrill personal maupun bisnis dengan limit fleksibel dan pengawasan fraud real-time."
+      },
+      "credit_card": {
+        "title": "Kartu Kredit Skrill",
+        "description": "Penyediaan kartu virtual Skrill siap pakai untuk belanja online, subscription, dan verifikasi marketplace internasional."
+      }
+    },
+    "procedure": {
+      "title": "Prosedur Transaksi",
+      "description": "Hubungi tim kami melalui WhatsApp atau LiveChat, serahkan detail kebutuhan transaksi, lalu kami susun quotation, verifikasi pembayaran, hingga pengiriman bukti selesai dalam satu alur terpadu dan terdokumentasi."
+    },
+    "licensing": {
+      "title": "Legalitas & Lisensi",
+      "description": "PT Jasa Gudang Indonesia berizin resmi melalui OSS RBA, memiliki NIB nasional dan daerah, serta menjalankan tata kelola keuangan sesuai standar audit independen."
+    },
+    "official_documents": {
+      "title": "Dokumen Resmi",
+      "indonesia": {
+        "title": "NIB Indonesia"
+      },
+      "tangerang": {
+        "title": "NIB Tangerang"
+      },
+      "download_button": "Unduh Dokumen"
+    },
+    "additional_info": {
+      "title": "Informasi Tambahan",
+      "show": "Tampilkan Informasi Tambahan",
+      "hide": "Sembunyikan Informasi Tambahan",
+      "highlight": "Jasa PayPal Terpercaya!",
+      "description": "Kami telah melayani ribuan pelanggan sejak 2011 dengan tingkat kepuasan yang tinggi. Keamanan dan kepercayaan adalah prioritas utama kami dalam setiap transaksi jasa PayPal."
+    },
+    "licensing_documents": {
+      "title": "Dokumen Lisensi",
+      "indonesia": {
+        "title": "Dokumen NIB Indonesia",
+        "description": "Nomor Induk Berusaha (NIB) yang dikeluarkan oleh pemerintah Indonesia."
+      },
+      "tangerang": {
+        "title": "Dokumen NIB Tangerang",
+        "description": "Nomor Induk Berusaha (NIB) yang dikeluarkan oleh pemerintah Kota Tangerang."
+      },
+      "download_nib": "Unduh Dokumen NIB"
+    }
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  },
+  "scroll": {
+    "to_top": "Gulir ke atas",
+    "to_bottom": "Gulir ke bawah"
+  },
+  "loading": {
+    "message": "Memuat halaman, mohon tunggu sebentar...",
+    "online_mode": "Sedang memuat konten online, mohon tunggu hingga semua konten siap ditampilkan.",
+    "countdown": {
+      "label": "Sisa waktu:",
+      "unit": "detik"
+    },
+    "slow_loading_message": "Loading agak lama? Klik tombol di bawah untuk langsung masuk",
+    "skip_button": "Langsung Masuk",
+    "smart_mode_active": "Mode pintar aktif",
+    "loading_message": "Memuat konten...",
+    "please_wait": "Mohon tunggu sebentar",
+    "loading": "Memuat",
+    "complete": "Selesai"
+  },
+  "whatsapp": {
+    "contact": "Hubungi via WhatsApp",
+    "default_message": "Halo JasaPembayaran.com, saya ingin konsultasi tentang jasa PayPal",
+    "contact_us": "Hubungi Kami",
+    "chat_now": "Chat Sekarang"
+  },
+  "static": {
+    "footer": {
+      "popular_posts": "POST POPULER",
+      "categories": "KATEGORI",
+      "service_hours": "JAM PELAYANAN",
+      "view_all": "Lihat semua",
+      "category_singular": "Kategori",
+      "current_time_info": "Informasi waktu saat ini",
+      "now": "Sekarang:",
+      "tap_outside_to_close": "Sentuh/klik di luar untuk menutup",
+      "support_admin_24_7": "Support & Admin online kami akan senantiasa melayani Bpk/Ibu 24/7",
+      "mon_sun_247_hours": "Senin-Minggu: 24/7 JAM",
+      "click_here": "Klik Disini",
+      "contact_info": "Info Kontak",
+      "navigation": "Navigasi",
+      "about_us": "Tentang Kami",
+      "online_transaction": "Transaksi Online",
+      "transaction_proof": "Bukti Transaksi",
+      "testimonials_alt": "Testimonial",
+      "tags": "Label",
+      "whatsapp_label": "WhatsApp:",
+      "contact_info_upper": "INFO KONTAK",
+      "navigation_upper": "NAVIGASI",
+      "tags_upper": "LABEL",
+      "our_services_upper": "LAYANAN KAMI",
+      "payment_services": "Layanan Pembayaran",
+      "purchase_services": "Layanan Pembelian",
+      "whatsapp_chat": "Chat WhatsApp",
+      "consultation_whatsapp": "Konsultasi & diskusi via WhatsApp 24/7",
+      "whatsapp_24_7": "WhatsApp 24/7",
+      "company_tagline": "Jasa PayPal Terpercaya & Pembayaran Online",
+      "our_domains_upper": "DOMAIN KAMI",
+      "related_services": "Layanan terkait"
+    },
+    "trusted_partners": {
+      "subtitle": "Kami bekerja sama dengan brand terpercaya untuk memberikan layanan terbaik."
+    }
+  },
+  "why_we": {
+    "title": "Mengapa Memilih Kami?",
+    "security": {
+      "title": "Keamanan Berstandar Bank",
+      "description": "Berpengalaman lebih dari 12 tahun menangani pembayaran dan pembelian online dengan sistem keamanan berlapis. Kami memberikan arahan profesional agar transaksi Anda terhindar dari risiko penipuan, seller nakal, dan ancaman siber lainnya."
+    },
+    "response": {
+      "title": "Respons Super Cepat 24/7",
+      "description": "Pesanan diproses segera dengan rata-rata waktu respon ±3 menit. Tim customer service profesional kami ramah, sopan, dan siap membantu 24 jam sehari dari awal hingga transaksi selesai dengan standar internasional."
+    },
+    "service": {
+      "title": "Layanan Berstandar Internasional",
+      "description": "Customer service kami memahami kebutuhan unik setiap pelanggan. Melalui rekrutmen dan pelatihan ketat, kami menghadirkan layanan ramah, responsif, dan profesional berstandar kelas internasional dengan teknologi terdepan."
+    },
+    "trust": {
+      "title": "Kepercayaan Terbuktikan 12+ Tahun",
+      "description": "Dipercaya oleh ribuan pelanggan di Indonesia dan luar negeri selama lebih dari 12 tahun. Testimoni nyata dan track record sempurna menjadi bukti komitmen kami memberikan layanan terbaik."
+    }
+  },
+  "common": {
+    "read_more": "Baca Selengkapnya",
+    "learn_more": "Pelajari Lebih Lanjut",
+    "contact_now": "Hubungi Sekarang",
+    "get_started": "Mulai Sekarang"
+  }
+}

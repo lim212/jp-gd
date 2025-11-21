@@ -1,0 +1,195 @@
+/* ========================================
+   FINAL HEADER LIGHT MODE FIX
+   ======================================== */
+
+/* Force light mode on ALL elements when .light class is present */
+.light,
+.light body,
+.light html,
+.light #__nuxt,
+.light .min-h-screen,
+.light .main-content,
+.light .container,
+.light .wrapper {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+
+/* Header and Navigation - Force Light Mode */
+.light .header,
+.light header,
+.light .navbar,
+.light .nav,
+.light .navigation,
+.light .app-header,
+.light .main-header,
+.light .nav-container,
+.light .top-bar,
+.light .menu-bar,
+.light .nav-bar,
+.light .header-container,
+.light .navigation-container,
+.light .site-header,
+.light .page-header,
+.light .fancy-header {
+  background: #ffffff !important;
+  color: #1a202c !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Navigation Links - Force Light Mode */
+.light .nav-link,
+.light .navbar-link,
+.light .navigation-link,
+.light .menu-link,
+.light a[class*="nav"],
+.light a[class*="menu"],
+.light .nav-item,
+.light .menu-item,
+.light .link,
+.light a {
+  color: #1a202c !important;
+}
+
+.light .nav-link:hover,
+.light .navbar-link:hover,
+.light .navigation-link:hover,
+.light .menu-link:hover,
+.light a[class*="nav"]:hover,
+.light a[class*="menu"]:hover,
+.light .nav-item:hover,
+.light .menu-item:hover,
+.light .link:hover,
+.light a:hover {
+  color: #3b82f6 !important;
+}
+
+/* Logo and Brand Elements - Force Light Mode */
+.light .logo,
+.light .brand-logo,
+.light [class*="logo"],
+.light [class*="brand"],
+.light .brand,
+.light .site-logo,
+.light .company-logo {
+  color: #1a202c !important;
+}
+
+/* Header Icons - Force Light Mode */
+.light .search-icon,
+.light .theme-toggle,
+.light .language-switcher,
+.light [class*="icon"],
+.light .icon,
+.light .btn-icon,
+.light .header-icon {
+  color: #1a202c !important;
+}
+
+.light .search-icon:hover,
+.light .theme-toggle:hover,
+.light .language-switcher:hover,
+.light [class*="icon"]:hover,
+.light .icon:hover,
+.light .btn-icon:hover,
+.light .header-icon:hover {
+  color: #3b82f6 !important;
+}
+
+/* Override any dark mode classes when in light mode */
+.light .dark,
+.light [class*="dark"],
+.light .bg-gray-900,
+.light .bg-gray-800,
+.light .bg-gray-700,
+.light .bg-gray-600,
+.light .bg-gray-500,
+.light .bg-gray-400,
+.light .bg-gray-300,
+.light .bg-gray-200,
+.light .bg-gray-100,
+.light .bg-gray-50 {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+
+.light .text-gray-900,
+.light .text-gray-800,
+.light .text-gray-700,
+.light .text-gray-600,
+.light .text-gray-500,
+.light .text-gray-400,
+.light .text-gray-300,
+.light .text-gray-200,
+.light .text-gray-100,
+.light .text-gray-50 {
+  color: #1a202c !important;
+}
+
+/* Force light mode on Tailwind dark mode classes */
+.light .dark\:bg-gray-900,
+.light .dark\:bg-gray-800,
+.light .dark\:bg-gray-700,
+.light .dark\:bg-gray-600,
+.light .dark\:bg-gray-500,
+.light .dark\:bg-gray-400,
+.light .dark\:bg-gray-300,
+.light .dark\:bg-gray-200,
+.light .dark\:bg-gray-100,
+.light .dark\:bg-gray-50 {
+  background: #ffffff !important;
+}
+
+.light .dark\:text-gray-900,
+.light .dark\:text-gray-800,
+.light .dark\:text-gray-700,
+.light .dark\:text-gray-600,
+.light .dark\:text-gray-500,
+.light .dark\:text-gray-400,
+.light .dark\:text-gray-300,
+.light .dark\:text-gray-200,
+.light .dark\:text-gray-100,
+.light .dark\:text-gray-50 {
+  color: #1a202c !important;
+}
+
+/* Ultimate override for any remaining dark elements */
+.light *[class*="dark"],
+.light *[class*="gray-9"],
+.light *[class*="gray-8"],
+.light *[class*="gray-7"],
+.light *[class*="gray-6"],
+.light *[class*="gray-5"] {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+
+/* Force light mode on all possible header variations */
+.light [class*="header"],
+.light [class*="nav"],
+.light [class*="menu"],
+.light [class*="top"],
+.light [class*="bar"] {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+
+/* Force light mode on all possible link variations */
+.light [class*="link"],
+.light [class*="nav"],
+.light [class*="menu"],
+.light a {
+  color: #1a202c !important;
+}
+
+.light [class*="link"]:hover,
+.light [class*="nav"]:hover,
+.light [class*="menu"]:hover,
+.light a:hover {
+  color: #3b82f6 !important;
+}
+
+/* Ensure no dark mode styles override light mode */
+.light * {
+  color-scheme: light !important;
+}

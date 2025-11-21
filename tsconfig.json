@@ -1,0 +1,29 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"],
+      "#imports": [".nuxt/imports.d.ts"]
+    }
+  },
+  "vueCompilerOptions": {
+    "skipTemplateCodegen": true
+  },
+  "include": ["**/*", "types/**/*.d.ts"],
+  "exclude": [
+    ".nuxt",
+    ".output",
+    "node_modules",
+    "dist",
+    "coverage"
+  ]
+}

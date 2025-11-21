@@ -1,0 +1,295 @@
+/* ========================================
+   DESIGN TOKENS - UNIFIED COLOR SYSTEM
+   Modern, Accessible & Professional
+   ======================================== */
+
+:root {
+  /* ===== PRIMARY COLORS - Blue Scale (Brand Identity) ===== */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+
+  /* ===== NEUTRAL COLORS - Slate Scale (Base) ===== */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* ===== ACCENT COLORS - Cyan Scale (Highlights) ===== */
+  --color-accent-50: #ecfeff;
+  --color-accent-100: #cffafe;
+  --color-accent-200: #a5f3fc;
+  --color-accent-300: #67e8f9;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+  --color-accent-600: #0891b2;
+  --color-accent-700: #0e7490;
+  --color-accent-800: #155e75;
+  --color-accent-900: #164e63;
+
+  /* ===== SUCCESS COLORS - Emerald Scale ===== */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-200: #a7f3d0;
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065f46;
+  --color-success-900: #064e3b;
+
+  /* ===== WARNING COLORS - Amber Scale ===== */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+
+  /* ===== ERROR COLORS - Rose Scale ===== */
+  --color-error-50: #fff1f2;
+  --color-error-100: #ffe4e6;
+  --color-error-200: #fecdd3;
+  --color-error-300: #fda4af;
+  --color-error-400: #fb7185;
+  --color-error-500: #f43f5e;
+  --color-error-600: #e11d48;
+  --color-error-700: #be123c;
+  --color-error-800: #9f1239;
+  --color-error-900: #881337;
+
+  /* ===== INFO COLORS - Indigo Scale ===== */
+  --color-info-50: #eef2ff;
+  --color-info-100: #e0e7ff;
+  --color-info-200: #c7d2fe;
+  --color-info-300: #a5b4fc;
+  --color-info-400: #818cf8;
+  --color-info-500: #6366f1;
+  --color-info-600: #4f46e5;
+  --color-info-700: #4338ca;
+  --color-info-800: #3730a3;
+  --color-info-900: #312e81;
+
+  /* ===== SEMANTIC COLORS (Light Mode) ===== */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: var(--color-neutral-50);
+  --color-bg-tertiary: var(--color-neutral-100);
+  
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-tertiary: var(--color-neutral-600);
+  --color-text-disabled: var(--color-neutral-400);
+  
+  --color-border-primary: var(--color-neutral-200);
+  --color-border-secondary: var(--color-neutral-300);
+  --color-border-focus: var(--color-primary-500);
+  
+  /* ===== SHADOWS (Light Mode) ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  --shadow-primary: 0 8px 24px rgba(59, 130, 246, 0.12);
+  --shadow-primary-glow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  --shadow-success: 0 8px 24px rgba(16, 185, 129, 0.12);
+  --shadow-warning: 0 8px 24px rgba(59, 130, 246, 0.12);
+  --shadow-error: 0 8px 24px rgba(244, 63, 94, 0.12);
+  
+  /* ===== SPACING SCALE ===== */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* ===== BORDER RADIUS ===== */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-3xl: 2rem;      /* 32px */
+  --radius-full: 9999px;
+  
+  /* ===== TYPOGRAPHY ===== */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ===== Z-INDEX SCALE ===== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-notification: 1080;
+}
+
+/* ===== DARK MODE OVERRIDES - REMOVED ===== */
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Background utilities */
+.bg-primary { background-color: var(--color-primary-600) !important; }
+.bg-accent { background-color: var(--color-accent-500) !important; }
+.bg-success { background-color: var(--color-success-600) !important; }
+.bg-warning { background-color: var(--color-warning-500) !important; }
+.bg-error { background-color: var(--color-error-600) !important; }
+
+/* Text color utilities */
+.text-primary { color: var(--color-text-primary) !important; }
+.text-secondary { color: var(--color-text-secondary) !important; }
+.text-tertiary { color: var(--color-text-tertiary) !important; }
+
+/* Border utilities */
+.border-primary { border-color: var(--color-border-primary) !important; }
+.border-secondary { border-color: var(--color-border-secondary) !important; }
+
+/* Gradient utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700)) !important;
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent-500), var(--color-primary-600)) !important;
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, var(--color-success-500), var(--color-success-600)) !important;
+}
+
+/* Text gradient utilities */
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent-500), var(--color-primary-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== COMPONENT SPECIFIC TOKENS ===== */
+
+/* Buttons */
+.btn-token {
+  --btn-padding-x: var(--spacing-lg);
+  --btn-padding-y: var(--spacing-md);
+  --btn-border-radius: var(--radius-lg);
+  --btn-font-weight: var(--font-weight-bold);
+  --btn-transition: var(--transition-base);
+}
+
+/* Cards */
+.card-token {
+  --card-padding: var(--spacing-xl);
+  --card-border-radius: var(--radius-2xl);
+  --card-border-width: 2px;
+  --card-shadow: var(--shadow-lg);
+}
+
+/* Inputs */
+.input-token {
+  --input-padding-x: var(--spacing-lg);
+  --input-padding-y: var(--spacing-md);
+  --input-border-radius: var(--radius-lg);
+  --input-border-width: 2px;
+  --input-font-size: var(--font-size-base);
+}
+
+/* ===== COLOR USAGE GUIDELINES ===== */
+
+/*
+  USAGE GUIDELINES:
+  
+  1. PRIMARY (Blue): Main brand color, CTAs, primary actions
+     - Use for: Primary buttons, links, active states
+     - Light: primary-600, Dark: primary-400
+  
+  2. ACCENT (Cyan): Highlights, secondary CTAs
+     - Use for: Secondary actions, highlights, info states
+     - Light: accent-500, Dark: accent-400
+  
+  3. SUCCESS (Emerald): Positive feedback, completion
+     - Use for: Success messages, completed tasks
+     - Light: success-600, Dark: success-400
+  
+  4. WARNING (Amber): Caution, pending states
+     - Use for: Warning messages, pending actions
+     - Light: warning-500, Dark: warning-400
+  
+  5. ERROR (Rose): Errors, destructive actions
+     - Use for: Error messages, delete actions
+     - Light: error-600, Dark: error-500
+  
+  6. NEUTRAL (Slate): Text, borders, backgrounds
+     - Use for: Body text, borders, subtle backgrounds
+     - Varies by context and mode
+  
+  ACCESSIBILITY:
+  - Minimum contrast ratio: 4.5:1 for body text
+  - Minimum contrast ratio: 3:1 for large text
+  - Always test color combinations for accessibility
+  - Use color + icon/text for important information
+  
+  CONSISTENCY:
+  - Use design tokens instead of hardcoded colors
+  - Maintain gradient direction consistency (135deg)
+  - Use semantic color names (bg-primary, text-secondary)
+  - Follow the established color scale (50-900)
+*/
+
+

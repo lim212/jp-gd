@@ -1,0 +1,27 @@
+/* ========================================
+   MOBILE - LIGHT MODE - CLEAN V3
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* HIDE BADGES */
+  .logo-text-only + *,
+  .logo-text-only ~ div[class*="flex"],
+  span[class*="Berkualitas"],
+  span[class*="Terpercaya"],
+  span[class*="Fast Response"],
+  span[class*="Profesional"] {
+    display: none !important;
+  }
+  
+  /* CLEAN - No negative margins */
+  main,
+  main > div,
+  .mobile-page-wrapper,
+  .mobile-banner-wrapper,
+  .mobile-banner-container {
+    margin-top: 0 !important;
+  }
+}
+
+/* FORCE RELOAD MARKER */
+/* light-v3-clean-2138 */

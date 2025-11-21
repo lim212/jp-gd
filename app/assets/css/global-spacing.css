@@ -1,0 +1,174 @@
+/* Global spacing tuned for mobile-first layout */
+:root {
+  --space-mobile: 14px;
+  --space-tablet: 20px;
+  --space-desktop: 28px;
+}
+
+/* Base section rhythm */
+@media (max-width: 640px) {
+  section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: var(--space-mobile) !important;
+    padding-bottom: var(--space-mobile) !important;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: var(--space-tablet) !important;
+    padding-bottom: var(--space-tablet) !important;
+  }
+}
+@media (min-width: 1025px) {
+  section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: var(--space-desktop) !important;
+    padding-bottom: calc(var(--space-desktop) + 4px) !important;
+  }
+}
+
+/* UPageSection padding safeguards */
+.UPageSection {
+  padding-top: var(--space-mobile) !important;
+  padding-bottom: calc(var(--space-mobile) + 6px) !important;
+}
+@media (min-width: 641px) {
+  .UPageSection {
+    padding-top: var(--space-tablet) !important;
+    padding-bottom: calc(var(--space-tablet) + 6px) !important;
+  }
+}
+@media (min-width: 1025px) {
+  .UPageSection {
+    padding-top: var(--space-desktop) !important;
+    padding-bottom: calc(var(--space-desktop) + 8px) !important;
+  }
+}
+
+/* Section-specific improved spacing with proper gaps - Tipis tapi rapi */
+#trusted-partner,
+#trusted-partners-section,
+#proses-transaksi,
+#transaction-process-section,
+#livechat-partner,
+#testimonial-section,
+#faq-section,
+#livechat-section,
+#accordionFAQ,
+#about-section,
+#whywe-section,
+#process-section {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  #trusted-partner,
+  #trusted-partners-section,
+  #proses-transaksi,
+  #transaction-process-section,
+  #livechat-partner,
+  #testimonial-section,
+  #faq-section,
+  #livechat-section,
+  #accordionFAQ,
+  #about-section,
+  #whywe-section,
+  #process-section {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #trusted-partner,
+  #trusted-partners-section,
+  #proses-transaksi,
+  #transaction-process-section,
+  #livechat-partner,
+  #testimonial-section,
+  #faq-section,
+  #livechat-section,
+  #accordionFAQ,
+  #about-section,
+  #whywe-section,
+  #process-section {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+/* Card and grid spacing fixes */
+.card { margin: 4px 8px !important; }
+.row, .grid { gap: 16px !important; }
+
+/* Force proper spacing between main sections - Tipis tapi rapi */
+.space-y-4 > * + * {
+  margin-top: 1rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem !important;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .space-y-4 > * + * {
+    margin-top: 1.5rem !important;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 2rem !important;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .space-y-4 > * + * {
+    margin-top: 2rem !important;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 2.5rem !important;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 3rem !important;
+  }
+}
+
+/* Keep legacy utility override in a softer form */
+.mt-14 { margin-top: 0 !important; }
+
+/* Mobile-only bottom padding for testimonial section to prevent clipping */
+@media (max-width: 640px) {
+  #testimonial-section.UPageSection,
+  #testimonial-section .UPageSection,
+  .testimonial-override {
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+/* Ensure the bottom notice in Transaction Process section is visible and not clipped */
+#transaction-process-section.UPageSection,
+#transaction-process-section .UPageSection,
+#transaction-process-section {
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+  overflow: visible !important;
+}

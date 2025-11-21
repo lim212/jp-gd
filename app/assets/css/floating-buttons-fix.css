@@ -1,0 +1,432 @@
+/* ========================================
+   FLOATING BUTTONS - PROFESSIONAL FIX
+   Responsive, Clear, No Icon Cropping
+   ======================================== */
+
+/* ===== BASE FIXES ===== */
+#floating-actions {
+  /* Ensure proper positioning */
+  position: fixed !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  z-index: 9999 !important;
+  
+  /* Flex layout */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  
+  /* Prevent interference */
+  pointer-events: none !important;
+}
+
+#floating-actions > * {
+  pointer-events: auto !important;
+}
+
+/* ===== BUTTON BASE STYLES ===== */
+.epic-scroll-btn,
+.epic-wa-btn {
+  /* Ensure proper centering */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Prevent icon cropping */
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  
+  /* Professional sizing */
+  border-radius: 50% !important;
+  border: none !important;
+  cursor: pointer !important;
+  
+  /* Smooth transitions */
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  
+  /* Ensure proper stacking */
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ===== ICON FIXES ===== */
+.epic-scroll-btn svg,
+.epic-wa-btn svg {
+  /* Prevent icon distortion */
+  display: block !important;
+  margin: auto !important;
+  flex-shrink: 0 !important;
+  
+  /* Ensure proper sizing */
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  
+  /* Prevent text selection */
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  
+  /* Ensure proper positioning */
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ===== SCROLL BUTTONS ===== */
+.epic-scroll-btn {
+  /* Professional sizing */
+  width: 60px !important;
+  height: 60px !important;
+  
+  /* Clean design */
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4) !important;
+  color: white !important;
+}
+
+.epic-scroll-btn svg {
+  width: 28px !important;
+  height: 28px !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25)) !important;
+}
+
+.epic-scroll-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 
+    0 8px 24px rgba(249, 115, 22, 0.45),
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+.epic-scroll-btn:hover svg {
+  transform: scale(1.1) !important;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.epic-wa-btn {
+  /* Professional sizing */
+  width: 70px !important;
+  height: 70px !important;
+  
+  /* Premium WhatsApp design */
+  background: linear-gradient(135deg, #25d366 0%, #1da851 50%, #128c7e 100%) !important;
+  box-shadow: 
+    0 6px 20px rgba(37, 211, 102, 0.4),
+    0 3px 10px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(18, 140, 126, 0.3) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.epic-wa-btn svg {
+  width: 36px !important;
+  height: 36px !important;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.epic-wa-btn:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 
+    0 10px 30px rgba(37, 211, 102, 0.5),
+    0 6px 15px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(18, 140, 126, 0.4) !important;
+}
+
+.epic-wa-btn:hover svg {
+  transform: scale(1.15) !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* ===== ONLINE PULSE INDICATOR ===== */
+.online-pulse {
+  position: absolute !important;
+  top: 4px !important;
+  right: 4px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: radial-gradient(circle, #22c55e 0%, #10b981 100%) !important;
+  border: 3px solid white !important;
+  border-radius: 50% !important;
+  box-shadow: 
+    0 2px 6px rgba(16, 185, 129, 0.4),
+    0 0 10px rgba(34, 197, 94, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+  z-index: 3 !important;
+  
+  /* Subtle pulse animation */
+  animation: pulse-gentle 2s ease-in-out infinite !important;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+}
+
+/* ===== DARK MODE STYLES ===== */
+.dark .epic-scroll-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%) !important;
+  box-shadow: 
+    0 6px 20px rgba(59, 130, 246, 0.45),
+    0 3px 10px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.25),
+    inset 0 -2px 4px rgba(29, 78, 216, 0.3) !important;
+}
+
+.dark .epic-scroll-btn:hover {
+  box-shadow: 
+    0 10px 30px rgba(59, 130, 246, 0.55),
+    0 6px 15px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(29, 78, 216, 0.4) !important;
+}
+
+.dark .epic-wa-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%) !important;
+  box-shadow: 
+    0 8px 24px rgba(16, 185, 129, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(4, 120, 87, 0.35) !important;
+}
+
+.dark .epic-wa-btn:hover {
+  box-shadow: 
+    0 12px 35px rgba(16, 185, 129, 0.6),
+    0 6px 18px rgba(0, 0, 0, 0.45),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(4, 120, 87, 0.45) !important;
+}
+
+.dark .online-pulse {
+  background: radial-gradient(circle, #6ee7b7 0%, #34d399 100%) !important;
+  border-color: rgba(15, 23, 42, 0.95) !important;
+  box-shadow: 
+    0 3px 8px rgba(52, 211, 153, 0.5),
+    0 0 12px rgba(110, 231, 183, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  #floating-actions {
+    left: 20px !important;
+    bottom: 20px !important;
+    gap: 16px !important;
+  }
+  
+  .epic-scroll-btn {
+    width: 68px !important;
+    height: 68px !important;
+  }
+  
+  .epic-scroll-btn svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .epic-wa-btn {
+    width: 78px !important;
+    height: 78px !important;
+  }
+  
+  .epic-wa-btn svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .online-pulse {
+    width: 18px !important;
+    height: 18px !important;
+    top: 6px !important;
+    right: 6px !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .epic-scroll-btn {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  
+  .epic-scroll-btn svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .epic-wa-btn {
+    width: 74px !important;
+    height: 74px !important;
+  }
+  
+  .epic-wa-btn svg {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  
+  .online-pulse {
+    width: 17px !important;
+    height: 17px !important;
+    top: 5px !important;
+    right: 5px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #floating-actions {
+    left: 12px !important;
+    bottom: 12px !important;
+    gap: 10px !important;
+  }
+  
+  .epic-scroll-btn {
+    width: 58px !important;
+    height: 58px !important;
+  }
+  
+  .epic-scroll-btn svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  
+  .epic-wa-btn {
+    width: 68px !important;
+    height: 68px !important;
+  }
+  
+  .epic-wa-btn svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  
+  .online-pulse {
+    width: 16px !important;
+    height: 16px !important;
+    top: 4px !important;
+    right: 4px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #floating-actions {
+    left: 8px !important;
+    bottom: 8px !important;
+    gap: 8px !important;
+  }
+  
+  .epic-scroll-btn {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  
+  .epic-scroll-btn svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  
+  .epic-wa-btn {
+    width: 62px !important;
+    height: 62px !important;
+  }
+  
+  .epic-wa-btn svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .online-pulse {
+    width: 14px !important;
+    height: 14px !important;
+    top: 3px !important;
+    right: 3px !important;
+    border-width: 2px !important;
+  }
+  
+  /* Hide tooltips on mobile */
+  .tooltip-text {
+    display: none !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  #floating-actions {
+    left: 4px !important;
+    bottom: 4px !important;
+    gap: 6px !important;
+  }
+  
+  .epic-scroll-btn {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  .epic-scroll-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  .epic-wa-btn {
+    width: 58px !important;
+    height: 58px !important;
+  }
+  
+  .epic-wa-btn svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .online-pulse {
+    width: 12px !important;
+    height: 12px !important;
+    top: 2px !important;
+    right: 2px !important;
+    border-width: 1.5px !important;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .online-pulse,
+  .epic-scroll-btn,
+  .epic-wa-btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Focus states for keyboard navigation */
+.epic-scroll-btn:focus-visible,
+.epic-wa-btn:focus-visible {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 4px !important;
+  box-shadow: 
+    0 0 0 5px rgba(59, 130, 246, 0.2),
+    0 6px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+.dark .epic-scroll-btn:focus-visible,
+.dark .epic-wa-btn:focus-visible {
+  outline-color: #60a5fa !important;
+  box-shadow: 
+    0 0 0 5px rgba(96, 165, 250, 0.2),
+    0 6px 20px rgba(96, 165, 250, 0.4) !important;
+}

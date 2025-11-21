@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 180" width="292" height="180">
+  <!-- Neteller logo based on the downloaded image -->
+  <g transform="translate(20, 60)">
+    <!-- Neteller logo in green -->
+    <path d="M0,0h25l22,58h1l22-58h25v86h-17V28h-1l-24,61h-13L16,28h-1v61H0V0z" fill="#84BC41"/>
+    <path d="M108,0h17v33h38V0h17v86h-17V50h-38v36h-17V0z" fill="#84BC41"/>
+    <path d="M198,0h17v86h-17V0z" fill="#84BC41"/>
+    <path d="M230,0h17v72h42v14H230V0z" fill="#84BC41"/>
+    <path d="M298,0h17v72h42v14H298V0z" fill="#84BC41"/>
+    <path d="M366,0h59v14h-42v22h39v14h-39v23h42v14h-59V0z" fill="#84BC41"/>
+    <path d="M438,0h17v72h42v14h-59V0z" fill="#84BC41"/>
+  </g>
+</svg>

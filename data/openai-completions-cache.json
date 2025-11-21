@@ -1,0 +1,22 @@
+{
+  "6503a9088784a3d677a1c068abae4bd776b04f464fe6de135d6e1698afbb4409": {
+    "content": "{\n  \"navigation.home\": \"Home\",\n  \"navigation.testimonials\": \"Testimonials\",\n  \"navigation.theme\": \"Theme\"\n}",
+    "ts": 1755017105057
+  },
+  "07510ece00290d46d824558e63cce60fc898405b98c7b265f8b41a5ab66e4eed": {
+    "content": "{\n  \"navigation.home\": \"Home\"\n}",
+    "ts": 1755270563930
+  },
+  "3df9ce6b74d64cfbafac7c61484fc33e39068ef8ac39bd3f35341f41394cd3ba": {
+    "content": "{\n  \"search.placeholder\": \"Search...\"\n}",
+    "ts": 1755686645283
+  },
+  "ba6463d93c1ba707bbfe97abff2e1319993ef1f7b9ef02fab42eaa77d3c0b3f9": {
+    "content": "{\n  \"static.footer.whatsapp_label\": \"WhatsApp:\",\n  \"static.footer.whatsapp_24_7\": \"WhatsApp 24/7\"\n}",
+    "ts": 1755975602261
+  },
+  "557a1a3b1c64a3a48f2ae4200b5373a81c0d42828a6a22f2e8acb869d508b8a3": {
+    "content": "{\n  \"marquee.text\": \"Trusted PayPal Service #1 Indonesia - We provide trusted PayPal services and secure payment solutions for every transaction you make, including PayPal Payment Services, PayPal Top Up Services, PayPal Transfer Services, PayPal Balance Filling Services, Credit Card, Skrill, Neteller, Namecheap, LiveChat, Bitcoin, crypto, and TRC20. With high security systems, we ensure that every PayPal service is conducted safely and reliably 24 hours a day.\",\n  \"about.paypal_service_title\": \"Trusted PayPal Service\",\n  \"about.definition_title\": \"What is Trusted PayPal Service?\",\n  \"about.services_intro\": \"Trusted PayPal service is a service that helps you conduct online transactions using PayPal without needing to have your own PayPal account or credit card. We provide trusted PayPal services in Indonesia that act as intermediaries to facilitate your payments with guaranteed security. Our PayPal services include PayPal payment services, PayPal top up services, and PayPal transfer services available 24 hours a day.\",\n  \"about.paypal_services.title\": \"Trusted PayPal Service\",\n  \"about.paypal_services.intermediary.description\": \"We act as intermediaries for your PayPal transactions with guaranteed security.\",\n  \"about.paypal_services.payment.description\": \"Payment services for online transactions using PayPal quickly and securely.\",\n  \"about.paypal_services.transfer.description\": \"Send funds to another PayPal account quickly and securely 24 hours a day.\",\n  \"about.paypal_services.topup.title\": \"PayPal Top Up Service\",\n  \"about.paypal_services.topup.description\": \"Easily and reliably top up your PayPal account balance.\",\n  \"about.additional_info.highlight\": \"Trusted PayPal Service!\",\n  \"about.additional_info.description\": \"We have served thousands of customers since 2011 with a high satisfaction rate. Security and trust are our top priorities in every PayPal service transaction.\",\n  \"static.footer.company_tagline\": \"Trusted PayPal Service & Online Payments\"\n}",
+    "ts": 1760901972424
+  }
+}

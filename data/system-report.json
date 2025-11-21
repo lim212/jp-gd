@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-10-07T17:30:16.668Z",
+  "system": {
+    "totalKeywords": 2997,
+    "generatedBlogs": 200,
+    "completionPercentage": "6.7",
+    "dailyTarget": 10,
+    "schedule": "03:00 daily"
+  },
+  "rotation": {
+    "currentIndex": 200,
+    "currentDay": 21,
+    "dailyCount": 10,
+    "progressPercentage": "6.7",
+    "daysRemaining": 280,
+    "nextResetDate": "2026-07-14T17:30:16.678Z"
+  },
+  "generation": {
+    "totalGenerated": 200,
+    "daysActive": 21,
+    "averagePerDay": "9.5",
+    "recentBlogs": [
+      {
+        "title": "Rahasia Sukses via paypal Panduan Komplit",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Tips & Trik tukar saldo paypal Hasil Maksimal",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Cara Mudah tukar saldo paypal ke dana Panduan Komplit",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Cara Cepat tukar paypal ke dana Panduan Komplit",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Langkah Mudah transfer paypal ke dana Strategi Jitu",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Solusi Praktis topup paypal Terbaru 2025",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Cara Mudah top up saldo paypal untuk Pemula",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Teknik Profesional top up paypal murah Anti Gagal",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Rahasia Sukses top up dana via paypal murah Paling Efektif",
+        "date": "30/09/2025"
+      },
+      {
+        "title": "Cara Mudah saldopp Hasil Maksimal",
+        "date": "30/09/2025"
+      }
+    ]
+  },
+  "health": {
+    "keywords": "accessible",
+    "rotation": "accessible",
+    "generated": "accessible",
+    "logs": "accessible"
+  }
+}

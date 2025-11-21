@@ -1,0 +1,47 @@
+/* BANNER FINAL FIX - MAXIMUM SPECIFICITY */
+
+/* Align banner positioning without forced gaps */
+html body div.banner-slider-container,
+html body div.simple-banner-wrapper,
+html body div.simple-banner-container {
+  margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+  padding-top: 0 !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Force border fix */
+html body div.simple-banner-container {
+  border: none !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  html body div.banner-slider-container,
+  html body div.simple-banner-wrapper,
+  html body div.simple-banner-container {
+    margin-top: var(--app-header-gap, calc(var(--app-header-offset, 118px) + 1rem)) !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body div.banner-slider-container,
+  html body div.simple-banner-wrapper,
+  html body div.simple-banner-container {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.86rem)) !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html body div.banner-slider-container,
+  html body div.simple-banner-wrapper,
+  html body div.simple-banner-container {
+    margin-top: var(--app-header-gap-mobile, calc(var(--app-header-offset, 118px) + 0.8rem)) !important;
+    padding-top: 0 !important;
+    transform: none !important;
+  }
+}

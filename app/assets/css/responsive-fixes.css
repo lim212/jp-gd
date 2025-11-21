@@ -1,0 +1,298 @@
+/*
+ * Responsive Fixes for JasaPembayaran.com
+ * Created: July 2025
+ * Purpose: Improve mobile and tablet experience
+ */
+
+/* ===== Responsive Image Handling ===== */
+/* Make all images in article content responsive */
+article img {
+  max-width: 100% !important;
+  height: auto !important;
+  width: auto !important; /* Override fixed widths */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem; /* Rounded corners for better visual appeal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Add loading attribute to all images for better performance */
+article img:not([loading]) {
+  loading: lazy;
+}
+
+/* ===== Responsive Typography ===== */
+/* Base typography adjustments for better readability on mobile */
+article h1 {
+  font-size: 1.5rem !important; /* 24px */
+  line-height: 1.3 !important;
+  margin-bottom: 1rem !important;
+}
+
+article h2 {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.3 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+article h3 {
+  font-size: 1.125rem !important; /* 18px */
+  line-height: 1.3 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+article p, article li {
+  font-size: 1rem !important; /* 16px */
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Tablet typography adjustments */
+@media (min-width: 640px) {
+  article h1 {
+    font-size: 1.75rem !important; /* 28px */
+  }
+
+  article h2 {
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  article h3 {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  article p, article li {
+    font-size: 1.0625rem !important; /* 17px */
+  }
+}
+
+/* Desktop typography adjustments */
+@media (min-width: 1024px) {
+  article h1 {
+    font-size: 2rem !important; /* 32px */
+  }
+
+  article h2 {
+    font-size: 1.75rem !important; /* 28px */
+  }
+
+  article h3 {
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  article p, article li {
+    font-size: 1.125rem !important; /* 18px */
+  }
+}
+
+/* ===== Responsive Table Handling ===== */
+/* Make tables responsive on mobile */
+article table {
+  width: 100% !important;
+  overflow-x: auto !important;
+  display: block !important;
+  max-width: 100% !important;
+  border-collapse: collapse !important;
+  margin-bottom: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  article table {
+    display: table !important; /* Revert to normal table display on larger screens */
+  }
+}
+
+/* Improve table cell spacing on mobile */
+article th, article td {
+  padding: 0.5rem !important;
+  font-size: 0.875rem !important; /* 14px */
+}
+
+@media (min-width: 640px) {
+  article th, article td {
+    padding: 0.75rem !important;
+    font-size: 1rem !important; /* 16px */
+  }
+}
+
+@media (min-width: 1024px) {
+  article th, article td {
+    padding: 1rem !important;
+  }
+}
+
+/* ===== Touch Target Improvements ===== */
+/* Ensure all interactive elements have adequate touch targets on mobile */
+@media (max-width: 767px) {
+  article a {
+    padding: 0.25rem 0 !important;
+    display: inline-block !important;
+  }
+
+  article button,
+  article input[type="button"],
+  article input[type="submit"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+/* ===== Blockquote Improvements ===== */
+/* Make blockquotes more visually appealing and responsive */
+article blockquote {
+  border-left: 4px solid #f59e0b !important; /* amber-500 */
+  padding: 0.75rem 1rem !important;
+  margin: 1.5rem 0 !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-radius: 0.25rem !important;
+  font-style: italic !important;
+}
+
+@media (min-width: 640px) {
+  article blockquote {
+    padding: 1rem 1.5rem !important;
+    margin: 2rem 0 !important;
+  }
+}
+
+/* ===== List Improvements ===== */
+/* Improve list styling and spacing */
+article ul, article ol {
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+article li {
+  margin-bottom: 0.5rem !important;
+}
+
+article li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ===== General Layout Fixes ===== */
+/* Prevent horizontal scrolling by ensuring content fits within viewport */
+.overflow-x-auto,
+.overflow-auto {
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Ensure proper padding on mobile */
+.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+@media (min-width: 640px) {
+  .px-2 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Improve spacing between elements */
+.gap-y-4 {
+  row-gap: 1rem !important;
+}
+
+@media (min-width: 640px) {
+  .gap-y-4 {
+    row-gap: 1.5rem !important;
+  }
+}
+
+/* ===== Performance Optimizations ===== */
+/* Reduce animation complexity on mobile */
+@media (max-width: 767px) {
+  .animate-pulse,
+  .animate-ping,
+  .animate-spin,
+  .animate-bounce {
+    animation-duration: 3s !important; /* Slower animations to reduce CPU usage */
+  }
+
+  /* Disable non-essential animations on mobile */
+  .mobile-no-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Sidebar Widgets: Normalization & Responsive Accordion ===== */
+/* Applied strictly to .sidebar-widget, .widget-header, .widget-body */
+
+/* Reset fixed heights so height follows content */
+.sidebar-widget {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.sidebar-widget .widget-body {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none;
+  overflow: visible;
+}
+
+/* Hide widgets with empty content via a status class */
+.sidebar-widget.is-empty {
+  display: none !important;
+}
+
+/* Desktop behavior: long content scrolls within body */
+@media (min-width: 769px) {
+  .sidebar-widget .widget-body {
+    max-height: 360px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile accordion (viewport ≤ 768px) */
+@media (max-width: 768px) {
+  .sidebar-widget {
+    border-radius: 8px; /* Smaller radius on mobile */
+  }
+  .sidebar-widget .widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 12px; /* Reduced padding */
+    font-size: 0.95rem; /* Smaller heading font */
+    border-radius: 8px 8px 0 0;
+  }
+  .sidebar-widget .widget-body {
+    display: none; /* Hidden by default on mobile */
+    padding: 10px 12px; /* Reduced padding */
+    max-height: none !important;
+    overflow: visible !important;
+    border-radius: 0 0 8px 8px;
+  }
+  .sidebar-widget.is-open .widget-body {
+    display: block; /* Toggle open state */
+  }
+}

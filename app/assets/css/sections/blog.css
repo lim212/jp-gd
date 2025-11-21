@@ -1,0 +1,33 @@
+/* Section theme: Blog List (BlogList.vue) */
+/* @reference "tailwindcss"; */
+
+.blog-theme {
+  /* Light */
+  --section-bg: #fffdf7;
+  --section-surface: #ffffff;
+  --section-border: #bae6fd; /* soft blue border */
+  --section-accent: #0ea5e9; /* sky blue */
+  --section-accent-2: #3B82F6; /* blue */
+  --section-text: #0f172a;
+}
+
+.dark .blog-theme {
+  /* Dark */
+  --section-bg: #0c1118;
+  --section-surface: #151b26; /* softer */
+  --section-border: #2f3a4e;
+  --section-accent: #8cb6ff;   /* calm */
+  --section-accent-2: #b6d0ff;
+  --section-text: #ffffff;
+}
+
+.blog-theme { color: var(--section-text); }
+.blog-theme .blog-card-body { background: var(--section-surface) !important; }
+.blog-theme .blog-card { border-color: color-mix(in oklab, var(--section-accent), transparent 70%) !important; }
+.blog-theme .bg-gradient-to-r.from-blue-500 { --tw-gradient-from: var(--section-accent) !important; }
+.blog-theme .bg-gradient-to-r.to-blue-500 { --tw-gradient-to: var(--section-accent-2) !important; }
+
+/* Images: prefer full brightness, avoid dim overlays on cards */
+.blog-theme img { filter: none !important; opacity: 1 !important; }
+
+

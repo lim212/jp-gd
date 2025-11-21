@@ -1,0 +1,185 @@
+/* Simple Floating Action Buttons - Clean & Minimal */
+
+/* Simple Floating Actions Container - BOTTOM LEFT POSITIONING */
+#floating-actions {
+  /* Position flush in bottom-left corner */
+  left: 0.75rem !important;
+  bottom: 0.75rem !important;
+  position: fixed !important;
+  z-index: 9999 !important;
+  visibility: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+  will-change: opacity !important;
+}
+
+#floating-actions > * {
+  pointer-events: auto !important;
+}
+
+/* Simple Container - No Frame */
+.simple-floating-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Simple Scroll Buttons */
+button.scroll-button {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Scroll to Top Button */
+button.scroll-button-up {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Scroll to Bottom Button */
+button.scroll-button-down {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+button.scroll-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Simple Scroll Button Icons */
+.scroll-button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* Simple WhatsApp Button */
+.whatsapp-button-container {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-button-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Simple WhatsApp Icon */
+.whatsapp-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: white;
+}
+
+/* Simple Online Indicator */
+.online-indicator {
+  position: absolute;
+  top: -0.125rem;
+  right: -0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #10b981;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Active States */
+button.scroll-button:active,
+.whatsapp-button-container:active {
+  transform: scale(0.95);
+}
+
+/* Dark Mode */
+.dark button.scroll-button {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.dark .whatsapp-button-container {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  button.scroll-button,
+  .whatsapp-button-container,
+  .online-indicator {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  #floating-actions {
+    display: none !important;
+  }
+}
+
+/* Responsive Mobile Positioning */
+@media (max-width: 640px) {
+  #floating-actions {
+    left: 0.5rem !important;
+    bottom: 0.5rem !important;
+    gap: 0.5rem !important;
+  }
+  
+  button.scroll-button,
+  .whatsapp-button-container {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+  
+  .scroll-button-icon,
+  .whatsapp-icon {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
+/* Tablet Positioning */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #floating-actions {
+    left: 0.875rem !important;
+    bottom: 0.875rem !important;
+    gap: 0.625rem !important;
+  }
+}
+
+/* Desktop Positioning */
+@media (min-width: 1025px) {
+  #floating-actions {
+    left: 1rem !important;
+    bottom: 1rem !important;
+    gap: 0.75rem !important;
+  }
+}

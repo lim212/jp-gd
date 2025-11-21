@@ -1,0 +1,33 @@
+/* Section theme: Berita Kami (BeritaKamiBox.vue) */
+/* @reference "tailwindcss"; */
+
+.berita-theme {
+  /* Light */
+  --section-bg: #ecfeff; /* cyan tint */
+  --section-surface: #ffffff;
+  --section-border: #99f6e4; /* teal */
+  --section-accent: #10b981; /* emerald */
+  --section-accent-2: #06b6d4; /* cyan */
+  --section-text: #06221d;
+}
+
+.dark .berita-theme {
+  /* Dark */
+  --section-bg: #082526;          /* deep teal */
+  --section-surface: #0f1c21;     /* softer dark */
+  --section-border: #1b4b46;
+  --section-accent: #46e0a8;      /* emerald softer */
+  --section-accent-2: #3bd8ef;    /* cyan softer */
+  --section-text: #eafffb;
+}
+
+.berita-theme section,
+.berita-theme .group { color: var(--section-text); }
+.berita-theme .border-emerald-400\/70 { border-color: var(--section-border) !important; }
+.berita-theme .hover\:border-emerald-500:hover { border-color: var(--section-accent) !important; }
+.berita-theme .bg-gradient-to-r { /* header bars inside section */ }
+
+/* Ensure thumbnails are bright */
+.berita-theme img { filter: none !important; opacity: 1 !important; }
+
+

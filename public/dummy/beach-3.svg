@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Ilustrasi pantai tropis 3">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#90caf9"/>
+      <stop offset="100%" stop-color="#e3f2fd"/>
+    </linearGradient>
+    <linearGradient id="sea3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00838f"/>
+      <stop offset="100%" stop-color="#00acc1"/>
+    </linearGradient>
+    <linearGradient id="sand3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3e0"/>
+      <stop offset="100%" stop-color="#ffcc80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky3)"/>
+  <circle cx="1050" cy="140" r="55" fill="#fff59d"/>
+  <rect x="0" y="300" width="1200" height="180" fill="url(#sea3)"/>
+  <rect x="0" y="480" width="1200" height="150" fill="url(#sand3)"/>
+  <path d="M0,465 C300,450 600,500 900,485 C1050,480 1150,520 1200,510 L1200,630 L0,630 Z" fill="#ffd180" opacity="0.85"/>
+  <g transform="translate(300,360)">
+    <path d="M0,120 C25,35 75,10 120,18 C85,45 55,85 35,120 Z" fill="#388e3c"/>
+    <rect x="22" y="120" width="16" height="90" fill="#6d4c41"/>
+  </g>
+</svg>

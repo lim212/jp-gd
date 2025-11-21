@@ -1,0 +1,41 @@
+/* ========================================
+   DESKTOP - LIGHT & DARK MODE
+   ======================================== */
+
+@media (min-width: 769px) {
+  /* BADGES - SHOW ON DESKTOP */
+  .logo-text-only + *,
+  .logo-text-only ~ div[class*="flex"] {
+    display: flex !important;
+  }
+  
+  /* NORMAL SPACING */
+  main {
+    margin-top: 0 !important;
+  }
+  
+  main > div {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  /* DESKTOP - NORMAL WIDTH (NOT FULL VIEWPORT) */
+  .banner-full-vw,
+  .bantuan-full-vw {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* LIGHT MODE */
+  .banner-full-vw {
+    background: #ffffff;
+  }
+  
+  /* DARK MODE */
+  .dark .banner-full-vw {
+    background: #1f2937;
+  }
+}
+

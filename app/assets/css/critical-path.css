@@ -1,0 +1,214 @@
+/* Critical CSS - Loaded inline for instant rendering */
+/* Minimal styles untuk above-the-fold content */
+
+/* Reset dasar yang sangat penting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent layout shift */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Dark mode basics */
+.dark body {
+  color: #f9fafb;
+  background: #0f172a;
+}
+
+/* Header placeholder - prevent layout shift */
+header,
+.fancy-header {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.dark header,
+.dark .fancy-header {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+/* Container basics */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Image placeholders - prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Banner slider images - ensure proper responsive behavior */
+.modern-slide-img,
+.banner-slider img,
+[class*="slider"] img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Lazy loading skeleton */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 50%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    #1f2937 0%,
+    #374151 50%,
+    #1f2937 100%
+  );
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Loading states */
+[data-loading="true"] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Prevent flash of unstyled content */
+[v-cloak] {
+  display: none !important;
+}
+
+/* Critical animations - minimal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Prevent cumulative layout shift (CLS) */
+.layout-shift-prevent {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap;
+}
+
+/* Responsive images - prevent layout shift */
+.responsive-image {
+  aspect-ratio: attr(width) / attr(height);
+  object-fit: cover;
+}
+
+/* Grid/Flex basics untuk layout awal */
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Utilities penting untuk above-the-fold */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  header,
+  .fancy-header {
+    height: 64px;
+  }
+}
+
+/* Prevent horizontal scroll */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+

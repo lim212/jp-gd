@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "home": "Home",
+    "information": "Informasi",
+    "about_us": "Tentang Kami",
+    "online_transaction": "Transaksi Online",
+    "transaction_proof": "Bukti Transaksi",
+    "testimonials": "Testimonials"
+  },
+  "search": {
+    "placeholder": "Pencarian..."
+  },
+  "marquee": {
+    "text": "Kami menyediakan layanan pembayaran yang aman dan terpercaya untuk setiap transaksi Bapak/Ibu, termasuk Jasa Pembayaran PayPal, Kartu Kredit, Skrill, Neteller, Namecheap, LiveChat, Bitcoin, kripto, dan TRC20. Dengan sistem keamanan tinggi, kami memastikan setiap pembayaran dilakukan dengan aman, sehingga Bapak/Ibu dapat bertransaksi tanpa rasa khawatir."
+  },
+  "about": {
+    "title": "Layanan pembayaran online yang aman dan terpercaya.",
+    "description": "Transaksi online yang aman dan terpercaya."
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  },
+  "scroll": {
+    "to_top": "Gulir ke atas",
+    "to_bottom": "Gulir ke bawah"
+  }
+}

@@ -1,0 +1,68 @@
+:root {
+  --neutral-border-light: rgba(148, 163, 184, 0.45);
+  --neutral-border-dark: rgba(71, 85, 105, 0.65);
+}
+
+:root :is([class*="border-red-"], [class*="border-red/"]) {
+  border-color: var(--neutral-border-light) !important;
+}
+
+.dark :is([class*="border-red-"], [class*="border-red/"]) {
+  border-color: var(--neutral-border-dark) !important;
+}
+
+:root :is([class*="ring-red-"], [class*="ring-red/"]) {
+  --tw-ring-color: var(--neutral-border-light) !important;
+}
+
+.dark :is([class*="ring-red-"], [class*="ring-red/"]) {
+  --tw-ring-color: var(--neutral-border-dark) !important;
+}
+
+:root :is([class*="outline-red-"], [class*="shadow-red-"]) {
+  outline-color: var(--neutral-border-light) !important;
+  --tw-shadow-color: var(--neutral-border-light) !important;
+}
+
+.dark :is([class*="outline-red-"], [class*="shadow-red-"]) {
+  outline-color: var(--neutral-border-dark) !important;
+  --tw-shadow-color: var(--neutral-border-dark) !important;
+}
+
+:root :is([class*="divide-red-"], [class*="border-t-red-"], [class*="border-b-red-"], [class*="border-l-red-"], [class*="border-r-red-"]) {
+  border-color: var(--neutral-border-light) !important;
+}
+
+.dark :is([class*="divide-red-"], [class*="border-t-red-"], [class*="border-b-red-"], [class*="border-l-red-"], [class*="border-r-red-"]) {
+  border-color: var(--neutral-border-dark) !important;
+}
+
+/* Trusted Partners inspired dark-mode styling for the help box */
+:is(html.dark, body.dark, .dark) .ultra-clean-help-box {
+  background: linear-gradient(150deg, rgba(17, 24, 39, 0.96), rgba(30, 41, 59, 0.93)) !important;
+  border: 1.5px solid rgba(59, 130, 246, 0.22) !important;
+  box-shadow:
+    0 26px 64px rgba(8, 11, 24, 0.55),
+    inset 0 1px 0 rgba(148, 163, 184, 0.18) !important;
+}
+
+:is(html.dark, body.dark, .dark) .ultra-clean-help-box:hover {
+  box-shadow:
+    0 32px 72px rgba(8, 11, 24, 0.6),
+    inset 0 1px 0 rgba(148, 163, 184, 0.24) !important;
+  border-color: rgba(96, 165, 250, 0.4) !important;
+}
+
+:is(html.dark, body.dark, .dark) .ultra-clean-help-box::before {
+  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.25), transparent 70%) !important;
+}
+
+:is(html.dark, body.dark, .dark) .ultra-clean-help-box::after {
+  background: radial-gradient(circle at 75% 85%, rgba(167, 139, 250, 0.2), transparent 65%) !important;
+}
+
+
+
+
+
+

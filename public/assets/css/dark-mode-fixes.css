@@ -1,0 +1,1358 @@
+/* Enhanced Dark Mode with Vibrant Colors - JasaPembayaran.com */
+
+/* ===== FORCE DARK MODE - HIGHEST PRIORITY ===== */
+html.dark,
+html.dark body,
+.dark,
+.dark body,
+.dark #__nuxt,
+.dark .min-h-screen {
+  color-scheme: dark !important;
+  background: linear-gradient(135deg, 
+    #0f0f23 0%, 
+    #1a1a2e 15%, 
+    #16213e 30%, 
+    #0f3460 45%, 
+    #0369a1 60%,
+    #0284c7 75%,
+    #0ea5e9 90%,
+    #06b6d4 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  color: #e2e8f0 !important;
+}
+
+/* Force dark mode for all main containers */
+.dark .container,
+.dark .max-w-7xl,
+.dark .max-w-6xl,
+.dark .max-w-5xl,
+.dark .max-w-4xl,
+.dark .max-w-3xl,
+.dark .max-w-2xl,
+.dark .max-w-xl,
+.dark .max-w-lg,
+.dark .max-w-md,
+.dark .max-w-sm {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+}
+
+/* ===== FORCE ALL ELEMENTS TO DARK MODE ===== */
+.dark * {
+  color: #e2e8f0 !important;
+}
+
+.dark p,
+.dark span,
+.dark div,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark li,
+.dark td,
+.dark th,
+.dark label,
+.dark small,
+.dark strong,
+.dark em,
+.dark b,
+.dark i {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Force all backgrounds to be dark or transparent */
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-gray-200,
+.dark .bg-gray-300,
+.dark .bg-blue-50,
+.dark .bg-blue-100,
+.dark .bg-indigo-50,
+.dark .bg-indigo-100,
+.dark .bg-purple-50,
+.dark .bg-purple-100,
+.dark .bg-green-50,
+.dark .bg-green-100,
+.dark .bg-yellow-50,
+.dark .bg-yellow-100,
+.dark .bg-red-50,
+.dark .bg-red-100 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark a {
+  color: #60a5fa !important;
+  transition: all 0.3s ease;
+}
+
+.dark a:hover {
+  color: #93c5fd !important;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+}
+
+/* ===== ENHANCED BUTTONS ===== */
+.dark button,
+.dark .btn,
+.dark [role="button"] {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.5) !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3), 0 0 10px rgba(59, 130, 246, 0.2) !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark button:hover,
+.dark .btn:hover,
+.dark [role="button"]:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ===== ENHANCED CARDS ===== */
+.dark .card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.85) 100%) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.4), 0 5px 10px -3px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .card:hover {
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 15px 25px -7px rgba(0, 0, 0, 0.5), 0 8px 15px -5px rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(129, 140, 248, 0.6) !important;
+}
+
+/* ===== HOMEPAGE SPECIFIC ENHANCEMENTS ===== */
+
+/* Banner Container Dark Mode */
+.dark .banner-container {
+  background: linear-gradient(135deg, 
+    #1e3a8a 0%, 
+    #1d4ed8 25%, 
+    #2563eb 50%, 
+    #3b82f6 75%, 
+    #0ea5e9 100%) !important;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3) !important;
+  border: 2px solid rgba(14, 165, 233, 0.4) !important;
+}
+
+/* Enhanced Bank Cards with Vibrant Colors */
+.dark .bank-card,
+.dark .info-card {
+  background: linear-gradient(135deg, 
+    rgba(30, 58, 138, 0.9) 0%, 
+    rgba(59, 130, 246, 0.8) 25%,
+    rgba(14, 165, 233, 0.7) 50%,
+    rgba(6, 182, 212, 0.8) 75%,
+    rgba(8, 145, 178, 0.9) 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 20px rgba(14, 165, 233, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .bank-card:hover,
+.dark .info-card:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4), 0 0 30px rgba(14, 165, 233, 0.3) !important;
+  border-color: rgba(14, 165, 233, 0.8) !important;
+}
+
+/* Enhanced Why Choose Us Cards */
+.dark .why-choose-card {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.95) 0%, 
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(59, 130, 246, 0.8) 50%,
+    rgba(14, 165, 233, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.7) !important;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3), 0 0 25px rgba(14, 165, 233, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+  transition: all 0.4s ease !important;
+}
+
+.dark .why-choose-card:hover {
+  transform: translateY(-8px) rotate(1deg) !important;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4), 0 0 35px rgba(14, 165, 233, 0.3) !important;
+  border-color: rgba(14, 165, 233, 1) !important;
+}
+
+/* Enhanced Section Headers */
+.dark .section-header {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.9) 0%, 
+    rgba(14, 165, 233, 0.8) 25%,
+    rgba(6, 182, 212, 0.9) 50%,
+    rgba(8, 145, 178, 0.8) 75%,
+    rgba(59, 130, 246, 0.9) 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.8) !important;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4), 0 0 15px rgba(14, 165, 233, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  animation: sectionHeaderGlow 3s ease-in-out infinite !important;
+}
+
+@keyframes sectionHeaderGlow {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4), 0 0 15px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 12px 25px rgba(59, 130, 246, 0.6), 0 0 25px rgba(14, 165, 233, 0.5);
+  }
+}
+
+/* ===== LIVECHAT BANNERS DARK MODE FIX ===== */
+.dark .livechat-banner {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(30, 41, 59, 0.9) 25%,
+    rgba(59, 130, 246, 0.8) 50%,
+    rgba(99, 102, 241, 0.9) 75%,
+    rgba(15, 23, 42, 0.95) 100%) !important;
+  border: 2px solid rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 20px rgba(99, 102, 241, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  color: #e2e8f0 !important;
+}
+
+.dark .livechat-banner:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4), 0 0 30px rgba(99, 102, 241, 0.3) !important;
+  border-color: rgba(59, 130, 246, 0.8) !important;
+}
+
+.dark .livechat-banner .text-white {
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .livechat-banner .bg-blue-600 {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .livechat-banner .bg-orange-500 {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* ===== ENHANCED NAVIGATION DARK MODE ===== */
+.dark .nav-bar {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(30, 41, 59, 0.9) 50%,
+    rgba(15, 23, 42, 0.95) 100%) !important;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.dark .nav-link {
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.dark .nav-link:hover {
+  color: #60a5fa !important;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.5) !important;
+}
+
+.dark .nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #3b82f6, #0ea5e9) !important;
+  transition: width 0.3s ease !important;
+}
+
+.dark .nav-link:hover::after {
+  width: 100% !important;
+}
+
+/* ===== ENHANCED TEXT COLORS ===== */
+.dark .text-primary {
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3) !important;
+}
+
+.dark .text-secondary {
+  color: #94a3b8 !important;
+}
+
+.dark .text-accent {
+  color: #c4b5fd !important;
+  text-shadow: 0 0 10px rgba(196, 181, 253, 0.3) !important;
+}
+
+.dark .text-warning {
+  color: #fde047 !important;
+  text-shadow: 0 0 10px rgba(253, 224, 71, 0.3) !important;
+}
+
+.dark .text-success {
+  color: #4ade80 !important;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.3) !important;
+}
+
+/* ===== ENHANCED ICONS ===== */
+.dark .icon-primary {
+  color: #60a5fa !important;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.4)) !important;
+}
+
+.dark .icon-secondary {
+  color: #c4b5fd !important;
+  filter: drop-shadow(0 0 8px rgba(196, 181, 253, 0.4)) !important;
+}
+
+.dark .icon-warning {
+  color: #fde047 !important;
+  filter: drop-shadow(0 0 8px rgba(253, 224, 71, 0.4)) !important;
+}
+
+.dark .icon-success {
+  color: #4ade80 !important;
+  filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.4)) !important;
+}
+
+/* ===== ENHANCED SCROLLBAR ===== */
+.dark ::-webkit-scrollbar {
+  width: 14px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border-radius: 7px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 50%, #06b6d4 100%);
+  border-radius: 7px;
+  border: 2px solid rgba(15, 23, 42, 0.8);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 50%, #0891b2 100%);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  transform: scale(1.1);
+}
+
+/* ===== ENHANCED FOCUS STATES ===== */
+.dark *:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.6) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark *:focus-visible {
+  outline: 2px solid rgba(14, 165, 233, 0.8) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* ===== AGGRESSIVE DARK MODE FIXES ===== */
+
+/* Force all white backgrounds to be dark */
+.dark [class*="bg-white"],
+.dark [class*="bg-gray-50"],
+.dark [class*="bg-gray-100"],
+.dark [class*="bg-gray-200"],
+.dark [class*="bg-gray-300"] {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force all light text to be dark mode friendly */
+.dark [class*="text-gray-900"],
+.dark [class*="text-gray-800"],
+.dark [class*="text-gray-700"],
+.dark [class*="text-black"] {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Force all light borders to be dark mode friendly */
+.dark [class*="border-gray-200"],
+.dark [class*="border-gray-300"],
+.dark [class*="border-gray-400"] {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Force all light shadows to be dark mode friendly */
+.dark [class*="shadow-sm"],
+.dark [class*="shadow-md"],
+.dark [class*="shadow-lg"],
+.dark [class*="shadow-xl"] {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force specific components that might be resistant */
+.dark .card,
+.dark .panel,
+.dark .section,
+.dark .container,
+.dark .wrapper,
+.dark .content,
+.dark .main,
+.dark .article,
+.dark .aside,
+.dark .header,
+.dark .footer,
+.dark .nav,
+.dark .menu {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Force all inputs to be dark mode friendly */
+.dark input,
+.dark textarea,
+.dark select,
+.dark [type="text"],
+.dark [type="email"],
+.dark [type="password"],
+.dark [type="search"] {
+  background: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Force all images to have proper contrast */
+.dark img {
+  filter: brightness(1.1) contrast(1.1) !important;
+}
+
+/* Force all icons to be visible */
+.dark svg,
+.dark [class*="icon"] {
+  color: #60a5fa !important;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.4)) !important;
+}
+
+/* ===== NUCLEAR OPTION - FORCE EVERYTHING TO DARK MODE ===== */
+
+/* Override any inline styles or high-specificity selectors */
+html.dark *,
+html.dark *::before,
+html.dark *::after {
+  color: #e2e8f0 !important;
+}
+
+/* Force all elements with white backgrounds */
+html.dark [style*="background-color: white"],
+html.dark [style*="background-color: #fff"],
+html.dark [style*="background-color: #ffffff"],
+html.dark [style*="background: white"],
+html.dark [style*="background: #fff"],
+html.dark [style*="background: #ffffff"] {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+}
+
+/* Force all elements with light gray backgrounds */
+html.dark [style*="background-color: #f9fafb"],
+html.dark [style*="background-color: #f3f4f6"],
+html.dark [style*="background-color: #e5e7eb"],
+html.dark [style*="background: #f9fafb"],
+html.dark [style*="background: #f3f4f6"],
+html.dark [style*="background: #e5e7eb"] {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+}
+
+/* Force all elements with dark text to be light */
+html.dark [style*="color: black"],
+html.dark [style*="color: #000"],
+html.dark [style*="color: #000000"],
+html.dark [style*="color: #1f2937"],
+html.dark [style*="color: #374151"],
+html.dark [style*="color: #4b5563"] {
+  color: #e2e8f0 !important;
+}
+
+/* Force all elements with light borders */
+html.dark [style*="border-color: #e5e7eb"],
+html.dark [style*="border-color: #d1d5db"],
+html.dark [style*="border-color: #9ca3af"] {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Force all elements with light shadows */
+html.dark [style*="box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1)"],
+html.dark [style*="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)"],
+html.dark [style*="box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1)"] {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ===== SPECIFIC COMPONENT FIXES ===== */
+
+/* Fix for UPageSection components */
+.dark .UPageSection,
+.dark [class*="UPageSection"] {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Fix for UCarousel components */
+.dark .UCarousel,
+.dark [class*="UCarousel"] {
+  background: transparent !important;
+}
+
+.dark .UCarousel .carousel-item,
+.dark [class*="UCarousel"] .carousel-item {
+  background: linear-gradient(135deg, 
+    rgba(30, 58, 138, 0.9) 0%, 
+    rgba(59, 130, 246, 0.8) 25%,
+    rgba(14, 165, 233, 0.7) 50%,
+    rgba(6, 182, 212, 0.8) 75%,
+    rgba(8, 145, 178, 0.9) 100%) !important;
+  border: 2px solid rgba(251, 191, 36, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 20px rgba(251, 191, 36, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .UCarousel .carousel-item:hover,
+.dark [class*="UCarousel"] .carousel-item:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4), 0 0 30px rgba(251, 191, 36, 0.3) !important;
+  border-color: rgba(251, 191, 36, 0.8) !important;
+}
+
+/* Fix for UiTitleBase components */
+.dark .UiTitleBase,
+.dark [class*="UiTitleBase"] {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+}
+
+/* Fix for MDC components */
+.dark .MDC,
+.dark [class*="MDC"] {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Fix for specific Tailwind classes that might be resistant */
+.dark .bg-gradient-to-br,
+.dark .from-white,
+.dark .to-blue-50,
+.dark .from-gray-800,
+.dark .to-gray-900,
+.dark .from-elevated\/80,
+.dark .to-blue-950\/20 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+}
+
+.dark .border-blue-200,
+.dark .border-blue-800\/40,
+.dark .border-gray-700 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-200,
+.dark .text-gray-900,
+.dark .text-white {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Fix for carousel navigation buttons */
+.dark .bg-white\/90,
+.dark .dark\:bg-gray-800\/90,
+.dark .hover\:bg-blue-100,
+.dark .dark\:hover\:bg-blue-900\/40 {
+  background: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-white\/90:hover,
+.dark .dark\:bg-gray-800\/90:hover,
+.dark .hover\:bg-blue-100:hover,
+.dark .dark\:hover\:bg-blue-900\/40:hover {
+  background: rgba(59, 130, 246, 0.8) !important;
+  border-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Fix for carousel dots */
+.dark .bg-gray-300,
+.dark .dark\:bg-gray-600,
+.dark .hover\:bg-gray-400,
+.dark .dark\:hover\:bg-gray-500 {
+  background: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-gray-300:hover,
+.dark .dark\:bg-gray-600:hover,
+.dark .hover\:bg-gray-400:hover,
+.dark .dark\:hover\:bg-gray-500:hover {
+  background: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Fix for specific service cards */
+.dark .bg-blue-50,
+.dark .dark\:bg-blue-900\/20,
+.dark .bg-indigo-50,
+.dark .dark\:bg-indigo-900\/20,
+.dark .bg-green-50,
+.dark .dark\:bg-green-900\/20,
+.dark .bg-purple-50,
+.dark .dark\:bg-purple-900\/20 {
+  background: linear-gradient(135deg, 
+    rgba(30, 58, 138, 0.9) 0%, 
+    rgba(59, 130, 246, 0.8) 25%,
+    rgba(14, 165, 233, 0.7) 50%,
+    rgba(6, 182, 212, 0.8) 75%,
+    rgba(8, 145, 178, 0.9) 100%) !important;
+  border: 2px solid rgba(251, 191, 36, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 20px rgba(251, 191, 36, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .bg-blue-50:hover,
+.dark .dark\:bg-blue-900\/20:hover,
+.dark .bg-indigo-50:hover,
+.dark .dark\:bg-indigo-900\/20:hover,
+.dark .bg-green-50:hover,
+.dark .dark\:bg-green-900\/20:hover,
+.dark .bg-purple-50:hover,
+.dark .dark\:bg-purple-900\/20:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4), 0 0 30px rgba(251, 191, 36, 0.3) !important;
+  border-color: rgba(251, 191, 36, 0.8) !important;
+}
+
+/* Fix for border colors in service cards */
+.dark .border-blue-200,
+.dark .dark\:border-blue-800,
+.dark .border-indigo-200,
+.dark .dark\:border-indigo-800,
+.dark .border-green-200,
+.dark .dark\:border-green-800,
+.dark .border-purple-200,
+.dark .dark\:border-purple-800 {
+  border-color: rgba(251, 191, 36, 0.6) !important;
+}
+
+/* Fix for text colors in service cards */
+.dark .text-ui-primary {
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3) !important;
+}
+
+/* Fix for icons in service cards */
+.dark .text-ui-primary svg,
+.dark .text-ui-primary [class*="icon"] {
+  color: #60a5fa !important;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.4)) !important;
+}
+
+/* Fix for specific background classes */
+.dark .bg-ui-primary\/10,
+.dark .dark\:bg-ui-primary\/20 {
+  background: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Fix for border colors */
+.dark .border-blue-100,
+.dark .dark\:border-gray-700 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Fix for shadow classes */
+.dark .shadow-sm,
+.dark .md\:shadow,
+.dark .shadow-md,
+.dark .md\:shadow-lg,
+.dark .shadow-xl,
+.dark .md\:shadow-xl {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Fix for rounded classes */
+.dark .rounded-lg,
+.dark .rounded-xl,
+.dark .rounded-2xl {
+  border-radius: inherit !important;
+}
+
+/* Fix for padding and margin classes */
+.dark .p-4,
+.dark .md\:p-3,
+.dark .py-3,
+.dark .px-4,
+.dark .md\:py-5,
+.dark .md\:px-6 {
+  padding: inherit !important;
+}
+
+.dark .mb-4,
+.dark .md\:mb-0,
+.dark .mb-2,
+.dark .md\:mb-4 {
+  margin-bottom: inherit !important;
+}
+
+/* Fix for flex and grid classes */
+.dark .flex,
+.dark .flex-col,
+.dark .md\:flex-row,
+.dark .items-start,
+.dark .gap-3,
+.dark .md\:gap-4 {
+  display: inherit !important;
+  flex-direction: inherit !important;
+  align-items: inherit !important;
+  gap: inherit !important;
+}
+
+.dark .grid,
+.dark .grid-cols-1,
+.dark .md\:grid-cols-2 {
+  display: inherit !important;
+  grid-template-columns: inherit !important;
+}
+
+/* Fix for text alignment */
+.dark .text-center,
+.dark .text-left,
+.dark .md\:text-center {
+  text-align: inherit !important;
+}
+
+/* Fix for font weights */
+.dark .font-bold,
+.dark .font-medium {
+  font-weight: inherit !important;
+}
+
+/* Fix for text sizes */
+.dark .text-lg,
+.dark .md\:text-2xl,
+.dark .text-base,
+.dark .md\:text-lg {
+  font-size: inherit !important;
+}
+
+/* Fix for leading */
+.dark .leading-relaxed,
+.dark .leading-\[1\.6\],
+.dark .md\:leading-relaxed {
+  line-height: inherit !important;
+}
+
+/* ===== ULTRA SPECIFIC FIXES FOR RESISTANT ELEMENTS ===== */
+
+/* Force all elements with specific class combinations */
+.dark .bg-white.dark\:bg-elevated\/50,
+.dark .bg-white.dark\:bg-gray-800\/70,
+.dark .bg-white.dark\:bg-gray-900\/60 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+}
+
+.dark .border-gray-200.dark\:border-gray-700,
+.dark .border-blue-200.dark\:border-blue-800\/40 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .text-gray-700.dark\:text-gray-200,
+.dark .text-gray-900.dark\:text-white {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Force all elements with specific background combinations */
+.dark .from-white.to-blue-50.dark\:from-elevated\/80.dark\:to-blue-950\/20,
+.dark .from-white.to-gray-50.dark\:from-gray-800.dark\:to-gray-900 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+}
+
+/* Force all elements with specific border combinations */
+.dark .border-blue-200.md\:border-2.dark\:border-blue-800\/40 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Force all elements with specific shadow combinations */
+.dark .shadow-sm.md\:shadow,
+.dark .shadow-md.md\:shadow-xl {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force all elements with specific text combinations */
+.dark .text-gray-700.dark\:text-gray-200.text-sm.md\:text-base {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Force all elements with specific background combinations for service cards */
+.dark .bg-blue-50.dark\:bg-blue-900\/20.p-4.md\:p-3,
+.dark .bg-indigo-50.dark\:bg-indigo-900\/20.p-4.md\:p-3,
+.dark .bg-green-50.dark\:bg-green-900\/20.p-4.md\:p-3,
+.dark .bg-purple-50.dark\:bg-purple-900\/20.p-4.md\:p-3 {
+  background: linear-gradient(135deg, 
+    rgba(30, 58, 138, 0.9) 0%, 
+    rgba(59, 130, 246, 0.8) 25%,
+    rgba(14, 165, 233, 0.7) 50%,
+    rgba(6, 182, 212, 0.8) 75%,
+    rgba(8, 145, 178, 0.9) 100%) !important;
+  border: 2px solid rgba(251, 191, 36, 0.6) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3), 0 0 20px rgba(251, 191, 36, 0.2) !important;
+  backdrop-filter: blur(15px) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Force all elements with specific border combinations for service cards */
+.dark .border-blue-200.dark\:border-blue-800,
+.dark .border-indigo-200.dark\:border-indigo-800,
+.dark .border-green-200.dark\:border-green-800,
+.dark .border-purple-200.dark\:border-purple-800 {
+  border-color: rgba(251, 191, 36, 0.6) !important;
+}
+
+/* Force all elements with specific background combinations for carousel */
+.dark .bg-white\/90.dark\:bg-gray-800\/90.hover\:bg-blue-100.dark\:hover\:bg-blue-900\/40 {
+  background: rgba(30, 41, 59, 0.9) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-white\/90.dark\:bg-gray-800\/90.hover\:bg-blue-100.dark\:hover\:bg-blue-900\/40:hover {
+  background: rgba(59, 130, 246, 0.8) !important;
+  border-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Force all elements with specific background combinations for dots */
+.dark .bg-gray-300.dark\:bg-gray-600.hover\:bg-gray-400.dark\:hover\:bg-gray-500 {
+  background: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-gray-300.dark\:bg-gray-600.hover\:bg-gray-400.dark\:hover\:bg-gray-500:hover {
+  background: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Force all elements with specific background combinations for icons */
+.dark .bg-ui-primary\/10.dark\:bg-ui-primary\/20.p-3 {
+  background: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Force all elements with specific text combinations for titles */
+.dark .text-ui-primary.font-bold.relative {
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3) !important;
+}
+
+/* Force all elements with specific text combinations for content */
+.dark .text-base.md\:text-lg.mb-4.leading-relaxed {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Force all elements with specific text combinations for headings */
+.dark .font-bold.text-lg.md\:text-2xl.mb-2.text-ui-primary {
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3) !important;
+}
+
+/* Force all elements with specific text combinations for descriptions */
+.dark .text-left.md\:text-center.text-gray-700.dark\:text-gray-200.text-sm.md\:text-base.leading-\[1\.6\].md\:leading-relaxed.font-medium {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Force all elements with specific text combinations for section titles */
+.dark .text-center.font-bold.relative.text-lg.md\:text-2xl.tracking-wide.text-gray-900.dark\:text-white {
+  color: #e2e8f0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Force all elements with specific background combinations for main containers */
+.dark .bg-gradient-to-br.from-white.to-blue-50.dark\:from-elevated\/80.dark\:to-blue-950\/20.shadow-md.md\:shadow-xl.border.border-blue-200.md\:border-2.dark\:border-blue-800\/40.overflow-hidden.rounded-2xl.mt-2 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force all elements with specific background combinations for rounded containers */
+.dark .rounded-xl.py-3.px-4.md\:py-5.md\:px-6.mb-4.md\:mb-0.shadow-md.md\:shadow-lg.border.border-blue-100.dark\:border-gray-700 {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.9) 0%, 
+    rgba(51, 65, 85, 0.8) 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force all elements with specific background combinations for flex containers */
+.dark .flex.flex-col.md\:flex-row.items-start.gap-3.md\:gap-4 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .dark .flex.flex-col.md\:flex-row.items-start.gap-3.md\:gap-4 {
+    flex-direction: row !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Force all elements with specific background combinations for grid containers */
+.dark .grid.grid-cols-1.md\:grid-cols-2.gap-2.md\:gap-3.mb-3.md\:mb-4 {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .dark .grid.grid-cols-1.md\:grid-cols-2.gap-2.md\:gap-3.mb-3.md\:mb-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Force all elements with specific background combinations for text containers */
+.dark .text-center.mb-6 {
+  text-align: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Force all elements with specific background combinations for icon containers */
+.dark .flex-shrink-0.bg-ui-primary\/10.dark\:bg-ui-primary\/20.p-3.rounded-lg {
+  flex-shrink: 0 !important;
+  background: rgba(59, 130, 246, 0.2) !important;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Force all elements with specific background combinations for content containers */
+.dark .flex-grow {
+  flex-grow: 1 !important;
+}
+
+/* Force all elements with specific background combinations for title containers */
+.dark .font-bold.text-lg.md\:text-2xl.mb-2.text-ui-primary.border-b.border-blue-200.dark\:border-gray-700.pb-2 {
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #60a5fa !important;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3) !important;
+  padding-bottom: 0.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .dark .font-bold.text-lg.md\:text-2xl.mb-2.text-ui-primary.border-b.border-blue-200.dark\:border-gray-700.pb-2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Force all elements with specific background combinations for paragraph containers */
+.dark .text-base.md\:text-lg.mb-4.leading-relaxed {
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.625 !important;
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (min-width: 768px) {
+  .dark .text-base.md\:text-lg.mb-4.leading-relaxed {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* ===== HEADER SPECIFIC FIXES ===== */
+
+/* Fix for header elements - don't override header styles */
+.dark header,
+.dark .fancy-header,
+.dark .fancy-header * {
+  background: inherit !important;
+  color: inherit !important;
+  border: inherit !important;
+  box-shadow: inherit !important;
+}
+
+/* Fix for running text marquee */
+.dark .animate-marquee,
+.dark .marquee-track {
+  background: inherit !important;
+  color: inherit !important;
+}
+
+.dark .animate-marquee svg,
+.dark .marquee-track svg {
+  color: inherit !important;
+  filter: none !important;
+}
+
+/* Fix for header navigation */
+.dark .nav-link,
+.dark .nav-item {
+  background: inherit !important;
+  color: inherit !important;
+  border: inherit !important;
+  box-shadow: inherit !important;
+}
+
+/* Fix for header icons */
+.dark header svg,
+.dark .fancy-header svg,
+.dark .UIcon {
+  color: inherit !important;
+  filter: none !important;
+}
+
+/* Fix for header buttons */
+.dark header button,
+.dark .fancy-header button {
+  background: inherit !important;
+  color: inherit !important;
+  border: inherit !important;
+  box-shadow: inherit !important;
+}
+
+/* Fix for header links */
+.dark header a,
+.dark .fancy-header a {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Fix for header text */
+.dark header span,
+.dark .fancy-header span,
+.dark header p,
+.dark .fancy-header p {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Fix for header backgrounds */
+.dark header .bg-white,
+.dark .fancy-header .bg-white,
+.dark header .bg-gray-50,
+.dark .fancy-header .bg-gray-50 {
+  background: inherit !important;
+}
+
+/* Fix for header borders */
+.dark header .border,
+.dark .fancy-header .border {
+  border-color: inherit !important;
+}
+
+/* Fix for header shadows */
+.dark header .shadow,
+.dark .fancy-header .shadow {
+  box-shadow: inherit !important;
+}
+
+/* Fix for header gradients */
+.dark header .bg-gradient-to-r,
+.dark .fancy-header .bg-gradient-to-r {
+  background: inherit !important;
+}
+
+/* Fix for header backdrop filters */
+.dark header .backdrop-blur,
+.dark .fancy-header .backdrop-blur {
+  backdrop-filter: inherit !important;
+}
+
+/* Fix for header z-index */
+.dark header,
+.dark .fancy-header {
+  z-index: inherit !important;
+}
+
+/* Fix for header positioning */
+.dark header,
+.dark .fancy-header {
+  position: inherit !important;
+  top: inherit !important;
+  left: inherit !important;
+  right: inherit !important;
+  width: inherit !important;
+}
+
+/* Fix for header flexbox */
+.dark header .flex,
+.dark .fancy-header .flex {
+  display: inherit !important;
+  flex-direction: inherit !important;
+  align-items: inherit !important;
+  justify-content: inherit !important;
+  gap: inherit !important;
+}
+
+/* Fix for header grid */
+.dark header .grid,
+.dark .fancy-header .grid {
+  display: inherit !important;
+  grid-template-columns: inherit !important;
+  gap: inherit !important;
+}
+
+/* Fix for header padding and margin */
+.dark header .p-4,
+.dark .fancy-header .p-4,
+.dark header .py-1,
+.dark .fancy-header .py-1,
+.dark header .px-4,
+.dark .fancy-header .px-4 {
+  padding: inherit !important;
+  margin: inherit !important;
+}
+
+/* Fix for header text alignment */
+.dark header .text-center,
+.dark .fancy-header .text-center,
+.dark header .text-left,
+.dark .fancy-header .text-left {
+  text-align: inherit !important;
+}
+
+/* Fix for header font weights */
+.dark header .font-bold,
+.dark .fancy-header .font-bold,
+.dark header .font-semibold,
+.dark .fancy-header .font-semibold {
+  font-weight: inherit !important;
+}
+
+/* Fix for header font sizes */
+.dark header .text-sm,
+.dark .fancy-header .text-sm,
+.dark header .text-xs,
+.dark .fancy-header .text-xs {
+  font-size: inherit !important;
+}
+
+/* Fix for header line heights */
+.dark header .leading-tight,
+.dark .fancy-header .leading-tight,
+.dark header .leading-relaxed,
+.dark .fancy-header .leading-relaxed {
+  line-height: inherit !important;
+}
+
+/* Fix for header rounded corners */
+.dark header .rounded,
+.dark .fancy-header .rounded,
+.dark header .rounded-full,
+.dark .fancy-header .rounded-full {
+  border-radius: inherit !important;
+}
+
+/* Fix for header transitions */
+.dark header .transition,
+.dark .fancy-header .transition {
+  transition: inherit !important;
+}
+
+/* Fix for header hover effects */
+.dark header .hover\:scale-105,
+.dark .fancy-header .hover\:scale-105 {
+  transform: inherit !important;
+}
+
+/* Fix for header responsive classes */
+.dark header .sm\:h-14,
+.dark .fancy-header .sm\:h-14,
+.dark header .md\:h-16,
+.dark .fancy-header .md\:h-16 {
+  height: inherit !important;
+}
+
+/* Fix for header size classes */
+.dark header .size-5,
+.dark .fancy-header .size-5,
+.dark header .size-8,
+.dark .fancy-header .size-8 {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+/* Fix for header color classes */
+.dark header .text-yellow-600,
+.dark .fancy-header .text-yellow-600,
+.dark header .text-yellow-400,
+.dark .fancy-header .text-yellow-400 {
+  color: inherit !important;
+}
+
+/* Fix for header background color classes */
+.dark header .bg-white\/80,
+.dark .fancy-header .bg-white\/80,
+.dark header .bg-gray-800\/70,
+.dark .fancy-header .bg-gray-800\/70 {
+  background: inherit !important;
+}
+
+/* Fix for header border color classes */
+.dark header .border-yellow-200,
+.dark .fancy-header .border-yellow-200 {
+  border-color: inherit !important;
+}
+
+/* Fix for header shadow classes */
+.dark header .shadow-sm,
+.dark .fancy-header .shadow-sm {
+  box-shadow: inherit !important;
+}
+
+/* Fix for header backdrop blur classes */
+.dark header .backdrop-blur,
+.dark .fancy-header .backdrop-blur {
+  backdrop-filter: inherit !important;
+}
+
+/* Fix for header ring classes */
+.dark header .ring-1,
+.dark .fancy-header .ring-1 {
+  box-shadow: inherit !important;
+}
+
+/* Fix for header ring color classes */
+.dark header .ring-white\/60,
+.dark .fancy-header .ring-white\/60,
+.dark header .ring-white\/10,
+.dark .fancy-header .ring-white\/10 {
+  box-shadow: inherit !important;
+}
+
+/* Fix for header shadow color classes */
+.dark header .shadow-\[0_2px_20px_rgba\(0\,0\,0\,0\.08\)\],
+.dark .fancy-header .shadow-\[0_2px_20px_rgba\(0\,0\,0\,0\.08\)\] {
+  box-shadow: inherit !important;
+}
+
+/* Fix for header transition classes */
+.dark header .transition-all,
+.dark .fancy-header .transition-all,
+.dark header .duration-300,
+.dark .fancy-header .duration-300 {
+  transition: inherit !important;
+}
+
+/* Fix for header top positioning */
+.dark header .top-\[28px\],
+.dark .fancy-header .top-\[28px\] {
+  top: inherit !important;
+}
+
+/* Fix for header z-index classes */
+.dark header .z-50,
+.dark .fancy-header .z-50,
+.dark header .md\:z-40,
+.dark .fancy-header .md\:z-40 {
+  z-index: inherit !important;
+}
+
+/* Fix for header max width classes */
+.dark header .max-w-7xl,
+.dark .fancy-header .max-w-7xl {
+  max-width: inherit !important;
+}
+
+/* Fix for header margin classes */
+.dark header .mx-auto,
+.dark .fancy-header .mx-auto {
+  margin-left: inherit !important;
+  margin-right: inherit !important;
+}
+
+/* Fix for header padding classes */
+.dark header .px-4,
+.dark .fancy-header .px-4 {
+  padding-left: inherit !important;
+  padding-right: inherit !important;
+}
+
+/* Fix for header justify classes */
+.dark header .justify-between,
+.dark .fancy-header .justify-between {
+  justify-content: inherit !important;
+}
+
+/* Fix for header items classes */
+.dark header .items-center,
+.dark .fancy-header .items-center {
+  align-items: inherit !important;
+}
+
+/* Fix for header flex classes */
+.dark header .flex-nowrap,
+.dark .fancy-header .flex-nowrap {
+  flex-wrap: inherit !important;
+}
+
+/* Fix for header flex shrink classes */
+.dark header .flex-shrink-0,
+.dark .fancy-header .flex-shrink-0 {
+  flex-shrink: inherit !important;
+}
+
+/* Fix for header relative positioning */
+.dark header .relative,
+.dark .fancy-header .relative {
+  position: inherit !important;
+}
+
+/* Fix for header z-index classes */
+.dark header .z-10,
+.dark .fancy-header .z-10 {
+  z-index: inherit !important;
+}

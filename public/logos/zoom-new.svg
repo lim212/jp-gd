@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 64 64" role="img" aria-label="Zoom logo">
+  <title>Zoom logo</title>
+  <desc>Simple blue circle with white video camera glyph representing Zoom</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2FA3FF"/>
+      <stop offset="100%" stop-color="#2D8CFF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#bg)"/>
+  <!-- Camera body -->
+  <rect x="18" y="22" width="22" height="20" rx="6" fill="#FFFFFF"/>
+  <!-- Camera lens / protrusion -->
+  <path d="M40 26l10-5v22l-10-5z" fill="#FFFFFF"/>
+</svg>

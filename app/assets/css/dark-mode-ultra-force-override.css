@@ -1,0 +1,382 @@
+/* ========================================
+   DARK MODE - ULTRA FORCE OVERRIDE
+   Highest Specificity untuk Force Dark Mode
+   Override SEMUA element terang!
+   ======================================== */
+
+/* ===================================
+   BANNER SLIDER - ULTRA FORCE DARK
+   =================================== */
+
+/* Modern Banner Container */
+html.dark .modern-banner-container,
+body.dark .modern-banner-container,
+.dark .modern-banner-container {
+  background: #0D0D12 !important;
+  background-color: #0D0D12 !important;
+  background-image: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+}
+
+/* Banner Stage */
+html.dark .banner-stage,
+body.dark .banner-stage,
+.dark .banner-stage {
+  background: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.4) !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(233, 30, 99, 0.15),
+    0 0 40px rgba(233, 30, 99, 0.08) !important;
+}
+
+/* Loading State */
+html.dark .modern-banner-loading,
+body.dark .modern-banner-loading,
+.dark .modern-banner-loading {
+  background: linear-gradient(135deg, #0D0D12 0%, #1A1A24 50%, #22222E 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+}
+
+/* ===================================
+   INDEX PAGE - BANNER CONTAINERS
+   =================================== */
+
+/* Hero Offset */
+html.dark .hero-offset,
+body.dark .hero-offset,
+.dark .hero-offset {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Banner Container Zero */
+html.dark .banner-container-zero,
+body.dark .banner-container-zero,
+.dark .banner-container-zero {
+  background: transparent !important;
+}
+
+/* Banner Slider Wrapper */
+html.dark .banner-slider-wrapper,
+body.dark .banner-slider-wrapper,
+.dark .banner-slider-wrapper {
+  background: transparent !important;
+}
+
+/* Banner Container Wrapper */
+html.dark .banner-container-wrapper,
+body.dark .banner-container-wrapper,
+.dark .banner-container-wrapper {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 36, 0.95) 0%, 
+    rgba(34, 34, 46, 0.9) 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(233, 30, 99, 0.1),
+    inset 0 1px 0 rgba(233, 30, 99, 0.15),
+    0 0 40px rgba(233, 30, 99, 0.08) !important;
+}
+
+/* Professional CTA Container */
+html.dark .professional-cta-container,
+body.dark .professional-cta-container,
+.dark .professional-cta-container {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 36, 0.95) 0%, 
+    rgba(34, 34, 46, 0.9) 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(233, 30, 99, 0.1),
+    inset 0 1px 0 rgba(233, 30, 99, 0.15),
+    0 0 40px rgba(233, 30, 99, 0.08) !important;
+}
+
+/* Override Any Light Backgrounds in Index */
+html.dark .w-full.relative.z-0,
+body.dark .w-full.relative.z-0,
+.dark .w-full.relative.z-0 {
+  background: transparent !important;
+}
+
+/* ===================================
+   KOTAK BANTUAN / HELP BOX
+   =================================== */
+
+html.dark .ultra-clean-help-box,
+body.dark .ultra-clean-help-box,
+.dark .ultra-clean-help-box {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 36, 0.95) 0%, 
+    rgba(34, 34, 46, 0.9) 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(233, 30, 99, 0.1),
+    inset 0 1px 0 rgba(233, 30, 99, 0.15) !important;
+}
+
+html.dark .help-item,
+html.dark .help-box-item,
+body.dark .help-item,
+body.dark .help-box-item,
+.dark .help-item,
+.dark .help-box-item {
+  background: rgba(26, 26, 36, 0.8) !important;
+  border: 1.5px solid rgba(233, 30, 99, 0.25) !important;
+}
+
+/* ===================================
+   OVERRIDE ALL BLUE/INDIGO/PURPLE
+   =================================== */
+
+/* Background Classes */
+html.dark [class*="bg-blue"],
+html.dark [class*="bg-indigo"],
+html.dark [class*="bg-purple"],
+html.dark [class*="bg-sky"],
+html.dark [class*="bg-cyan"],
+body.dark [class*="bg-blue"],
+body.dark [class*="bg-indigo"],
+body.dark [class*="bg-purple"],
+body.dark [class*="bg-sky"],
+body.dark [class*="bg-cyan"] {
+  background: rgba(26, 26, 36, 0.9) !important;
+  background-color: rgba(26, 26, 36, 0.9) !important;
+}
+
+/* Gradient Classes */
+html.dark [class*="from-blue"],
+html.dark [class*="from-indigo"],
+html.dark [class*="from-purple"],
+html.dark [class*="via-blue"],
+html.dark [class*="via-indigo"],
+html.dark [class*="via-purple"],
+html.dark [class*="to-blue"],
+html.dark [class*="to-indigo"],
+html.dark [class*="to-purple"],
+body.dark [class*="from-blue"],
+body.dark [class*="from-indigo"],
+body.dark [class*="from-purple"] {
+  background: linear-gradient(135deg, #0D0D12 0%, #1A1A24 100%) !important;
+  background-image: linear-gradient(135deg, #0D0D12 0%, #1A1A24 100%) !important;
+}
+
+/* Inline Styles Override */
+html.dark [style*="background: linear-gradient"][style*="blue"],
+html.dark [style*="background: linear-gradient"][style*="indigo"],
+html.dark [style*="background-image: linear-gradient"][style*="blue"],
+body.dark [style*="background: linear-gradient"][style*="blue"] {
+  background: linear-gradient(135deg, #0D0D12 0%, #1A1A24 100%) !important;
+  background-image: linear-gradient(135deg, #0D0D12 0%, #1A1A24 100%) !important;
+}
+
+/* ===================================
+   TEXT COLORS - ENSURE VISIBILITY
+   =================================== */
+
+/* Banner Text */
+html.dark .banner-stage h1,
+html.dark .banner-stage h2,
+html.dark .banner-stage h3,
+html.dark .banner-stage p,
+html.dark .banner-stage span,
+body.dark .banner-stage h1,
+body.dark .banner-stage h2,
+body.dark .banner-stage h3 {
+  color: #FAFAFA !important;
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(233, 30, 99, 0.3) !important;
+}
+
+/* Ensure Text on Images is Visible */
+html.dark .banner-image + *,
+html.dark .banner-stage .text-overlay,
+body.dark .banner-image + *,
+body.dark .banner-stage .text-overlay {
+  color: #FAFAFA !important;
+  text-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.9),
+    0 4px 20px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ===================================
+   NAVIGATION BUTTONS - BURGUNDY
+   =================================== */
+
+html.dark .nav-button,
+body.dark .nav-button,
+.dark .nav-button {
+  background: linear-gradient(135deg, rgba(26, 26, 36, 0.95) 0%, rgba(34, 34, 46, 0.9) 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    0 4px 10px rgba(233, 30, 99, 0.25),
+    0 0 20px rgba(233, 30, 99, 0.1) !important;
+}
+
+html.dark .nav-button:hover,
+body.dark .nav-button:hover,
+.dark .nav-button:hover {
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.3) 0%, rgba(233, 30, 99, 0.2) 100%) !important;
+  border-color: rgba(233, 30, 99, 0.7) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.7),
+    0 8px 20px rgba(233, 30, 99, 0.4),
+    0 0 30px rgba(233, 30, 99, 0.3) !important;
+}
+
+html.dark .nav-icon,
+body.dark .nav-icon,
+.dark .nav-icon {
+  color: rgba(233, 30, 99, 0.9) !important;
+}
+
+html.dark .nav-button:hover .nav-icon,
+body.dark .nav-button:hover .nav-icon,
+.dark .nav-button:hover .nav-icon {
+  color: #FFF1F2 !important;
+}
+
+/* ===================================
+   DOT INDICATORS - BURGUNDY
+   =================================== */
+
+html.dark .dot-indicator,
+body.dark .dot-indicator,
+.dark .dot-indicator {
+  background: rgba(26, 26, 36, 0.9) !important;
+  border: 2px solid rgba(233, 30, 99, 0.3) !important;
+}
+
+html.dark .dot-indicator.active,
+body.dark .dot-indicator.active,
+.dark .dot-indicator.active {
+  background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%) !important;
+  border-color: rgba(233, 30, 99, 0.8) !important;
+  box-shadow: 
+    0 4px 12px rgba(233, 30, 99, 0.5),
+    0 0 25px rgba(233, 30, 99, 0.4) !important;
+}
+
+/* ===================================
+   SLIDE COUNTER - BURGUNDY
+   =================================== */
+
+html.dark .slide-counter,
+body.dark .slide-counter,
+.dark .slide-counter {
+  background: linear-gradient(135deg, rgba(26, 26, 36, 0.92) 0%, rgba(34, 34, 46, 0.88) 100%) !important;
+  border: 2px solid rgba(233, 30, 99, 0.4) !important;
+  color: #FAFAFA !important;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(233, 30, 99, 0.2) !important;
+}
+
+html.dark .counter-current,
+body.dark .counter-current,
+.dark .counter-current {
+  color: #FDA4AF !important;
+}
+
+html.dark .counter-divider,
+body.dark .counter-divider,
+.dark .counter-divider {
+  color: rgba(233, 30, 99, 0.6) !important;
+}
+
+/* ===================================
+   IMAGES IN DARK MODE
+   =================================== */
+
+/* Banner Images - Slight Dimming for Contrast */
+html.dark .banner-image,
+body.dark .banner-image,
+.dark .banner-image {
+  filter: brightness(0.92) contrast(1.05) !important;
+}
+
+html.dark .banner-image:hover,
+body.dark .banner-image:hover,
+.dark .banner-image:hover {
+  filter: brightness(0.95) contrast(1.08) !important;
+}
+
+/* ===================================
+   RESPONSIVE DARK MODE OVERRIDES
+   =================================== */
+
+/* Mobile - Extra Specificity */
+@media (max-width: 640px) {
+  html.dark .banner-stage,
+  body.dark .banner-stage,
+  .dark .banner-stage {
+    border-width: 1.5px !important;
+    background: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+  }
+  
+  html.dark .nav-button,
+  body.dark .nav-button,
+  .dark .nav-button {
+    background: rgba(26, 26, 36, 0.92) !important;
+    border-width: 1.5px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  html.dark .banner-container-wrapper,
+  html.dark .professional-cta-container,
+  body.dark .banner-container-wrapper,
+  body.dark .professional-cta-container {
+    border-width: 2px !important;
+  }
+}
+
+/* Desktop - Full Effects */
+@media (min-width: 1025px) {
+  html.dark .banner-stage,
+  body.dark .banner-stage,
+  .dark .banner-stage {
+    backdrop-filter: blur(18px) saturate(180%) !important;
+  }
+}
+
+/* ===================================
+   Z-INDEX MANAGEMENT
+   =================================== */
+
+html.dark .modern-banner-container,
+body.dark .modern-banner-container {
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+html.dark .banner-stage,
+body.dark .banner-stage {
+  z-index: 11 !important;
+  position: relative !important;
+}
+
+html.dark .nav-button,
+body.dark .nav-button {
+  z-index: 30 !important;
+}
+
+html.dark .dot-indicators,
+body.dark .dot-indicators {
+  z-index: 25 !important;
+}
+
+html.dark .slide-counter,
+body.dark .slide-counter {
+  z-index: 25 !important;
+}
+
+/* FORCE RELOAD MARKER */
+/* dark-ultra-force-v1-2205 */
+

@@ -1,0 +1,177 @@
+/* Performance Optimizations for Fast Loading */
+
+/* Reduce animation complexity on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize will-change for better performance */
+.will-change-optimized {
+  will-change: transform, opacity;
+}
+
+/* Remove will-change after animation completes */
+.animation-complete {
+  will-change: auto;
+}
+
+/* Faster transitions for UI elements */
+.fast-transition {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Optimize gradient animations */
+@keyframes optimized-shimmer {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    filter: brightness(1);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    filter: brightness(1.1);
+  }
+}
+
+/* Reduce blur effects for better performance */
+.optimized-blur {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Faster loading states */
+.quick-fade-in {
+  animation: quickFadeIn 0.2s ease-in;
+}
+
+@keyframes quickFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Optimize box shadows for performance */
+.optimized-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* GPU acceleration for smoother animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reduce repaints and reflows */
+.contain-paint {
+  contain: paint;
+}
+
+.contain-layout {
+  contain: layout;
+}
+
+.contain-strict {
+  contain: strict;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+}
+
+/* Lazy loading optimization */
+.lazy-load {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+/* Optimize animations for mobile */
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.2s !important;
+  }
+  
+  .mobile-no-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Reduce motion for battery saving */
+@media (prefers-reduced-motion: reduce) {
+  .reduce-motion {
+    animation: none !important;
+    transition: opacity 0.1s ease !important;
+  }
+}
+
+/* Fast page transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* Optimize loading indicators */
+.loading-optimized {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Optimize scroll performance */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reduce animation complexity */
+.simple-animation {
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Critical CSS optimizations */
+.critical-content {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Optimize hover effects */
+@media (hover: hover) {
+  .optimized-hover:hover {
+    transform: translateY(-2px);
+    transition: transform 0.15s ease;
+  }
+}
+
+/* Disable hover on touch devices */
+@media (hover: none) {
+  .optimized-hover:hover {
+    transform: none;
+  }
+}
+

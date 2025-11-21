@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+    <style>
+      /* Import mobile theme */
+      @import url('/assets/css/mobile-theme.css');
+      @import url('/assets/css/mobile-layout-fix.css');
+      @import url('/assets/css/header-mobile-fix.css');
+      @import url('/assets/css/mobile-floating-buttons-fix.css');
+      @import url('/assets/css/mobile-comprehensive-fix.css');
+      @import url('/assets/css/mobile-header-fix.css');
+      @import url('/assets/css/mobile-header-spacing-fix.css');
+      @import url('/assets/css/mobile-full-width-boxes.css');
+      
+      /* Instant splash screen - shows immediately before Vue loads */
+      #initial-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #475569 50%, #64748b 75%, #94a3b8 100%);
+        background-size: 400% 400%;
+        animation: gradientMove 8s ease infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999;
+        overflow: hidden;
+      }
+      
+      @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      #initial-splash .splash-content {
+        text-align: center;
+        animation: fadeInScale 0.8s ease-out;
+      }
+      
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      #initial-splash .logo-circle {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 
+          0 20px 60px rgba(0, 0, 0, 0.3),
+          0 0 0 8px rgba(255, 255, 255, 0.1),
+          inset 0 2px 0 rgba(255, 255, 255, 0.3);
+        animation: logoPulse 2s ease-in-out infinite;
+      }
+      
+      @keyframes logoPulse {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 
+            0 20px 60px rgba(0, 0, 0, 0.3),
+            0 0 0 8px rgba(255, 255, 255, 0.1),
+            inset 0 2px 0 rgba(255, 255, 255, 0.3);
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 
+            0 25px 70px rgba(0, 0, 0, 0.4),
+            0 0 0 12px rgba(255, 255, 255, 0.15),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+        }
+      }
+      
+      #initial-splash .logo-icon {
+        width: 60px;
+        height: 60px;
+        color: white;
+        animation: iconRotate 3s linear infinite;
+      }
+      
+      @keyframes iconRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      #initial-splash h1 {
+        font-size: 36px;
+        font-weight: 900;
+        margin: 0 0 15px 0;
+        background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      #initial-splash p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 0 10px 0;
+        font-weight: 500;
+      }
+      
+      #initial-splash .badges {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      
+      #initial-splash .badge {
+        padding: 6px 14px;
+        background: rgba(34, 197, 94, 0.2);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        border-radius: 20px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        animation: badgeGlow 2s ease-in-out infinite;
+      }
+      
+      @keyframes badgeGlow {
+        0%, 100% {
+          box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+        }
+      }
+      
+      #initial-splash .spinner {
+        width: 40px;
+        height: 40px;
+        margin: 30px auto 0;
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      /* Hide splash when app is ready */
+      .app-ready #initial-splash {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body {{ BODY_ATTRS }}>
+    <!-- Instant Splash Screen -->
+    <div id="initial-splash">
+      <div class="splash-content">
+        <div class="logo-circle">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h1>JasaPembayaran.com</h1>
+        <p>🚀 Memuat sistem pembayaran terpercaya...</p>
+        <div class="badges">
+          <span class="badge">✓ Sejak 2011</span>
+          <span class="badge">✓ 50,000+ Transaksi</span>
+          <span class="badge">✓ 24/7 Support</span>
+        </div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+    
+    {{ APP }}
+    
+    <script>
+      // Hide splash when app is ready
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.body.classList.add('app-ready');
+          setTimeout(function() {
+            const splash = document.getElementById('initial-splash');
+            if (splash) splash.remove();
+          }, 500);
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

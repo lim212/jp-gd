@@ -1,0 +1,634 @@
+/**
+ * Super Loading Screen - Advanced Styles
+ * 
+ * Features:
+ * - Advanced animations
+ * - 3D effects
+ * - Particle systems
+ * - Gradient morphing
+ * - Glassmorphism
+ * - Smooth transitions
+ */
+
+/* ========================================
+   GLOBAL LOADING ANIMATIONS
+   ======================================== */
+
+/* Glow pulse effect */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(59, 130, 246, 0.2),
+                0 0 60px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6),
+                0 0 60px rgba(59, 130, 246, 0.4),
+                0 0 90px rgba(59, 130, 246, 0.2);
+  }
+}
+
+/* Gradient animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Morphing shapes */
+@keyframes morph-shape {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% {
+    border-radius: 70% 30% 50% 50% / 30% 50% 70% 50%;
+    transform: rotate(270deg) scale(1.05);
+  }
+}
+
+/* Floating animation */
+@keyframes float-smooth {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+}
+
+/* Rotation with perspective */
+@keyframes rotate-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  33% {
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+  }
+  66% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* Scale pulse */
+@keyframes scale-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+/* Border animation */
+@keyframes border-dance {
+  0%, 100% {
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+  25% {
+    border-color: rgba(139, 92, 246, 0.5);
+  }
+  50% {
+    border-color: rgba(236, 72, 153, 0.5);
+  }
+  75% {
+    border-color: rgba(34, 197, 94, 0.5);
+  }
+}
+
+/* Text shimmer */
+@keyframes text-shimmer {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+/* Sparkle effect */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Wave motion */
+@keyframes wave-motion {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Loading bar fill */
+@keyframes loading-fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Bounce smooth */
+@keyframes bounce-smooth {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ========================================
+   ENHANCED COMPONENTS
+   ======================================== */
+
+/* Enhanced progress bar with multiple effects */
+.enhanced-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.enhanced-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+.enhanced-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,
+    #3b82f6 0%,
+    #2563eb 33%,
+    #ec4899 66%,
+    #f59e0b 100%
+  );
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.enhanced-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 100%
+  );
+  border-radius: 999px 999px 0 0;
+}
+
+/* Enhanced resource card */
+.enhanced-resource-card {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.enhanced-resource-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(59, 130, 246, 0.2) 60deg,
+    transparent 120deg
+  );
+  animation: rotate-3d 6s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.enhanced-resource-card:hover::before {
+  opacity: 1;
+}
+
+.enhanced-resource-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3),
+              0 0 60px rgba(59, 130, 246, 0.1);
+}
+
+/* Enhanced loading spinner */
+.enhanced-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.enhanced-spinner::before,
+.enhanced-spinner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  animation: spin 1.5s linear infinite;
+}
+
+.enhanced-spinner::before {
+  border-top-color: #3b82f6;
+  border-right-color: #3b82f6;
+  animation-duration: 1.5s;
+}
+
+.enhanced-spinner::after {
+  border-bottom-color: #ec4899;
+  border-left-color: #f59e0b;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+/* Particle effect */
+.particle-effect {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-rise 3s ease-out infinite;
+}
+
+@keyframes particle-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-80px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0);
+  }
+}
+
+/* Glowing text effect */
+.glowing-text {
+  background: linear-gradient(90deg,
+    #3b82f6 0%,
+    #2563eb 25%,
+    #ec4899 50%,
+    #2563eb 75%,
+    #3b82f6 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 3s linear infinite;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+/* 3D card effect */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+}
+
+/* Ripple effect */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  animation: ripple 1.5s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   SMART MODE ENHANCEMENTS
+   ======================================== */
+
+/* Smart mode badge */
+.smart-mode-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(139, 92, 246, 0.2) 100%
+  );
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  border-radius: 999px;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.smart-mode-badge::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg,
+    #3b82f6,
+    #3b82f6,
+    #ec4899,
+    #f59e0b,
+    #3b82f6
+  );
+  background-size: 200% 100%;
+  border-radius: 999px;
+  z-index: -1;
+  animation: gradient-shift 3s linear infinite;
+  opacity: 0.5;
+}
+
+/* Progressive loading indicator */
+.progressive-loading {
+  position: relative;
+  display: inline-block;
+}
+
+.progressive-loading::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg,
+    #3b82f6 0%,
+    #3b82f6 50%,
+    #ec4899 100%
+  );
+  background-size: 200% 100%;
+  animation: loading-fill 2s ease-in-out infinite,
+             gradient-shift 3s linear infinite;
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* Focus visible styles */
+.loading-element:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .enhanced-progress-bar {
+    border: 2px solid white;
+  }
+  
+  .enhanced-resource-card {
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .enhanced-resource-card {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+  }
+}
+
+/* Dark mode using .dark class (Nuxt Color Mode) */
+.dark .enhanced-resource-card {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+.dark .loading-glass {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glowing-text {
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+}
+
+.dark .particle-effect {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.dark .enhanced-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .loading-gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .enhanced-progress-bar {
+    height: 12px;
+  }
+  
+  .enhanced-resource-card {
+    padding: 1rem;
+  }
+  
+  .enhanced-spinner {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-progress-bar {
+    height: 10px;
+  }
+  
+  .enhanced-resource-card {
+    padding: 0.75rem;
+  }
+  
+  .glowing-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Use GPU acceleration for animations */
+.enhanced-progress-fill,
+.enhanced-spinner,
+.particle-effect,
+.wave {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize paint and composite */
+.enhanced-resource-card {
+  contain: layout style paint;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.loading-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.loading-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.loading-shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+              0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.loading-gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scroll behavior */
+html.loading-active {
+  overflow: hidden;
+}
+
+/* Prevent layout shift */
+.loading-prevent-shift {
+  min-height: 100vh;
+  position: relative;
+}
+

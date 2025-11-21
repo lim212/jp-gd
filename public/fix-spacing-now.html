@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="2;url=http://localhost:3000/?_fix=true">
+    <title>🔧 AUTO FIX SPACING</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: system-ui;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { font-size: 2.5em; margin: 0 0 20px; }
+        .countdown { font-size: 4em; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🔧 AUTO FIX SPACING</h1>
+        <div class="countdown">2</div>
+        <p>Redirecting ke homepage...</p>
+        <p>Script akan inject spacing otomatis!</p>
+    </div>
+    
+    <script>
+        let count = 2;
+        const countEl = document.querySelector('.countdown');
+        setInterval(() => {
+            count--;
+            countEl.textContent = count > 0 ? count : 'GO!';
+        }, 1000);
+        
+        // Save script to run after redirect
+        const fixScript = `
+(function() {
+    console.log('🔧 AUTO FIX SPACING - STARTING...');
+    
+    // Find elements by text content
+    const allDivs = Array.from(document.querySelectorAll('div'));
+    
+    // Find "Butuh Bantuan" section
+    const helpDiv = allDivs.find(div => {
+        const text = div.textContent || '';
+        return text.includes('Butuh Bantuan') && text.includes('Konsultasi');
+    });
+    
+    // Find "Trusted Partners" section  
+    const trustedDiv = allDivs.find(div => {
+        const text = div.textContent || '';
+        return text.includes('Trusted Partners') && text.includes('brand terpercaya');
+    });
+    
+    // Find "Jasa PayPal" section
+    const aboutDiv = allDivs.find(div => {
+        const text = div.textContent || '';
+        return text.includes('JASA PAYPAL TERPERCAYA') || text.includes('Apa itu Jasa PayPal');
+    });
+    
+    console.log('Found elements:', {
+        help: !!helpDiv,
+        trusted: !!trustedDiv,
+        about: !!aboutDiv
+    });
+    
+    // Apply extreme styling for visibility
+    if (helpDiv) {
+        // Find parent wrapper
+        let wrapper = helpDiv;
+        for (let i = 0; i < 3; i++) {
+            if (wrapper.parentElement) wrapper = wrapper.parentElement;
+        }
+        
+        wrapper.style.cssText = \`
+            margin-top: 100px !important;
+            margin-bottom: 100px !important;
+            padding: 50px !important;
+            border: 10px solid red !important;
+            background-color: yellow !important;
+            box-shadow: 0 0 50px red !important;
+            display: block !important;
+        \`;
+        console.log('✅ HELP SECTION FIXED - SHOULD BE YELLOW!');
+    }
+    
+    if (trustedDiv) {
+        let wrapper = trustedDiv;
+        for (let i = 0; i < 2; i++) {
+            if (wrapper.parentElement) wrapper = wrapper.parentElement;
+        }
+        
+        wrapper.style.cssText = \`
+            margin-top: 100px !important;
+            margin-bottom: 100px !important;
+            padding: 50px !important;
+            border: 10px solid blue !important;
+            background-color: lightblue !important;
+            box-shadow: 0 0 50px blue !important;
+            display: block !important;
+        \`;
+        console.log('✅ TRUSTED SECTION FIXED - SHOULD BE LIGHT BLUE!');
+    }
+    
+    if (aboutDiv) {
+        let wrapper = aboutDiv;
+        for (let i = 0; i < 2; i++) {
+            if (wrapper.parentElement) wrapper = wrapper.parentElement;
+        }
+        
+        wrapper.style.cssText = \`
+            margin-top: 100px !important;
+            margin-bottom: 100px !important;
+            padding: 50px !important;
+            border: 10px solid green !important;
+            background-color: lightgreen !important;
+            box-shadow: 0 0 50px green !important;
+            display: block !important;
+        \`;
+        console.log('✅ ABOUT SECTION FIXED - SHOULD BE LIGHT GREEN!');
+    }
+    
+    console.log('🎉 FIX COMPLETE! Scroll dan lihat:');
+    console.log('🟡 Kotak 1 = KUNING dengan border MERAH tebal');
+    console.log('🔵 Kotak 2 = BIRU MUDA dengan border BIRU tebal');
+    console.log('🟢 Kotak 3 = HIJAU MUDA dengan border HIJAU tebal');
+    console.log('📏 Jarak antar kotak = 100-200px!');
+})();
+        `;
+        
+        sessionStorage.setItem('auto_fix_script', fixScript);
+    </script>
+</body>
+</html>
+

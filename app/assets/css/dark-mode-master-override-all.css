@@ -1,0 +1,318 @@
+/* ========================================
+   DARK MODE - MASTER OVERRIDE ALL
+   Override ALL 702+ Matches di 41 Files
+   HIGHEST PRIORITY - ABSOLUTE LAST LOAD
+   ======================================== */
+
+/* ===================================
+   UNIVERSAL BACKGROUND OVERRIDES
+   =================================== */
+
+/* WHITE BACKGROUNDS - 292 Matches */
+.dark .bg-white,
+.dark [class~="bg-white"],
+html.dark .bg-white,
+html.dark [class~="bg-white"],
+body.dark .bg-white,
+[data-theme="dark"] .bg-white,
+.dark .bg-white\/70,
+.dark .bg-white\/90 {
+  background-color: #18181B !important;
+  background: #18181B !important;
+}
+
+/* GRAY 50 BACKGROUNDS */
+.dark .bg-gray-50,
+.dark [class~="bg-gray-50"],
+html.dark .bg-gray-50,
+html.dark [class~="bg-gray-50"],
+body.dark .bg-gray-50,
+[data-theme="dark"] .bg-gray-50 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+/* GRAY 100 BACKGROUNDS */
+.dark .bg-gray-100,
+.dark [class~="bg-gray-100"],
+html.dark .bg-gray-100,
+html.dark [class~="bg-gray-100"],
+body.dark .bg-gray-100 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+/* GRAY 200-300 BACKGROUNDS */
+.dark .bg-gray-200,
+.dark .bg-gray-300,
+html.dark .bg-gray-200,
+html.dark .bg-gray-300 {
+  background-color: #3F3F46 !important;
+  background: #3F3F46 !important;
+}
+
+/* GRAY 700-800-900 BACKGROUNDS - Keep but ensure consistency */
+.dark .bg-gray-700,
+html.dark .bg-gray-700 {
+  background-color: #3F3F46 !important;
+  background: #3F3F46 !important;
+}
+
+.dark .bg-gray-800,
+html.dark .bg-gray-800 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+.dark .bg-gray-900,
+html.dark .bg-gray-900 {
+  background-color: #18181B !important;
+  background: #18181B !important;
+}
+
+/* SLATE BACKGROUNDS */
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+.dark .bg-slate-800,
+html.dark .bg-slate-800 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+.dark .bg-slate-900,
+html.dark .bg-slate-900 {
+  background-color: #18181B !important;
+  background: #18181B !important;
+}
+
+/* ===================================
+   BLUE/INDIGO BACKGROUNDS - 128 Matches
+   =================================== */
+
+.dark [class*="bg-blue-"],
+.dark [class*="bg-indigo-"],
+.dark [class*="bg-sky-"],
+.dark [class*="bg-cyan-"],
+html.dark [class*="bg-blue-"],
+html.dark [class*="bg-indigo-"] {
+  background-color: rgba(26, 26, 36, 0.9) !important;
+  background: rgba(26, 26, 36, 0.9) !important;
+}
+
+/* ===================================
+   GRADIENT BACKGROUNDS - 282 Matches
+   =================================== */
+
+/* From Gray */
+.dark [class~="from-gray-50"],
+.dark [class~="from-gray-100"],
+html.dark [class~="from-gray-50"],
+html.dark [class~="from-gray-100"] {
+  --tw-gradient-stops: #27272A, #18181B !important;
+}
+
+/* To Gray */
+.dark [class~="to-gray-50"],
+.dark [class~="to-gray-100"],
+html.dark [class~="to-gray-100"] {
+  --tw-gradient-stops: #27272A, #18181B !important;
+}
+
+/* From Slate */
+.dark [class~="from-slate-50"],
+.dark [class~="from-slate-100"],
+html.dark [class~="from-slate-50"] {
+  --tw-gradient-stops: #27272A, #18181B !important;
+}
+
+/* From Blue/Indigo */
+.dark [class~="from-blue-50"],
+.dark [class~="from-blue-100"],
+.dark [class~="from-indigo-50"],
+.dark [class~="from-indigo-100"],
+html.dark [class~="from-blue-50"],
+html.dark [class~="from-indigo-50"] {
+  --tw-gradient-stops: #27272A, #18181B !important;
+}
+
+/* Via Blue/Indigo */
+.dark [class~="via-blue-50"],
+.dark [class~="via-indigo-50"],
+html.dark [class~="via-blue-50"] {
+  --tw-gradient-stops: #27272A, #27272A, #18181B !important;
+}
+
+/* To Blue/Indigo */
+.dark [class~="to-blue-50"],
+.dark [class~="to-indigo-50"],
+.dark [class~="to-purple-50"],
+html.dark [class~="to-blue-50"] {
+  --tw-gradient-stops: #27272A, #18181B !important;
+}
+
+/* Gradient Directions */
+.dark .bg-gradient-to-b,
+.dark .bg-gradient-to-br,
+.dark .bg-gradient-to-r,
+html.dark .bg-gradient-to-b,
+html.dark .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops, #27272A, #18181B)) !important;
+}
+
+/* ===================================
+   TEXT COLORS - Ensure Readability
+   =================================== */
+
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-slate-900 {
+  color: #FAFAFA !important;
+}
+
+.dark .text-gray-600,
+.dark .text-slate-600,
+html.dark .text-gray-600,
+html.dark .text-slate-600 {
+  color: #E4E4E7 !important;
+}
+
+.dark .text-gray-500,
+.dark .text-slate-500,
+html.dark .text-gray-500 {
+  color: #D4D4D8 !important;
+}
+
+.dark .text-gray-400,
+.dark .text-slate-400,
+html.dark .text-gray-400 {
+  color: #A1A1AA !important;
+}
+
+/* ===================================
+   BORDERS - Burgundy Theme
+   =================================== */
+
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-slate-200,
+.dark .border-slate-300,
+html.dark .border-gray-200,
+html.dark .border-slate-200 {
+  border-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+.dark .border-gray-600,
+.dark .border-gray-700,
+.dark .border-slate-600,
+.dark .border-slate-700,
+html.dark .border-gray-700,
+html.dark .border-slate-700 {
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .border-blue-200,
+.dark .border-indigo-200,
+.dark .border-purple-200,
+html.dark .border-blue-200 {
+  border-color: rgba(233, 30, 99, 0.3) !important;
+}
+
+/* Ring Colors */
+.dark .ring-default,
+.dark [class*="ring-purple"],
+.dark [class*="ring-blue"],
+html.dark .ring-default {
+  --tw-ring-color: rgba(233, 30, 99, 0.3) !important;
+}
+
+/* ===================================
+   PRIMARY COLORS - Burgundy Override
+   =================================== */
+
+.dark .text-primary-600,
+.dark .text-primary-500,
+.dark .text-primary-400,
+html.dark .text-primary-600,
+html.dark .text-primary-500 {
+  color: #FDA4AF !important;
+}
+
+.dark .bg-primary-50,
+html.dark .bg-primary-50 {
+  background-color: rgba(233, 30, 99, 0.15) !important;
+}
+
+.dark .bg-primary-100,
+html.dark .bg-primary-100 {
+  background-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+.dark .border-primary-200,
+.dark .border-primary-300,
+html.dark .border-primary-200 {
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+/* ===================================
+   HOVER STATES
+   =================================== */
+
+.dark .hover\:border-primary-200:hover,
+.dark .dark\:hover\:border-primary-700:hover,
+html.dark .hover\:border-primary-200:hover {
+  border-color: rgba(233, 30, 99, 0.5) !important;
+}
+
+.dark .hover\:shadow-lg:hover,
+.dark .hover\:shadow-xl:hover,
+html.dark .hover\:shadow-lg:hover {
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(233, 30, 99, 0.2) !important;
+}
+
+/* ===================================
+   RESPONSIVE - Mobile/Tablet/Desktop
+   =================================== */
+
+/* Mobile */
+@media (max-width: 640px) {
+  .dark .bg-white,
+  .dark .bg-gray-50,
+  .dark .bg-gray-100,
+  html.dark .bg-white {
+    background: #18181B !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .dark .bg-white,
+  .dark .bg-gray-50,
+  html.dark .bg-white {
+    background: #18181B !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .dark .bg-white,
+  html.dark .bg-white {
+    background: #18181B !important;
+  }
+}
+
+/* MASTER RELOAD: all-702-matches-v2315 */
+

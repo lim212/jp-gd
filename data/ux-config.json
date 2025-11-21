@@ -1,0 +1,24 @@
+{
+  "responsive": {
+    "enabled": true,
+    "breakpoints": [
+      "mobile",
+      "tablet",
+      "desktop"
+    ]
+  },
+  "accessibility": {
+    "enabled": true,
+    "wcag": "AA",
+    "screenReader": true
+  },
+  "darkMode": {
+    "enabled": true,
+    "autoDetect": true
+  },
+  "pwa": {
+    "enabled": true,
+    "offline": true,
+    "pushNotifications": true
+  }
+}

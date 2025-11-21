@@ -1,0 +1,68 @@
+═══════════════════════════════════════════════════════════
+  INSTRUKSI SANGAT SIMPLE - IKUTI PERSIS!
+═══════════════════════════════════════════════════════════
+
+
+STEP 1: TUTUP BROWSER
+──────────────────────
+• Tutup Chrome/Edge SEPENUHNYA
+• Pastikan tidak ada window browser terbuka
+
+
+STEP 2: BUKA INCOGNITO
+──────────────────────
+• Tekan tombol: CTRL + SHIFT + N
+  (tekan 3 tombol bersamaan)
+
+• Atau:
+  - Buka Chrome/Edge
+  - Klik titik 3 (⋮) di pojok kanan atas
+  - Klik: "New Incognito Window"
+
+
+STEP 3: KETIK URL
+──────────────────────
+• Di Incognito window, ketik:
+  
+  localhost:3000
+
+• Tekan ENTER
+
+
+STEP 4: BUKA MOBILE VIEW
+──────────────────────
+• Tekan: F12
+• Tekan: CTRL + SHIFT + M
+• Pilih: iPhone 12 Pro
+
+
+═══════════════════════════════════════════════════════════
+  HASIL YANG AKAN TERLIHAT:
+═══════════════════════════════════════════════════════════
+
+✓ Badge HILANG (Berkualitas, Terpercaya, dll)
+✓ Banner MENEMPEL ke header (NO GAP!)
+✓ Banner ada space 12px kiri-kanan
+✓ Butuh Bantuan ada space 12px kiri-kanan
+
+
+═══════════════════════════════════════════════════════════
+  KENAPA HARUS INCOGNITO?
+═══════════════════════════════════════════════════════════
+
+Browser Normal  = Pakai file LAMA (cache)
+                  Result: Badge masih ada, gap masih ada
+
+Incognito Mode  = Load file BARU (fresh)
+                  Result: Badge hilang, banner menempel
+
+
+═══════════════════════════════════════════════════════════
+
+TUNGGU 30 DETIK → IKUTI 4 STEP DI ATAS!
+
+FILE BARU SUDAH DIBUAT: mobile-responsive-v2-final.css
+SERVER SEDANG RESTART: Tunggu 30 detik
+
+═══════════════════════════════════════════════════════════
+

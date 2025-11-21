@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════════
+  QUICK TEST - INCOGNITO MODE (WAJIB!)
+═══════════════════════════════════════════════════════════════
+
+LANGKAH CEPAT:
+
+1. CTRL + SHIFT + N          ← Buka Incognito
+
+2. localhost:3000            ← Ketik URL
+
+3. F12                       ← Buka DevTools
+
+4. CTRL + SHIFT + M          ← Mobile View
+
+5. iPhone 12 Pro             ← Pilih Device
+
+
+═══════════════════════════════════════════════════════════════
+  HASIL YANG AKAN TERLIHAT:
+═══════════════════════════════════════════════════════════════
+
+✅ Badge HILANG (Berkualitas, Terpercaya, dll)
+✅ Banner MENEMPEL ke header (no gap)
+✅ Banner ada space kiri kanan 12px (tidak menempel edge)
+✅ Butuh Bantuan ada space kiri kanan 12px
+✅ Border radius ada (rounded corners)
+
+
+═══════════════════════════════════════════════════════════════
+  KENAPA INCOGNITO WAJIB?
+═══════════════════════════════════════════════════════════════
+
+BROWSER NORMAL:
+  ❌ Pakai file CSS lama (dari cache)
+  ❌ Perubahan TIDAK terlihat
+
+INCOGNITO MODE:
+  ✅ Load file CSS baru (fresh)
+  ✅ Perubahan PASTI terlihat
+
+
+═══════════════════════════════════════════════════════════════
+
+TUNGGU 30 DETIK → TEST SEKARANG! 🚀
+

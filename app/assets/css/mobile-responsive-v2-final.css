@@ -1,0 +1,63 @@
+/* ========================================
+   MOBILE RESPONSIVE - CLEAN & SIMPLE V3
+   Super rapi, konsisten, no negative margins
+   ======================================== */
+
+/* HIDE BADGES - Mobile Only */
+@media (max-width: 1024px) {
+  .hidden.sm\:block .hidden.lg\:flex,
+  .hidden.sm\:block div.flex.items-center.space-x-2.text-xs,
+  div.flex.items-center.space-x-2.text-xs.text-gray-600,
+  div.hidden.lg\:flex.items-center.space-x-2 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  span[class*="bg-green-100"],
+  span[class*="bg-blue-100"],
+  span[class*="bg-purple-100"],
+  span[class*="bg-orange-100"],
+  .hidden.sm\:block span {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* CLEAN SPACING - NO NEGATIVE MARGINS */
+@media (max-width: 768px) {
+  /* Remove all negative margins */
+  header {
+    margin-bottom: 0 !important;
+  }
+  
+  main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  main > div {
+    margin-top: 0 !important;
+  }
+  
+  .relative[data-net-mode] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Banner & Sections - Clean spacing */
+  .banner-full-vw,
+  .bantuan-full-vw,
+  .simple-banner-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* FORCE RELOAD MARKER */
+/* v3-clean-spacing-2138 */

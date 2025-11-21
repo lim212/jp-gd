@@ -1,0 +1,391 @@
+/* =====================================================
+   PROFESSIONAL LOADING SCREEN - ENHANCED STYLES
+   =====================================================
+   File ini berisi styling tambahan untuk loading screen
+   yang lebih keren, menarik, dan lengkap.
+   ===================================================== */
+
+/* ===== ENHANCED ANIMATIONS ===== */
+@keyframes professionalPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===== ENHANCED LOADING SPINNER ===== */
+.professional-loading-container .loading-spinner {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.professional-loading-container .spinner-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.professional-loading-container .ring-1 {
+  border-top-color: #3b82f6;
+  animation-duration: 1.5s;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.professional-loading-container .ring-2 {
+  border-right-color: #3b82f6;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.professional-loading-container .ring-3 {
+  border-bottom-color: #06b6d4;
+  animation-duration: 2.5s;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+/* ===== ENHANCED PROGRESS BAR ===== */
+.professional-loading-container .progress-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-loading-container .progress-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* ===== ENHANCED STAGE ANIMATIONS ===== */
+.professional-loading-container .loading-stage {
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-loading-container .loading-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(59, 130, 246, 0.1), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.professional-loading-container .loading-stage.current::before {
+  left: 100%;
+}
+
+/* ===== ENHANCED STATISTICS ===== */
+.professional-loading-container .stat-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-loading-container .stat-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(59, 130, 246, 0.1), 
+    rgba(139, 92, 246, 0.1), 
+    rgba(6, 182, 212, 0.1));
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.professional-loading-container .stat-item:hover::after {
+  opacity: 1;
+}
+
+/* ===== ENHANCED TIPS ===== */
+.professional-loading-container .tip-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-loading-container .tip-text {
+  position: relative;
+  z-index: 2;
+}
+
+.professional-loading-container .tip-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(251, 191, 36, 0.1), 
+    transparent);
+  animation: shimmer 3s infinite;
+}
+
+/* ===== ENHANCED CONTROL BUTTONS ===== */
+.professional-loading-container .control-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.professional-loading-container .control-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.3s ease;
+}
+
+.professional-loading-container .control-button:hover::before {
+  left: 100%;
+}
+
+/* ===== ENHANCED BACKGROUND EFFECTS ===== */
+.professional-loading-container .gradient-wave {
+  background: linear-gradient(45deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%, 
+    rgba(6, 182, 212, 0.1) 50%, 
+    rgba(34, 197, 94, 0.1) 75%, 
+    rgba(59, 130, 246, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.professional-loading-container .floating-shape {
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+.professional-loading-container .floating-shape:nth-child(odd) {
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+.professional-loading-container .floating-shape:nth-child(even) {
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+
+/* ===== ENHANCED BRAND LOGO ===== */
+.professional-loading-container .brand-logo {
+  animation: professionalPulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.professional-loading-container .brand-logo svg {
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+}
+
+/* ===== ENHANCED RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .professional-loading-container .loading-spinner {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .professional-loading-container .spinner-center {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .professional-loading-container .loading-percentage {
+    font-size: 1rem;
+  }
+  
+  .professional-loading-container .loading-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .professional-loading-container .loading-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .professional-loading-container .control-button {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-loading-container .loading-stages {
+    margin-bottom: 1rem;
+  }
+  
+  .professional-loading-container .loading-stage {
+    padding: 0.75rem;
+  }
+  
+  .professional-loading-container .stage-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.75rem;
+  }
+  
+  .professional-loading-container .stage-icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .professional-loading-container .stage-title {
+    font-size: 0.9rem;
+  }
+  
+  .professional-loading-container .stage-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== DARK MODE ENHANCEMENTS ===== */
+.dark .professional-loading-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.dark .professional-loading-container .loading-stage {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .professional-loading-container .loading-stage.active {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.dark .professional-loading-container .loading-stage.current {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.dark .professional-loading-container .stat-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .professional-loading-container .tip-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .professional-loading-container .control-button {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark .professional-loading-container .control-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .professional-loading-container .spinner-ring,
+  .professional-loading-container .gradient-wave,
+  .professional-loading-container .floating-shape,
+  .professional-loading-container .brand-logo {
+    animation: none;
+  }
+  
+  .professional-loading-container .progress-fill::before,
+  .professional-loading-container .loading-stage::before,
+  .professional-loading-container .control-button::before {
+    animation: none;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  .professional-loading-container .loading-stage,
+  .professional-loading-container .stat-item,
+  .professional-loading-container .tip-container,
+  .professional-loading-container .control-button {
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .professional-loading-container .brand-title,
+  .professional-loading-container .stage-title,
+  .professional-loading-container .stat-value {
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .professional-loading-container {
+    display: none !important;
+  }
+}

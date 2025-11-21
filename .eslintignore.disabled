@@ -1,0 +1,5 @@
+# Ignore generated and build artifacts
+.nuxt/
+node_modules/
+.output/
+dist/

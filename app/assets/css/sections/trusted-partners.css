@@ -1,0 +1,58 @@
+/* Section theme: Trusted Partners */
+/* @reference "tailwindcss"; */
+
+.tp-theme {
+  /* Light */
+  --section-bg: #ffffff;
+  --section-surface: #f8fafc;
+  --section-border: #e5e7eb;
+  --section-accent: #0ea5e9; /* sky blue */
+  --section-accent-2: #3B82F6; /* blue */
+  --section-text: #0f172a;
+}
+
+.dark .tp-theme {
+  /* Dark */
+  --section-bg: #0c1118;        /* a bit softer than full black */
+  --section-surface: #141b24;   /* deep slate, not pitch black */
+  --section-border: #2a3546;
+  --section-accent: #7aa2ff;    /* softer blue */
+  --section-accent-2: #a6c4ff;  /* lighter companion */
+  --section-text: #ffffff;
+}
+
+/* Map common parts inside component to section tokens */
+.tp-theme .ui-box,
+.tp-theme .trusted-card {
+  background: var(--section-surface) !important;
+  color: var(--section-text) !important;
+  border-color: var(--section-border) !important;
+}
+
+.tp-theme .trusted-pagination .swiper-pagination-bullet-active {
+  background: linear-gradient(90deg, var(--section-accent), var(--section-accent-2)) !important;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--section-accent-2), transparent 82%);
+}
+
+.tp-theme .trusted-nav-btn {
+  background-color: color-mix(in oklab, var(--section-surface), transparent 20%) !important;
+  color: var(--section-text) !important;
+}
+
+.tp-theme .partner-card {
+  background: color-mix(in oklab, var(--section-surface), transparent 0%) !important;
+  border-color: color-mix(in oklab, var(--section-border), transparent 0%) !important;
+}
+
+.tp-theme .partner-card:hover { 
+  box-shadow: 0 10px 28px -8px color-mix(in oklab, #000, transparent 82%);
+}
+
+/* Ensure logos appear in full color (remove default grayscale/opacity classes) */
+.tp-theme img.partner-logo {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+
+

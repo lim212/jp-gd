@@ -1,0 +1,23 @@
+{
+  "navigation": {
+    "home": "Home",
+    "information": "Information",
+    "about_us": "About Us",
+    "online_transaction": "Online Transaction",
+    "transaction_proof": "Transaction Proof",
+    "testimonials": "Testimonials"
+  },
+  "search": {
+    "placeholder": "Search..."
+  },
+  "marquee": {
+    "text": "We provide secure and reliable payment services for all your transactions, including PayPal Payment Services, Credit Cards, Skrill, Neteller, Namecheap, LiveChat, Bitcoin, crypto, and TRC20. With our high-security system, we ensure every payment is processed safely, so you can transact without worry."
+  },
+  "about": {
+    "title": "Secure and reliable online payment services.",
+    "description": "Safe and trusted online transactions."
+  },
+  "language": {
+    "select": "Select Language"
+  }
+}

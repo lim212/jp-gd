@@ -1,0 +1,115 @@
+[
+  {
+    "code": "A0111",
+    "title": "Pertanian Padi",
+    "risk": "Rendah",
+    "description": "Usaha budidaya padi termasuk kegiatan penanaman, pemeliharaan, hingga panen.",
+    "licensing": {
+      "perizinan_berusaha": "NIB",
+      "keterangan": "Sesuai ketentuan OSS RBA"
+    }
+  },
+  {
+    "code": "B0510",
+    "title": "Pertambangan Batu Bara",
+    "risk": "Tinggi",
+    "description": "Kegiatan penambangan batu bara, termasuk ekstraksi dan pengolahan awal.",
+    "licensing": {
+      "perizinan_berusaha": "IUP Operasi Produksi",
+      "persyaratan": ["AMDAL/UKL-UPL", "Rencana Reklamasi"]
+    }
+  },
+  {
+    "code": "C1072",
+    "title": "Industri Gula",
+    "risk": "Menengah Tinggi",
+    "description": "Produksi gula dari tebu atau bahan baku lainnya.",
+    "licensing": {
+      "perizinan_berusaha": "Izin Industri",
+      "standar": ["Sertifikasi SNI (bila berlaku)"]
+    }
+  },
+  {
+    "code": "G4711",
+    "title": "Perdagangan Eceran di Minimarket",
+    "risk": "Menengah Rendah",
+    "description": "Perdagangan eceran umum di toko swalayan kecil/minimarket.",
+    "licensing": {
+      "perizinan_berusaha": "NIB",
+      "keterangan": "Pemenuhan standar bangunan dan lingkungan"
+    }
+  },
+  {
+    "code": "J6201",
+    "title": "Pengembangan Perangkat Lunak",
+    "risk": "Rendah",
+    "description": "Pengembangan perangkat lunak (software) termasuk aplikasi web dan mobile.",
+    "licensing": {
+      "perizinan_berusaha": "NIB"
+    }
+  },
+  {
+    "code": "M7020",
+    "title": "Konsultasi Manajemen",
+    "risk": "Rendah",
+    "description": "Kegiatan konsultasi manajemen dan bisnis.",
+    "licensing": {
+      "perizinan_berusaha": "NIB"
+    }
+  },
+  {
+    "code": "N8230",
+    "title": "Penyelenggaraan Konvensi dan Pameran Dagang",
+    "risk": "Menengah Rendah",
+    "description": "Event organizer untuk pameran dagang dan konvensi.",
+    "licensing": {
+      "perizinan_berusaha": "NIB"
+    }
+  },
+  {
+    "code": "P8532",
+    "title": "Pendidikan Menengah Kejuruan",
+    "risk": "Menengah Tinggi",
+    "description": "Penyelenggaraan pendidikan kejuruan tingkat menengah.",
+    "licensing": {
+      "perizinan_berusaha": "Izin Operasional Pendidikan"
+    }
+  },
+  {
+    "code": "Q8621",
+    "title": "Aktivitas Rumah Sakit",
+    "risk": "Tinggi",
+    "description": "Penyelenggaraan layanan kesehatan oleh rumah sakit.",
+    "licensing": {
+      "perizinan_berusaha": "Izin Operasional Rumah Sakit",
+      "persyaratan": ["Akreditasi Rumah Sakit", "Perizinan Tenaga Kesehatan"]
+    }
+  },
+  {
+    "code": "R9311",
+    "title": "Aktivitas Fasilitas Olahraga",
+    "risk": "Rendah",
+    "description": "Pengelolaan fasilitas olahraga seperti gym dan stadion.",
+    "licensing": {
+      "perizinan_berusaha": "NIB"
+    }
+  },
+  {
+    "code": "U9900",
+    "title": "Kegiatan Badan Internasional dan Badan Ekstra Teritorial Lainnya",
+    "risk": "Rendah",
+    "description": "Kegiatan organisasi internasional dan badan ekstra teritorial.",
+    "licensing": {
+      "perizinan_berusaha": "NIB"
+    }
+  },
+  {
+    "code": "48100",
+    "title": "Angkutan Udara Berjadwal Penumpang",
+    "risk": "Menengah Tinggi",
+    "description": "Kegiatan angkutan udara berjadwal untuk penumpang.",
+    "licensing": {
+      "perizinan_berusaha": "Izin Usaha Angkutan Udara Niaga Berjadwal"
+    }
+  }
+]

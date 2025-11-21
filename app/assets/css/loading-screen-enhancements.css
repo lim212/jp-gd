@@ -1,0 +1,578 @@
+/* ==========================================
+   LOADING SCREEN ENHANCEMENTS - SUPER KEREN & PROFESSIONAL
+   Enhancement tambahan untuk loading screen yang lebih menarik
+   Optimized for smooth animations and modern visual effects
+   ========================================== */
+
+/* ==================== MODERN LOADING ANIMATIONS ==================== */
+/* Animasi loading yang lebih smooth, modern, dan menarik */
+
+@keyframes loadingPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes loadingGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.7),
+                0 0 60px rgba(99, 102, 241, 0.4);
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes loadingSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes loadingRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes loadingWave {
+  0%, 60%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  30% {
+    transform: translateY(-15px) scaleY(1.1);
+  }
+}
+
+@keyframes loadingFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loadingScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==================== ENHANCED MODERN PROGRESS BAR ==================== */
+/* Progress bar yang lebih menarik dengan efek visual modern */
+
+.enhanced-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.04) 50%, 
+    rgba(255, 255, 255, 0.08) 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.15),
+              0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.enhanced-progress-fill {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    #60a5fa 0%, 
+    #818cf8 20%,
+    #a78bfa 40%, 
+    #c084fc 60%,
+    #e879f9 80%,
+    #f472b6 100%);
+  background-size: 200% 100%;
+  border-radius: 12px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.6),
+              0 0 50px rgba(168, 85, 247, 0.3);
+  animation: loadingShimmer 2s linear infinite;
+}
+
+.enhanced-progress-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.5) 50%, 
+    transparent 100%);
+  animation: loadingSlide 2.5s ease-in-out infinite;
+}
+
+.enhanced-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: inherit;
+  border-radius: 15px;
+  opacity: 0.4;
+  filter: blur(8px);
+  animation: loadingGlow 2.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Modern glass progress bar variant */
+.enhanced-progress-bar.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.enhanced-progress-bar.glass .enhanced-progress-fill {
+  background: linear-gradient(90deg, 
+    rgba(96, 165, 250, 0.8) 0%, 
+    rgba(129, 140, 248, 0.8) 50%,
+    rgba(168, 85, 247, 0.8) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* ==================== ENHANCED LOADING SPINNER ==================== */
+/* Spinner yang lebih menarik dengan multiple rings */
+
+.enhanced-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.enhanced-spinner-ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  animation: loadingRotate 2s linear infinite;
+}
+
+.enhanced-spinner-ring:nth-child(1) {
+  border-top-color: #667eea;
+  animation-duration: 1.5s;
+}
+
+.enhanced-spinner-ring:nth-child(2) {
+  border-right-color: #764ba2;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.enhanced-spinner-ring:nth-child(3) {
+  border-bottom-color: #f093fb;
+  animation-duration: 2.5s;
+}
+
+.enhanced-spinner-ring:nth-child(4) {
+  border-left-color: #4facfe;
+  animation-duration: 3s;
+  animation-direction: reverse;
+}
+
+.enhanced-spinner-center {
+  position: absolute;
+  inset: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 70%);
+  border-radius: 50%;
+  animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+.enhanced-spinner-center::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  animation: loadingBounce 1s ease-in-out infinite;
+}
+
+/* ==================== ENHANCED LOADING DOTS ==================== */
+/* Dots animation yang lebih smooth */
+
+.enhanced-loading-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.enhanced-loading-dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  animation: loadingBounce 1.4s ease-in-out infinite both;
+}
+
+.enhanced-loading-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.enhanced-loading-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.enhanced-loading-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* ==================== ENHANCED RESOURCE CARDS ==================== */
+/* Resource cards yang lebih menarik */
+
+.enhanced-resource-card {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.enhanced-resource-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.enhanced-resource-card:hover::before {
+  left: 100%;
+}
+
+.enhanced-resource-card.loading {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.2) 0%, 
+    rgba(14, 165, 233, 0.1) 100%);
+  border-color: rgba(59, 130, 246, 0.4);
+  animation: loadingGlow 2s ease-in-out infinite;
+}
+
+.enhanced-resource-card.loaded {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.2) 0%, 
+    rgba(16, 185, 129, 0.1) 100%);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+/* ==================== ENHANCED STATUS INDICATORS ==================== */
+/* Status indicators yang lebih informatif */
+
+.enhanced-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.enhanced-status-indicator:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enhanced-status-indicator .status-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.enhanced-status-indicator .status-text {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== ENHANCED FLOATING ELEMENTS ==================== */
+/* Elemen floating yang lebih menarik */
+
+.enhanced-floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 70%);
+  animation: floatingMove 20s ease-in-out infinite;
+}
+
+.enhanced-floating-element:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.enhanced-floating-element:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 5s;
+}
+
+.enhanced-floating-element:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  bottom: 30%;
+  left: 70%;
+  animation-delay: 10s;
+}
+
+@keyframes floatingMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-20px, 30px) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(20px, 10px) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+/* ==================== ENHANCED GLASS MORPHISM ==================== */
+/* Efek glass morphism yang lebih halus */
+
+.enhanced-glass-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.enhanced-glass-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* ==================== ENHANCED RESPONSIVE DESIGN ==================== */
+/* Responsive design yang lebih baik */
+
+@media (max-width: 768px) {
+  .enhanced-resource-card {
+    padding: 15px;
+  }
+  
+  .enhanced-status-indicator {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  
+  .enhanced-spinner {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .enhanced-spinner-center {
+    inset: 15px;
+  }
+  
+  .enhanced-spinner-center::before {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-resource-card {
+    padding: 12px;
+  }
+  
+  .enhanced-status-indicator {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+  
+  .enhanced-spinner {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .enhanced-spinner-center {
+    inset: 12px;
+  }
+  
+  .enhanced-spinner-center::before {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ==================== ENHANCED ACCESSIBILITY ==================== */
+/* Perbaikan untuk aksesibilitas */
+
+@media (prefers-reduced-motion: reduce) {
+  .enhanced-spinner-ring,
+  .enhanced-loading-dot,
+  .enhanced-floating-element {
+    animation: none;
+  }
+  
+  .enhanced-progress-fill::before,
+  .enhanced-progress-fill::after {
+    animation: none;
+  }
+}
+
+/* ==================== ENHANCED PERFORMANCE ==================== */
+/* Optimasi untuk performa yang lebih baik */
+
+.enhanced-spinner,
+.enhanced-resource-card,
+.enhanced-status-indicator {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.enhanced-progress-fill {
+  will-change: width;
+  transform: translateZ(0);
+}
+
+/* ==================== ENHANCED THEME SUPPORT ==================== */
+/* Support untuk berbagai tema */
+
+.dark .enhanced-glass-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .enhanced-resource-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .enhanced-status-indicator {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== ENHANCED ANIMATION VARIATIONS ==================== */
+/* Variasi animasi untuk berbagai state */
+
+.enhanced-loading-fast {
+  animation-duration: 0.8s;
+}
+
+.enhanced-loading-normal {
+  animation-duration: 1.2s;
+}
+
+.enhanced-loading-slow {
+  animation-duration: 2s;
+}
+
+.enhanced-loading-bounce {
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.enhanced-loading-ease {
+  animation-timing-function: ease-in-out;
+}
+
+.enhanced-loading-linear {
+  animation-timing-function: linear;
+}

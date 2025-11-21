@@ -1,0 +1,85 @@
+{
+  "tags": [
+    {
+      "name": "PayPal",
+      "slug": "paypal",
+      "count": 18,
+      "color": "#82E0AA"
+    },
+    {
+      "name": "Mobile App",
+      "slug": "mobile-app",
+      "count": 33,
+      "color": "#F1948A"
+    },
+    {
+      "name": "Digital Marketing",
+      "slug": "digital-marketing",
+      "count": 31,
+      "color": "#F8C471"
+    },
+    {
+      "name": "Hosting",
+      "slug": "hosting",
+      "count": 6,
+      "color": "#FFEAA7"
+    },
+    {
+      "name": "Domain",
+      "slug": "domain",
+      "count": 7,
+      "color": "#F1948A"
+    },
+    {
+      "name": "PAYTECH",
+      "slug": "PAYTECH",
+      "count": 6,
+      "color": "#D7BDE2"
+    },
+    {
+      "name": "Security",
+      "slug": "security",
+      "count": 34,
+      "color": "#45B7D1"
+    },
+    {
+      "name": "Web Development",
+      "slug": "web-development",
+      "count": 6,
+      "color": "#98D8C8"
+    },
+    {
+      "name": "Video Conference",
+      "slug": "video-conference",
+      "count": 22,
+      "color": "#FFEAA7"
+    },
+    {
+      "name": "Bitcoin",
+      "slug": "bitcoin",
+      "count": 25,
+      "color": "#85C1E9"
+    },
+    {
+      "name": "Zoom",
+      "slug": "zoom",
+      "count": 16,
+      "color": "#85C1E9"
+    },
+    {
+      "name": "Cryptocurrency",
+      "slug": "cryptocurrency",
+      "count": 16,
+      "color": "#FF6B6B"
+    }
+  ],
+  "totalTags": 12,
+  "lastUpdated": "2025-09-30T04:04:19.702Z",
+  "profile_icon": {
+    "id": 10,
+    "url": "/images/profile-icons/profile-icon-10.svg",
+    "filename": "profile-icon-10.svg",
+    "name": "Manager",
+    "color": "#5f27cd"
+  }
+}

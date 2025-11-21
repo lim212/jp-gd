@@ -1,0 +1,103 @@
+/* ========================================
+   DARK MODE - FINAL ULTRA FIX
+   ABSOLUTE LAST PRIORITY - FORCE EVERYTHING
+   ======================================== */
+
+/* OVERRIDE SEMUA BACKGROUND TERANG - SUPER AGRESIF */
+.dark *,
+html.dark * {
+  /* Force all white backgrounds */
+}
+
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+html.dark .bg-white,
+html.dark .bg-gray-50,
+html.dark .bg-gray-100,
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #18181B !important;
+  background: #18181B !important;
+}
+
+/* SLATE COLORS */
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background-color: #27272A !important;
+  background: #27272A !important;
+}
+
+.dark .bg-slate-800,
+.dark .bg-slate-900,
+html.dark .bg-slate-800,
+html.dark .bg-slate-900 {
+  background-color: #18181B !important;
+  background: #18181B !important;
+}
+
+/* GRADIENT OVERRIDES */
+.dark [class*="from-gray-50"],
+.dark [class*="from-gray-100"],
+.dark [class*="from-slate-50"],
+.dark [class*="from-slate-100"],
+html.dark [class*="from-gray-50"],
+html.dark [class*="from-gray-100"],
+html.dark [class*="from-slate-50"],
+html.dark [class*="from-slate-100"] {
+  background: linear-gradient(to right, #27272A 0%, #18181B 100%) !important;
+  background-image: linear-gradient(to right, #27272A 0%, #18181B 100%) !important;
+}
+
+/* TEXT COLORS - ENSURE READABILITY */
+.dark .text-gray-900,
+.dark .text-slate-900,
+html.dark .text-gray-900,
+html.dark .text-slate-900 {
+  color: #FAFAFA !important;
+}
+
+.dark .text-gray-800,
+.dark .text-slate-800,
+html.dark .text-gray-800,
+html.dark .text-slate-800 {
+  color: #F4F4F5 !important;
+}
+
+.dark .text-gray-700,
+.dark .text-slate-700,
+html.dark .text-gray-700,
+html.dark .text-slate-700 {
+  color: #E4E4E7 !important;
+}
+
+/* BORDERS */
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-slate-200,
+.dark .border-slate-300,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+/* SPECIFIC COMPONENTS */
+.dark #company-profile-section,
+html.dark #company-profile-section {
+  background: linear-gradient(to bottom, #27272A 0%, #18181B 100%) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+/* ALL CARDS */
+.dark [class*="rounded-xl"],
+.dark [class*="rounded-2xl"],
+html.dark [class*="rounded-xl"],
+html.dark [class*="rounded-2xl"] {
+  /* Let individual components handle their own backgrounds */
+}
+
+/* FORCE RELOAD: final-ultra-fix-v2250 */
+

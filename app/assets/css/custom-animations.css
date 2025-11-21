@@ -1,0 +1,193 @@
+/* Custom animations for JasaPembayaran.com
+ * Created: July 2025
+ * Optimized for all devices including desktop
+ */
+
+/* Enhanced Marquee Animation - Smooth and Readable */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile-specific marquee animation to prevent text cutoff */
+@keyframes marquee-mobile {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Marquee Animation Class - Optimized for readability */
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+  /* Smooth animation with proper timing */
+  animation-timing-function: linear;
+  /* Ensure smooth scrolling */
+  will-change: transform;
+  /* Better performance */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Marquee track styling for better readability */
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  /* Ensure text doesn't break */
+  font-weight: 600;
+  /* Better readability */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+/* Enhanced icon animation for marquee */
+.marquee-track svg {
+  animation: icon-pulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+/* Icon pulse animation */
+@keyframes icon-pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Enhanced text glow effect */
+.marquee-track span {
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+  /* Subtle glow for better visibility */
+}
+
+/* Base pulse animation - optimized for mobile */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Enhanced pulse animation for desktop with transform instead of opacity */
+@keyframes pulse-desktop {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Subtle hover animation for desktop interactive elements */
+@keyframes hover-lift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Smooth fade-in animation for desktop content */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base animation class - mobile first */
+.animate-pulse-slow {
+  /* Use will-change for better performance */
+  will-change: opacity;
+  /* Reduced animation duration and simplified timing function */
+  animation: pulse-slow 4s ease-in-out;
+  /* Animation only plays once instead of infinite to save resources */
+  animation-iteration-count: 1;
+}
+
+/* Responsive Marquee Adjustments */
+@media (max-width: 640px) {
+  .animate-marquee {
+    /* Use mobile-specific animation to prevent text cutoff */
+    animation: marquee-mobile 60s linear infinite;
+    /* Slower on mobile for better readability */
+  }
+  
+  .marquee-track {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    /* Ensure text doesn't get cut off */
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .animate-marquee {
+    /* Medium speed on tablet */
+    animation-duration: 55s;
+  }
+  
+  .marquee-track {
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop-specific animations using media queries */
+@media (min-width: 1024px) {
+  .animate-marquee {
+    /* Optimal speed on desktop */
+    animation-duration: 50s;
+  }
+  
+  .marquee-track {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  
+  .animate-pulse-slow {
+    /* Enhanced animation for desktop */
+    will-change: opacity, transform;
+    animation: pulse-desktop 4s ease-in-out;
+    /* Allow infinite animation on desktop where performance is better */
+    animation-iteration-count: infinite;
+  }
+
+  /* Desktop-specific hover animation class */
+  .desktop-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .desktop-hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Desktop-specific fade-in animation */
+  .desktop-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+}

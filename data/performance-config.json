@@ -1,0 +1,20 @@
+{
+  "caching": {
+    "enabled": true,
+    "ttl": 3600,
+    "maxSize": "100MB"
+  },
+  "compression": {
+    "enabled": true,
+    "level": 6
+  },
+  "images": {
+    "optimization": true,
+    "webp": true,
+    "lazyLoading": true
+  },
+  "database": {
+    "indexing": true,
+    "queryOptimization": true
+  }
+}

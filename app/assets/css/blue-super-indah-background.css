@@ -1,0 +1,180 @@
+/* ========================================
+   BLUE SUPER INDAH BACKGROUND
+   Background biru yang super indah dan profesional
+   ======================================== */
+
+/* Super indah background untuk body */
+body {
+  background: 
+    radial-gradient(1400px 700px at 120% -20%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    radial-gradient(1000px 500px at -20% 0%, rgba(236, 72, 153, 0.08) 0%, transparent 60%),
+    radial-gradient(800px 400px at 50% 100%, rgba(16, 185, 129, 0.06) 0%, transparent 70%),
+    radial-gradient(600px 300px at 80% 20%, rgba(245, 158, 11, 0.04) 0%, transparent 80%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Super indah background untuk sections */
+.section-bg-super-indah {
+  background: 
+    radial-gradient(800px 400px at 20% 0%, rgba(99, 102, 241, 0.06) 0%, transparent 60%),
+    radial-gradient(600px 300px at 80% 100%, rgba(236, 72, 153, 0.04) 0%, transparent 70%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+}
+
+.section-bg-super-indah::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(400px 200px at 10% 10%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(300px 150px at 90% 90%, rgba(236, 72, 153, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Super indah background untuk cards */
+.card-bg-super-indah {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
+    radial-gradient(200px 100px at 50% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 
+    0 4px 16px rgba(99, 102, 241, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Super indah background untuk hero section */
+.hero-bg-super-indah {
+  background: 
+    radial-gradient(1200px 600px at 50% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 60%),
+    radial-gradient(800px 400px at 0% 100%, rgba(236, 72, 153, 0.06) 0%, transparent 70%),
+    linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  position: relative;
+}
+
+.hero-bg-super-indah::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(600px 300px at 20% 20%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
+    radial-gradient(400px 200px at 80% 80%, rgba(236, 72, 153, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Super indah background untuk navigation */
+.nav-bg-super-indah {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%),
+    radial-gradient(400px 200px at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(99, 102, 241, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Super indah background untuk footer */
+.footer-bg-super-indah {
+  background: 
+    radial-gradient(1000px 500px at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+    radial-gradient(800px 400px at 0% 100%, rgba(236, 72, 153, 0.06) 0%, transparent 70%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Super indah background untuk buttons */
+.btn-bg-super-indah {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #10b981 100%);
+  box-shadow: 
+    0 4px 12px rgba(99, 102, 241, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.btn-bg-super-indah:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #10b981 50%, #f59e0b 100%);
+  box-shadow: 
+    0 6px 16px rgba(99, 102, 241, 0.4),
+    0 3px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Super indah background untuk icons */
+.icon-bg-super-indah {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  box-shadow: 
+    0 4px 12px rgba(99, 102, 241, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Super indah background untuk forms */
+.form-bg-super-indah {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
+    radial-gradient(200px 100px at 50% 0%, rgba(99, 102, 241, 0.03) 0%, transparent 70%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 2px 8px rgba(99, 102, 241, 0.1),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Super indah background untuk modals */
+.modal-bg-super-indah {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
+    radial-gradient(400px 200px at 50% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(99, 102, 241, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Super indah background untuk loading */
+.loading-bg-super-indah {
+  background: 
+    radial-gradient(600px 300px at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 60%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Super indah background untuk dark mode */
+.dark .dark-bg-super-indah {
+  background: 
+    radial-gradient(1200px 600px at 120% -20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(1000px 500px at -20% 0%, rgba(236, 72, 153, 0.1) 0%, transparent 60%),
+    radial-gradient(800px 400px at 50% 100%, rgba(16, 185, 129, 0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+/* Super indah background untuk mobile */
+@media (max-width: 768px) {
+  body {
+    background: 
+      radial-gradient(800px 400px at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+      radial-gradient(600px 300px at 0% 100%, rgba(236, 72, 153, 0.06) 0%, transparent 70%),
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+  
+  .section-bg-super-indah {
+    background: 
+      radial-gradient(400px 200px at 50% 0%, rgba(99, 102, 241, 0.04) 0%, transparent 60%),
+      linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  }
+}
+
+
+
+
+
+
+
+

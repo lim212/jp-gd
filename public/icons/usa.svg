@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- USA flag - colorful version -->
+  <!-- Red stripes -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <rect y="39.4" width="512" height="39.4" fill="#FF0000"/>
+  <rect y="118.2" width="512" height="39.4" fill="#FF0000"/>
+  <rect y="197" width="512" height="39.4" fill="#FF0000"/>
+  <rect y="275.8" width="512" height="39.4" fill="#FF0000"/>
+  <rect y="354.6" width="512" height="39.4" fill="#FF0000"/>
+  <rect y="433.4" width="512" height="39.4" fill="#FF0000"/>
+  <!-- Blue canton with stars -->
+  <rect width="256" height="275.8" fill="#0052B4"/>
+  <!-- Stars (simplified as a grid) -->
+  <g fill="#FFFFFF">
+    <circle cx="24" cy="24" r="8"/>
+    <circle cx="72" cy="24" r="8"/>
+    <circle cx="120" cy="24" r="8"/>
+    <circle cx="168" cy="24" r="8"/>
+    <circle cx="216" cy="24" r="8"/>
+    <circle cx="48" cy="48" r="8"/>
+    <circle cx="96" cy="48" r="8"/>
+    <circle cx="144" cy="48" r="8"/>
+    <circle cx="192" cy="48" r="8"/>
+    <circle cx="24" cy="72" r="8"/>
+    <circle cx="72" cy="72" r="8"/>
+    <circle cx="120" cy="72" r="8"/>
+    <circle cx="168" cy="72" r="8"/>
+    <circle cx="216" cy="72" r="8"/>
+    <circle cx="48" cy="96" r="8"/>
+    <circle cx="96" cy="96" r="8"/>
+    <circle cx="144" cy="96" r="8"/>
+    <circle cx="192" cy="96" r="8"/>
+    <circle cx="24" cy="120" r="8"/>
+    <circle cx="72" cy="120" r="8"/>
+    <circle cx="120" cy="120" r="8"/>
+    <circle cx="168" cy="120" r="8"/>
+    <circle cx="216" cy="120" r="8"/>
+    <circle cx="48" cy="144" r="8"/>
+    <circle cx="96" cy="144" r="8"/>
+    <circle cx="144" cy="144" r="8"/>
+    <circle cx="192" cy="144" r="8"/>
+    <circle cx="24" cy="168" r="8"/>
+    <circle cx="72" cy="168" r="8"/>
+    <circle cx="120" cy="168" r="8"/>
+    <circle cx="168" cy="168" r="8"/>
+    <circle cx="216" cy="168" r="8"/>
+    <circle cx="48" cy="192" r="8"/>
+    <circle cx="96" cy="192" r="8"/>
+    <circle cx="144" cy="192" r="8"/>
+    <circle cx="192" cy="192" r="8"/>
+    <circle cx="24" cy="216" r="8"/>
+    <circle cx="72" cy="216" r="8"/>
+    <circle cx="120" cy="216" r="8"/>
+    <circle cx="168" cy="216" r="8"/>
+    <circle cx="216" cy="216" r="8"/>
+    <circle cx="48" cy="240" r="8"/>
+    <circle cx="96" cy="240" r="8"/>
+    <circle cx="144" cy="240" r="8"/>
+    <circle cx="192" cy="240" r="8"/>
+  </g>
+</svg>

@@ -1,0 +1,256 @@
+/* ========================================
+   DARK MODE - NUCLEAR OVERRIDE
+   ULTIMATE FORCE - Override EVERYTHING!
+   292 bg-white/gray matches MUST be overridden!
+   ======================================== */
+
+/* ===================================
+   LEVEL 1: BODY & HTML (Highest Priority)
+   =================================== */
+
+html.dark,
+html.dark *,
+html.dark body,
+html.dark body *,
+html.dark #__nuxt,
+html.dark #__nuxt * {
+  /* Base dark theme */
+}
+
+html.dark,
+html.dark body {
+  background: #0D0D12 !important;
+  background-color: #0D0D12 !important;
+  color: #FAFAFA !important;
+}
+
+html.dark main {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ===================================
+   LEVEL 2: ALL WHITE BACKGROUNDS
+   =================================== */
+
+.dark .bg-white,
+.dark [class*="bg-white"],
+html.dark .bg-white,
+html.dark [class*="bg-white"],
+body.dark .bg-white,
+[data-theme="dark"] .bg-white {
+  background: #18181B !important;
+  background-color: #18181B !important;
+}
+
+/* ===================================
+   LEVEL 3: ALL GRAY BACKGROUNDS
+   =================================== */
+
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-gray-200,
+html.dark .bg-gray-50,
+html.dark .bg-gray-100,
+html.dark .bg-gray-200,
+body.dark .bg-gray-50,
+body.dark .bg-gray-100 {
+  background: #27272A !important;
+  background-color: #27272A !important;
+}
+
+.dark .bg-gray-800,
+.dark .bg-gray-900,
+html.dark .bg-gray-800,
+html.dark .bg-gray-900 {
+  background: #18181B !important;
+  background-color: #18181B !important;
+}
+
+/* ===================================
+   LEVEL 4: ALL SLATE BACKGROUNDS
+   =================================== */
+
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background: #27272A !important;
+  background-color: #27272A !important;
+}
+
+.dark .bg-slate-800,
+.dark .bg-slate-900,
+html.dark .bg-slate-800,
+html.dark .bg-slate-900 {
+  background: #18181B !important;
+  background-color: #18181B !important;
+}
+
+/* ===================================
+   LEVEL 5: ALL BLUE/INDIGO BACKGROUNDS
+   =================================== */
+
+.dark [class*="bg-blue"],
+.dark [class*="bg-indigo"],
+.dark [class*="bg-sky"],
+.dark [class*="bg-cyan"],
+html.dark [class*="bg-blue"],
+html.dark [class*="bg-indigo"],
+html.dark [class*="bg-sky"] {
+  background: rgba(26, 26, 36, 0.9) !important;
+  background-color: rgba(26, 26, 36, 0.9) !important;
+}
+
+/* ===================================
+   LEVEL 6: ALL GRADIENT BACKGROUNDS
+   =================================== */
+
+.dark [class*="bg-gradient"],
+html.dark [class*="bg-gradient"] {
+  background-image: linear-gradient(135deg, #27272A 0%, #18181B 100%) !important;
+}
+
+.dark [class*="from-gray-50"],
+.dark [class*="from-gray-100"],
+.dark [class*="from-slate-50"],
+.dark [class*="from-slate-100"],
+html.dark [class*="from-gray-50"],
+html.dark [class*="from-gray-100"] {
+  --tw-gradient-from: #27272A !important;
+  --tw-gradient-to: #18181B !important;
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)) !important;
+}
+
+.dark [class*="to-gray-50"],
+.dark [class*="to-gray-100"],
+.dark [class*="to-slate-50"],
+.dark [class*="to-slate-100"],
+html.dark [class*="to-gray-100"] {
+  --tw-gradient-to: #18181B !important;
+}
+
+.dark [class*="from-blue"],
+.dark [class*="from-indigo"],
+.dark [class*="via-blue"],
+.dark [class*="via-indigo"],
+.dark [class*="to-blue"],
+.dark [class*="to-indigo"],
+html.dark [class*="from-blue"],
+html.dark [class*="from-indigo"] {
+  --tw-gradient-from: #27272A !important;
+  --tw-gradient-to: #18181B !important;
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)) !important;
+}
+
+/* ===================================
+   LEVEL 7: TEXT COLORS
+   =================================== */
+
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #FAFAFA !important;
+}
+
+.dark .text-gray-600,
+.dark .text-slate-600,
+html.dark .text-gray-600 {
+  color: #E4E4E7 !important;
+}
+
+.dark .text-gray-500,
+.dark .text-slate-500,
+html.dark .text-gray-500 {
+  color: #D4D4D8 !important;
+}
+
+/* ===================================
+   LEVEL 8: BORDERS
+   =================================== */
+
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-slate-200,
+.dark .border-slate-300,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: rgba(233, 30, 99, 0.25) !important;
+}
+
+.dark .border-gray-600,
+.dark .border-gray-700,
+.dark .border-slate-600,
+.dark .border-slate-700,
+html.dark .border-gray-700 {
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+/* ===================================
+   LEVEL 9: SPECIFIC SECTIONS
+   =================================== */
+
+.dark #company-profile-section,
+.dark .company-profile-section,
+html.dark #company-profile-section {
+  background: linear-gradient(to bottom, #27272A 0%, #18181B 100%) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .ultra-clean-help-box,
+html.dark .ultra-clean-help-box {
+  background: linear-gradient(135deg, rgba(26, 26, 36, 0.95) 0%, rgba(34, 34, 46, 0.9) 100%) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .professional-cta-container,
+html.dark .professional-cta-container {
+  background: linear-gradient(135deg, rgba(26, 26, 36, 0.95) 0%, rgba(34, 34, 46, 0.9) 100%) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+/* ===================================
+   LEVEL 10: BANNER SLIDER COMPONENTS
+   =================================== */
+
+.dark .modern-banner-container,
+.dark .banner-stage,
+.dark .modern-banner-loading,
+html.dark .modern-banner-container,
+html.dark .banner-stage,
+html.dark .modern-banner-loading {
+  background: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+  border-color: rgba(233, 30, 99, 0.4) !important;
+}
+
+.dark .nav-button,
+html.dark .nav-button {
+  background: rgba(26, 26, 36, 0.95) !important;
+  border-color: rgba(233, 30, 99, 0.35) !important;
+}
+
+.dark .dot-indicator,
+html.dark .dot-indicator {
+  background: rgba(26, 26, 36, 0.9) !important;
+  border-color: rgba(233, 30, 99, 0.3) !important;
+}
+
+.dark .dot-indicator.active,
+html.dark .dot-indicator.active {
+  background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%) !important;
+}
+
+.dark .slide-counter,
+html.dark .slide-counter {
+  background: rgba(26, 26, 36, 0.92) !important;
+  border-color: rgba(233, 30, 99, 0.4) !important;
+  color: #FAFAFA !important;
+}
+
+/* NUCLEAR RELOAD: v2300 */
+

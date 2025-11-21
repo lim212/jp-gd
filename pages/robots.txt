@@ -1,0 +1,43 @@
+# Robots.txt for JasaPembayaran.com
+# Optimized for SEO and search engine crawling
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /blog/preview/
+Disallow: /login
+Disallow: /sw.js
+Disallow: /workbox-*.js
+
+# Allow search engines to access static assets and SEO endpoints
+Allow: /_nuxt/
+Allow: /api/sitemap*
+Allow: /api/robots*
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Sitemaps
+Sitemap: https://jasapembayaran.com/sitemap.xml
+Sitemap: https://jasapembayaran.com/sitemap-dynamic.xml
+Sitemap: https://jasapembayaran.com/sitemap-blog.xml
+Sitemap: https://blog.jasapembayaran.com/sitemap_index.xml
+
+# Host directive for canonical domain
+Host: jasapembayaran.com

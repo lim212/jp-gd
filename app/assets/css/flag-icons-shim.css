@@ -1,0 +1,6 @@
+/* Shim stylesheet to satisfy Vite/Nuxt resolver when something imports
+   'flag-icons/css/flag-icons.min.css' or 'flag-icons/css/flag-icons.css'.
+   Real flag-icons styles are loaded via CDN in app.head.link (nuxt.config.ts).
+*/
+
+/* Intentionally left blank */

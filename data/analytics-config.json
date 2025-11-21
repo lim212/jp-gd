@@ -1,0 +1,18 @@
+{
+  "tracking": {
+    "pageViews": true,
+    "userEngagement": true,
+    "contentPerformance": true,
+    "conversionTracking": true
+  },
+  "metrics": {
+    "realTime": true,
+    "historical": true,
+    "comparative": true
+  },
+  "reports": {
+    "daily": true,
+    "weekly": true,
+    "monthly": true
+  }
+}

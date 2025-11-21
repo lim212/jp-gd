@@ -1,0 +1,136 @@
+/* Mobile Menu Text Clarity Fix */
+
+/* Fix blurry text in mobile menu */
+.mobile-nav,
+.mobile-nav *,
+.mobile-menu,
+.mobile-menu *,
+[class*="mobile-"],
+#mobile-menu-panel,
+#mobile-menu-panel * {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smooth: always !important;
+  -webkit-text-stroke: 0.01em transparent !important;
+}
+
+/* Specific fixes for mobile menu elements */
+.mobile-nav .mobile-link,
+.mobile-nav .mobile-sublink,
+.mobile-nav span,
+.mobile-nav div,
+.mobile-nav p,
+.mobile-nav h1,
+.mobile-nav h2,
+.mobile-nav h3,
+.mobile-nav h4,
+.mobile-nav h5,
+.mobile-nav h6 {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Fix for AppHeader mobile menu */
+#mobile-menu-panel,
+#mobile-menu-panel * {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smooth: always !important;
+}
+
+/* Fix for navigation links */
+#mobile-menu-panel .block,
+#mobile-menu-panel .flex,
+#mobile-menu-panel span,
+#mobile-menu-panel div {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 500 !important;
+}
+
+/* Fix for search bar text */
+.mobile-nav input,
+.mobile-nav input::placeholder,
+#mobile-menu-panel input,
+#mobile-menu-panel input::placeholder {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 400 !important;
+}
+
+/* Fix for language selector */
+.mobile-nav button,
+#mobile-menu-panel button {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 500 !important;
+}
+
+/* Fix for icons and text combinations */
+.mobile-nav .flex.items-center,
+#mobile-menu-panel .flex.items-center {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* High DPI display fixes */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .mobile-nav,
+  .mobile-nav *,
+  #mobile-menu-panel,
+  #mobile-menu-panel * {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-weight: 500 !important;
+  }
+}
+
+/* Dark mode text clarity */
+.dark .mobile-nav,
+.dark .mobile-nav *,
+.dark #mobile-menu-panel,
+.dark #mobile-menu-panel * {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+}
+
+/* Fix for specific text elements that might be blurry */
+.mobile-nav .font-medium,
+.mobile-nav .font-bold,
+.mobile-nav .font-semibold,
+#mobile-menu-panel .font-medium,
+#mobile-menu-panel .font-bold,
+#mobile-menu-panel .font-semibold {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Fix for small text */
+.mobile-nav .text-xs,
+.mobile-nav .text-sm,
+#mobile-menu-panel .text-xs,
+#mobile-menu-panel .text-sm {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+

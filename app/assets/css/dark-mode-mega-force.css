@@ -1,0 +1,111 @@
+/* MEGA FORCE DARK MODE - SUPER AGRESIF */
+
+/* BODY BACKGROUND - FORCE! */
+html.dark,
+html.dark body,
+html.dark #__nuxt,
+.dark,
+.dark body,
+.dark #__nuxt {
+  background: #0D0D12 !important;
+  background-color: #0D0D12 !important;
+  background-image: none !important;
+}
+
+/* MAIN - TRANSPARENT */
+html.dark main,
+.dark main {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* BANNER SLIDER - DARK */
+html.dark .modern-banner-container,
+html.dark .banner-stage,
+html.dark .modern-banner-loading,
+.dark .modern-banner-container,
+.dark .banner-stage,
+.dark .modern-banner-loading {
+  background: #0D0D12 !important;
+  background-color: #0D0D12 !important;
+  background-image: linear-gradient(135deg, #0D0D12 0%, #13131A 100%) !important;
+}
+
+/* OVERRIDE ALL BLUE */
+html.dark [class*="bg-blue"],
+html.dark [class*="bg-indigo"],
+html.dark [class*="bg-sky"],
+html.dark [class*="from-blue"],
+html.dark [class*="via-blue"],
+html.dark [class*="to-blue"],
+.dark [class*="bg-blue"],
+.dark [class*="bg-indigo"],
+.dark [class*="bg-sky"],
+.dark [class*="from-blue"],
+.dark [class*="via-blue"],
+.dark [class*="to-blue"] {
+  background: rgba(26, 26, 36, 0.9) !important;
+  background-color: rgba(26, 26, 36, 0.9) !important;
+  background-image: none !important;
+}
+
+/* NAV BUTTONS */
+html.dark .nav-button,
+.dark .nav-button {
+  background: rgba(26, 26, 36, 0.95) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+}
+
+html.dark .nav-icon,
+.dark .nav-icon {
+  color: rgba(233, 30, 99, 0.9) !important;
+}
+
+/* DOT INDICATORS */
+html.dark .dot-indicator,
+.dark .dot-indicator {
+  background: rgba(26, 26, 36, 0.9) !important;
+  border: 2px solid rgba(233, 30, 99, 0.3) !important;
+}
+
+html.dark .dot-indicator.active,
+.dark .dot-indicator.active {
+  background: #E91E63 !important;
+  border-color: rgba(233, 30, 99, 0.8) !important;
+}
+
+/* SLIDE COUNTER */
+html.dark .slide-counter,
+.dark .slide-counter {
+  background: rgba(26, 26, 36, 0.92) !important;
+  border: 2px solid rgba(233, 30, 99, 0.4) !important;
+  color: #FAFAFA !important;
+}
+
+html.dark .counter-current,
+.dark .counter-current {
+  color: #FDA4AF !important;
+}
+
+/* TEXT VISIBILITY */
+html.dark .banner-stage *,
+.dark .banner-stage * {
+  color: #FAFAFA !important;
+}
+
+/* HELP BOX */
+html.dark .ultra-clean-help-box,
+.dark .ultra-clean-help-box {
+  background: rgba(26, 26, 36, 0.95) !important;
+  border: 2px solid rgba(233, 30, 99, 0.35) !important;
+}
+
+html.dark .help-item,
+.dark .help-item {
+  background: rgba(26, 26, 36, 0.8) !important;
+  border: 1.5px solid rgba(233, 30, 99, 0.25) !important;
+}
+
+/* FORCE v2230 */
+
