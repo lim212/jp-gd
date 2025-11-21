@@ -27,7 +27,7 @@ module.exports = {
       // Working directory
       cwd: process.cwd(),
       interpreter: 'node',
-      node_args: '--max-old-space-size=4096',
+      node_args: '--max-old-space-size=4096 --no-deprecation',
       
       // Logging
       log_file: './logs/combined.log',
