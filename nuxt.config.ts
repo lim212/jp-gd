@@ -6,6 +6,47 @@ const require = createRequire(import.meta.url)
 const flagIconsShimPath = fileURLToPath(new URL('./app/assets/css/flag-icons-shim.css', import.meta.url))
 const flagIconsShimPathNorm = flagIconsShimPath.replace(/\\/g, '/').replace(/\/+/g, '/')
 
+// CRITICAL: Suppress Node.js DEP0155 deprecation warnings (trailing slash pattern mapping)
+// This must run before any modules are loaded
+if (typeof process !== 'undefined') {
+  // Patch process.emitWarning to suppress DEP0155 warnings
+  if (process.emitWarning) {
+    const originalEmitWarning = process.emitWarning
+    process.emitWarning = function(warning: any, ...args: any[]) {
+      // Suppress DEP0155 warnings about trailing slash pattern mapping
+      if (typeof warning === 'string' && warning.includes('DEP0155')) {
+        return
+      }
+      if (warning && typeof warning === 'object' && warning.name === 'DeprecationWarning' && warning.code === 'DEP0155') {
+        return
+      }
+      if (warning && typeof warning === 'object' && warning.code === 'DEP0155') {
+        return
+      }
+      return originalEmitWarning.apply(process, [warning, ...args] as any)
+    }
+  }
+  
+  // Also patch process.on('warning') to catch warnings emitted via events
+  const originalOn = process.on
+  process.on = function(event: string, listener: any) {
+    if (event === 'warning') {
+      const wrappedListener = (warning: any) => {
+        // Suppress DEP0155 warnings
+        if (warning && warning.code === 'DEP0155') {
+          return
+        }
+        if (warning && warning.name === 'DeprecationWarning' && warning.code === 'DEP0155') {
+          return
+        }
+        return listener(warning)
+      }
+      return originalOn.call(process, event, wrappedListener)
+    }
+    return originalOn.call(process, event, listener)
+  } as typeof process.on
+}
+
 // CRITICAL: Patch consola IMMEDIATELY at module load time to catch @nuxt/image warnings
 // This must run before any Nuxt modules are loaded
 ;(() => {
@@ -307,8 +348,35 @@ export default defineNuxtConfig({
   // Use default build directory
   // buildDir: '.nuxt-build',
   
-  // Hooks to suppress @nuxt/image sharp warnings early
+  // Hooks to suppress @nuxt/image sharp warnings early and handle build cleanup
   hooks: {
+    // Handle build cleanup errors gracefully (Windows ENOTEMPTY issue)
+    'build:before'() {
+      try {
+        const fs = require('fs')
+        const path = require('path')
+        const outputImagesPath = path.join(process.cwd(), '.output', 'public', 'images')
+        if (fs.existsSync(outputImagesPath)) {
+          // Try to remove directory contents first, then the directory
+          const files = fs.readdirSync(outputImagesPath)
+          files.forEach((file: string) => {
+            const filePath = path.join(outputImagesPath, file)
+            try {
+              const stat = fs.statSync(filePath)
+              if (stat.isDirectory()) {
+                fs.rmSync(filePath, { recursive: true, force: true })
+              } else {
+                fs.unlinkSync(filePath)
+              }
+            } catch (e) {
+              // Ignore errors during cleanup
+            }
+          })
+        }
+      } catch (e) {
+        // Ignore cleanup errors - build will continue
+      }
+    },
     // Patch consola at the earliest possible moment
     'ready'() {
       try {
@@ -745,14 +813,20 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
+      // PENTING: CSS minification yang lebih aman - hanya whitespace, tidak mengubah selectors atau properties
       cssnano: process.env.NODE_ENV === 'production' ? {
         preset: ['default', {
           discardComments: {
-            removeAll: true,
+            removeAll: false, // PENTING: false untuk memastikan CSS comments tetap ada jika diperlukan
           },
-          cssDeclarationSorter: false,
-          normalizeWhitespace: true,
-          minifySelectors: false
+          cssDeclarationSorter: false, // PENTING: false agar urutan CSS tidak berubah
+          normalizeWhitespace: true, // Hanya normalize whitespace
+          minifySelectors: false, // PENTING: false agar selectors tidak diubah
+          minifyFontValues: false, // PENTING: false agar font values tidak diubah
+          minifyParams: false, // PENTING: false agar CSS params tidak diubah
+          normalizeUrl: false, // PENTING: false agar URL tidak diubah
+          reduceIdents: false, // PENTING: false agar ID tidak diubah
+          zindex: false // PENTING: false agar z-index tidak diubah
         }]
       } : false
     }
@@ -814,14 +888,19 @@ export default defineNuxtConfig({
       }
     },
     esbuild: { 
-      drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+      // JANGAN hapus console di production untuk debugging
+      drop: [], // Tidak menghapus console/debugger untuk memastikan fungsi tetap berjalan
       target: 'es2020',
-      minifyIdentifiers: process.env.NODE_ENV === 'production',
-      minifySyntax: process.env.NODE_ENV === 'production',
-      minifyWhitespace: process.env.NODE_ENV === 'production',
+      // Minification yang lebih aman - hanya whitespace, tidak mengubah identifiers
+      minifyIdentifiers: false, // PENTING: false agar tidak merusak nama fungsi/class
+      minifySyntax: process.env.NODE_ENV === 'production', // Hanya minify syntax, tidak identifiers
+      minifyWhitespace: process.env.NODE_ENV === 'production', // Hanya whitespace
       format: 'esm',
-      treeShaking: true,
+      // Tree shaking yang lebih aman - tidak terlalu agresif
+      treeShaking: false, // PENTING: false untuk memastikan semua code tetap ada
       legalComments: 'none',
+      // Preserve semua code dan design
+      keepNames: true, // PENTING: keep names agar fungsi tetap bisa dipanggil
       // Suppress CSS warnings for Tailwind classes with decimals
       logOverride: {
         'css-syntax-error': 'silent'
@@ -844,7 +923,10 @@ export default defineNuxtConfig({
       sourcemap: false,
       chunkSizeWarningLimit: 1500,
       cssCodeSplit: true,
-      minify: 'esbuild',
+      // PENTING: Gunakan terser untuk minify yang lebih aman, atau false untuk development
+      minify: process.env.NODE_ENV === 'production' ? 'terser' : false, // Terser lebih aman dari esbuild untuk minify
+      // PENTING: Jangan minify CSS terlalu agresif
+      cssMinify: false, // CSS minification via postcss/cssnano saja
       // Log level for build process
       logLevel: process.env.NODE_ENV === 'production' ? 'warn' : 'info',
       rollupOptions: {

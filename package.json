@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "nuxt start",
-    "build": "nuxt build",
+    "build": "node scripts/clean-output.js && cross-env NODE_OPTIONS=\"--no-deprecation\" nuxt build",
     "build:optimized": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384 --max-semi-space-size=512\" nuxt build",
     "build:clean": "rimraf .nuxt .output dist && cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" nuxt build",
     "build:high-performance": "cross-env NODE_OPTIONS=\"--max-old-space-size=32768 --max-semi-space-size=1024\" nuxt build",
@@ -15,7 +15,7 @@
     "build:ubuntu-fix": "rm -rf .nuxt .output .output-build && cross-env NODE_ENV=production NODE_OPTIONS=\"--max-old-space-size=16384\" PLATFORM=linux SHARP_IGNORE_GLOBAL_LIBVIPS=1 nuxt build && echo 'Ubuntu build fix completed successfully'",
     "analyze": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" nuxi build --analyze",
     "predev": "node scripts/update-version.js",
-    "dev": "nuxt dev",
+    "dev": "cross-env NODE_OPTIONS=\"--no-deprecation\" nuxt dev",
     "dev:fresh": "node scripts/update-version.js && nuxt dev",
     "autogen:blog": "node autogen-blog.js",
     "scrape:kbli": "node server/scripts/scrape-kbli.mjs",
