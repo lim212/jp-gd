@@ -6,6 +6,9 @@ export default {
   },
 
   nitro: {
+    // Disable compression for public assets to prevent ENOENT errors
+    compressPublicAssets: false,
+    
     routeRules: {
       '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
       '/api/**': { headers: { 'cache-control': 'no-store, max-age=0, must-revalidate' } },

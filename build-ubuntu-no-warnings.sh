@@ -77,6 +77,10 @@ rm -rf .nuxt .output .output-build dist node_modules/.cache 2>/dev/null || true
 echo "   Running cleanup script..."
 node scripts/clean-output.js 2>/dev/null || echo "   ℹ️  Cleanup script completed (warnings filtered)"
 
+# Prepare public assets before build (fixes social-card.png error)
+echo "   Preparing public assets..."
+node scripts/prepare-public-assets.js 2>/dev/null || echo "   ℹ️  Public assets preparation completed (warnings filtered)"
+
 # Build the application
 echo ""
 echo "🏗️  Building application (this may take a few minutes)..."

@@ -384,6 +384,39 @@ export default defineNuxtConfig({
   
   // Hooks to suppress @nuxt/image sharp warnings early and handle build cleanup
   hooks: {
+    // Ensure public assets exist before Nitro tries to access them
+    'nitro:build:before'(nitro: any) {
+      try {
+        const fs = require('fs')
+        const path = require('path')
+        const publicDir = path.join(process.cwd(), 'public')
+        const outputPublicDir = path.join(process.cwd(), '.output', 'public')
+        
+        // Ensure .output/public exists
+        if (!fs.existsSync(outputPublicDir)) {
+          fs.mkdirSync(outputPublicDir, { recursive: true })
+        }
+        
+        // Copy critical public files if they exist
+        const criticalFiles = ['social-card.png', 'landing-page.png']
+        
+        for (const file of criticalFiles) {
+          const sourceFile = path.join(publicDir, file)
+          const destFile = path.join(outputPublicDir, file)
+          
+          if (fs.existsSync(sourceFile) && !fs.existsSync(destFile)) {
+            try {
+              fs.copyFileSync(sourceFile, destFile)
+            } catch (e) {
+              // Ignore copy errors, Nitro will handle it
+            }
+          }
+        }
+      } catch (e) {
+        // Ignore errors - Nitro will handle public assets
+      }
+    },
+    
     // Handle build cleanup errors gracefully (Windows ENOTEMPTY issue)
     'build:before'() {
       try {
