@@ -44,7 +44,14 @@ npm run build:ubuntu 2>&1 | \
   grep -v "\.partner-card" | \
   grep -v "\.trusted-" | \
   grep -v "DEP0155" | \
-  grep -v "DeprecationWarning" || true
+  grep -v "DeprecationWarning" | \
+  grep -v "Could not fetch from https://fonts.google.com" | \
+  grep -v "fonts.google.com/metadata/fonts" | \
+  grep -v "Will retry in" | \
+  grep -v "retries left" | \
+  grep -v "Could not initialize provider google" | \
+  grep -v "unifont will not be able to process fonts" | \
+  grep -v "getaddrinfo ENOTFOUND fonts.google.com" || true
 
 # Check if build was successful
 if [ -f ".output/server/index.mjs" ]; then

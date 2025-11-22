@@ -69,11 +69,32 @@ if (typeof process !== 'undefined') {
       return false
     }
     
+    // Suppress Google Fonts fetch warnings (common on VPS without internet during build)
+    const suppressGoogleFontsWarning = (args: any[]): boolean => {
+      try {
+        const first = args?.[0]
+        const msg = typeof first === 'string' ? first : (first?.message || '')
+        if (typeof msg === 'string') {
+          return (
+            msg.includes('Could not fetch from https://fonts.google.com') ||
+            msg.includes('fonts.google.com/metadata/fonts') ||
+            msg.includes('Will retry in') ||
+            msg.includes('retries left') ||
+            msg.includes('Could not initialize provider google') ||
+            msg.includes('unifont will not be able to process fonts') ||
+            msg.includes('getaddrinfo ENOTFOUND fonts.google.com')
+          )
+        }
+      } catch {}
+      return false
+    }
+    
     // Patch consola.warn
     if (typeof consola.warn === 'function' && !(consola.warn as any).__sharpPatched) {
       const originalWarn = consola.warn.bind(consola)
       consola.warn = ((...args: any[]) => {
         if (suppressSharpWarning(args)) return
+        if (suppressGoogleFontsWarning(args)) return
         return originalWarn(...args)
       }) as typeof consola.warn
       ;(consola.warn as any).__sharpPatched = true
@@ -88,6 +109,7 @@ if (typeof process !== 'undefined') {
           const originalLoggerWarn = logger.warn.bind(logger)
           logger.warn = ((...args: any[]) => {
             if (suppressSharpWarning(args)) return
+            if (suppressGoogleFontsWarning(args)) return
             return originalLoggerWarn(...args)
           }) as typeof logger.warn
           ;(logger.warn as any).__sharpPatched = true
@@ -106,6 +128,7 @@ if (typeof process !== 'undefined') {
           const originalLoggerWarn = logger.warn.bind(logger)
           logger.warn = ((...args: any[]) => {
             if (suppressSharpWarning(args)) return
+            if (suppressGoogleFontsWarning(args)) return
             return originalLoggerWarn(...args)
           }) as typeof logger.warn
           ;(logger.warn as any).__sharpPatched = true
@@ -124,6 +147,7 @@ if (typeof process !== 'undefined') {
           const originalLoggerWarn = logger.warn.bind(logger)
           logger.warn = ((...args: any[]) => {
             if (suppressSharpWarning(args)) return
+            if (suppressGoogleFontsWarning(args)) return
             return originalLoggerWarn(...args)
           }) as typeof logger.warn
           ;(logger.warn as any).__sharpPatched = true
@@ -221,6 +245,16 @@ if (typeof process !== 'undefined' && typeof console !== 'undefined') {
       if (message.includes('sharp binaries') || 
           message.includes('linux-x64 cannot be found') ||
           (message.includes('@nuxt/image') && message.includes('sharp'))) {
+        return
+      }
+      // Suppress Google Fonts fetch warnings (common on VPS without internet during build)
+      if (message.includes('Could not fetch from https://fonts.google.com') ||
+          message.includes('fonts.google.com/metadata/fonts') ||
+          message.includes('Will retry in') ||
+          message.includes('retries left') ||
+          message.includes('Could not initialize provider google') ||
+          message.includes('unifont will not be able to process fonts') ||
+          message.includes('getaddrinfo ENOTFOUND fonts.google.com')) {
         return
       }
       return originalWarn.apply(console, args)
@@ -1274,6 +1308,7 @@ export default defineNuxtConfig({
       fontshare: false,
       googleicons: false,
       adobe: false
+      // Note: Google Fonts warnings are suppressed via patches in nuxt.config.ts
     },
     families: [
       { name: 'Poppins', provider: 'google', weights: [400, 600], display: 'swap', preload: false },
@@ -1283,7 +1318,9 @@ export default defineNuxtConfig({
     prefetch: false,
     experimental: {
       processCSSVariables: false
-    }
+    },
+    // Fail gracefully if fonts can't be loaded (common on VPS without internet during build)
+    fallback: true
   },
 
   image: {

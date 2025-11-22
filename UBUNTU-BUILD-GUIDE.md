@@ -165,3 +165,6 @@ ls -la .output/public/_nuxt/     # Client assets
 
 Jika semua file ada dan tidak ada error, build Anda berhasil! 🚀
 
+
+
+
