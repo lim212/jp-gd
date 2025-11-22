@@ -28,6 +28,16 @@ npm cache clean --force || echo "  ⚠️  npm cache clean failed, continuing...
 echo "📦 Reinstalling dependencies..."
 npm ci --production=false || npm install
 
+# Fix oxc-parser native binding
+echo "🔧 Fixing oxc-parser native binding..."
+if [ -f "scripts/fix-oxc-parser.sh" ]; then
+    chmod +x scripts/fix-oxc-parser.sh
+    ./scripts/fix-oxc-parser.sh || echo "  ⚠️  oxc-parser fix failed, continuing..."
+else
+    echo "  ℹ️  fix-oxc-parser.sh not found, trying manual fix..."
+    npm install --no-optional=false --force || echo "  ⚠️  Manual fix attempted"
+fi
+
 # Rebuild sharp for Linux
 echo "🔨 Rebuilding sharp for Linux..."
 npm rebuild sharp || echo "  ⚠️  Sharp rebuild failed, continuing..."

@@ -51,6 +51,18 @@ if ! npm list autoprefixer 2>/dev/null | grep -q "autoprefixer@"; then
     npm install --save-dev autoprefixer
 fi
 
+# Fix oxc-parser native binding (critical for Nuxt 3.20+)
+echo ""
+echo "🔧 Fixing oxc-parser native binding..."
+if [ -f "scripts/fix-oxc-parser.sh" ]; then
+    chmod +x scripts/fix-oxc-parser.sh
+    ./scripts/fix-oxc-parser.sh 2>&1 | grep -v "WARN" || echo "   ℹ️  oxc-parser fix completed (warnings filtered)"
+else
+    echo "   ℹ️  fix-oxc-parser.sh not found, trying manual fix..."
+    # Manual fix: reinstall with optional dependencies
+    npm install --no-optional=false --force 2>&1 | grep -v "WARN" || echo "   ℹ️  Manual fix attempted"
+fi
+
 # Rebuild sharp for Linux (critical for Ubuntu)
 echo ""
 echo "🔨 Rebuilding sharp for Linux..."

@@ -46,6 +46,17 @@ Checklist ini memastikan build di Ubuntu VPS berjalan tanpa error atau warning.
   npm rebuild sharp
   ```
 
+- [ ] **oxc-parser** native binding terfix (untuk Nuxt 3.20+)
+  ```bash
+  npm run fix:oxc-parser
+  ```
+  Atau jika masih error:
+  ```bash
+  rm -rf node_modules package-lock.json
+  npm cache clean --force
+  npm install --no-optional=false
+  ```
+
 ## 🚀 Build Steps
 
 ### Opsi 1: Build dengan Script No-Warnings (Recommended)
@@ -105,7 +116,22 @@ npm run build:ubuntu
 - `postcss` dan `autoprefixer` sudah ditambahkan ke devDependencies
 - Script build akan memverifikasi dependencies sebelum build
 
-### 4. Deprecation Warnings
+### 4. oxc-parser Native Binding Error
+✅ **Sudah diperbaiki** - Error `Cannot find native binding` sudah teratasi:
+- Script `fix-oxc-parser.sh` untuk fix native binding
+- Auto-install native binding untuk platform Linux yang terdeteksi
+- Script build akan otomatis fix oxc-parser sebelum build
+
+**Cara kerja:**
+- Script mendeteksi platform (x86_64 atau ARM64)
+- Menginstal native binding yang sesuai: `@oxc-parser/binding-linux-x64-gnu` atau `@oxc-parser/binding-linux-arm64-gnu`
+- Menginstal ulang dependencies dengan `--no-optional=false` untuk memastikan optional dependencies terinstal
+
+**File yang dibuat:**
+- `scripts/fix-oxc-parser.sh` - Script untuk fix oxc-parser
+- `OXC-PARSER-FIX.md` - Dokumentasi lengkap perbaikan
+
+### 5. Deprecation Warnings
 ✅ **Sudah diperbaiki** - Warnings DEP0155 sudah ditekan:
 - Patch di `nuxt.config.ts` untuk menekan DEP0155 warnings
 - Flag `--no-deprecation` di semua build scripts

@@ -102,6 +102,7 @@
     "fix:all-linux": "node scripts/fix-all-linux.js",
     "fix:sharp-linux": "node scripts/fix-sharp-linux.js",
     "fix:sharp-ubuntu": "chmod +x scripts/fix-sharp-ubuntu.sh && bash scripts/fix-sharp-ubuntu.sh",
+    "fix:oxc-parser": "chmod +x scripts/fix-oxc-parser.sh && bash scripts/fix-oxc-parser.sh",
     "fix:dev-warnings": "node scripts/fix-dev-warnings.js",
     "fix:dev-warnings-linux": "node scripts/fix-dev-warnings-linux.js",
     "translate:setup": "node scripts/setup-translation-system.cjs",
