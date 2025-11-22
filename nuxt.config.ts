@@ -897,7 +897,72 @@ export default defineNuxtConfig({
           return null
         }
       },
-      // Plugin to suppress esbuild CSS minify warnings
+      // Plugin to resolve @nuxt/vite-builder paths (fixes file:// URL resolution warnings)
+      {
+        name: 'resolve-vite-builder-paths',
+        enforce: 'pre',
+        resolveId(id, importer) {
+          // Handle file:// URLs from @nuxt/vite-builder
+          if (id && typeof id === 'string') {
+            // Check if it's a file:// URL pointing to @nuxt/vite-builder
+            if (id.startsWith('file://') && id.includes('@nuxt/vite-builder')) {
+              // Extract the actual path from file:// URL
+              try {
+                const url = new URL(id)
+                const actualPath = url.pathname
+                // On Windows, pathname starts with /, we need to handle it
+                const normalizedPath = process.platform === 'win32' 
+                  ? actualPath.replace(/^\/([A-Za-z]:)/, '$1')
+                  : actualPath
+                
+                // Try to resolve the actual file path
+                try {
+                  return require.resolve(normalizedPath)
+                } catch {
+                  // If require.resolve fails, return the normalized path
+                  return normalizedPath
+                }
+              } catch {
+                // If URL parsing fails, try to extract path manually
+                const match = id.match(/file:\/\/(.+)$/)
+                if (match) {
+                  let path = match[1]
+                  // Handle Windows paths
+                  if (process.platform === 'win32') {
+                    path = path.replace(/^\/([A-Za-z]:)/, '$1')
+                  }
+                  return path
+                }
+              }
+            }
+            
+            // Handle @nuxt/vite-builder imports that can't be resolved
+            if (id.includes('@nuxt/vite-builder/dist/runtime/vite-node.mjs')) {
+              try {
+                return require.resolve('@nuxt/vite-builder/dist/runtime/vite-node.mjs', {
+                  paths: [require.resolve('nuxt/package.json')]
+                })
+              } catch {
+                // Return null to let Vite handle it as external
+                return { id, external: true }
+              }
+            }
+            
+            if (id.includes('@nuxt/vite-builder/dist/runtime/client.manifest.mjs')) {
+              try {
+                return require.resolve('@nuxt/vite-builder/dist/runtime/client.manifest.mjs', {
+                  paths: [require.resolve('nuxt/package.json')]
+                })
+              } catch {
+                // Return null to let Vite handle it as external
+                return { id, external: true }
+              }
+            }
+          }
+          return null
+        }
+      },
+      // Plugin to suppress esbuild CSS minify warnings and module resolution warnings
       {
         name: 'suppress-css-warnings',
         enforce: 'post',
@@ -985,11 +1050,30 @@ export default defineNuxtConfig({
               warning.message?.includes('@nuxt/kit')) {
             return
           }
+          // Suppress esbuild warnings about @nuxt/vite-builder file:// URL resolution
+          if (warning.message?.includes('could not be resolved') && 
+              (warning.message?.includes('@nuxt/vite-builder') ||
+               warning.message?.includes('vite-node.mjs') ||
+               warning.message?.includes('client.manifest.mjs') ||
+               warning.message?.includes('treating it as an external dependency'))) {
+            return
+          }
+          // Suppress file:// URL resolution warnings
+          if (warning.message?.includes('file://') && 
+              warning.message?.includes('could not be resolved')) {
+            return
+          }
           warn(warning)
         },
         external: (id) => {
           // Exclude @nuxt/ui module files from client bundle
           if (id.includes('@nuxt/ui/dist/module.mjs')) {
+            return true
+          }
+          // Handle @nuxt/vite-builder files as external (they're resolved at runtime)
+          if (id.includes('@nuxt/vite-builder/dist/runtime/vite-node.mjs') ||
+              id.includes('@nuxt/vite-builder/dist/runtime/client.manifest.mjs') ||
+              (id.startsWith('file://') && id.includes('@nuxt/vite-builder'))) {
             return true
           }
           return false
@@ -1769,6 +1853,24 @@ export default defineNuxtConfig({
               warning.message?.includes('chunkSizeWarningLimit') ||
               warning.message?.includes('dynamic import()') ||
               warning.message?.includes('manualChunks')) {
+            return
+          }
+          // Suppress esbuild warnings about @nuxt/vite-builder file:// URL resolution
+          if (warning.message?.includes('could not be resolved') && 
+              (warning.message?.includes('@nuxt/vite-builder') ||
+               warning.message?.includes('vite-node.mjs') ||
+               warning.message?.includes('client.manifest.mjs') ||
+               warning.message?.includes('treating it as an external dependency'))) {
+            return
+          }
+          // Suppress file:// URL resolution warnings
+          if (warning.message?.includes('file://') && 
+              warning.message?.includes('could not be resolved')) {
+            return
+          }
+          // Suppress warnings about imported but could not be resolved
+          if (warning.message?.includes('is imported by') && 
+              warning.message?.includes('could not be resolved')) {
             return
           }
           warn(warning)
