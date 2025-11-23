@@ -900,7 +900,53 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    // Error handler untuk menangkap error pre-transform
+    logLevel: 'warn',
+    clearScreen: false,
     plugins: [
+      // Plugin to resolve #app-manifest alias (MUST be first to handle pre-transform errors)
+      {
+        name: 'resolve-app-manifest',
+        enforce: 'pre',
+        buildStart() {
+          // Ensure stub file exists
+          try {
+            const fs = require('fs')
+            const path = require('path')
+            const stubPath = fileURLToPath(new URL('./server/stubs/app-manifest-stub.ts', import.meta.url))
+            if (!fs.existsSync(stubPath)) {
+              const stubDir = path.dirname(stubPath)
+              if (!fs.existsSync(stubDir)) {
+                fs.mkdirSync(stubDir, { recursive: true })
+              }
+              fs.writeFileSync(stubPath, 'export default {}\n', 'utf-8')
+            }
+          } catch {
+            // Ignore errors
+          }
+        },
+        resolveId(id, importer) {
+          // Handle #app-manifest alias - this is a Nuxt internal alias
+          if (id === '#app-manifest') {
+            try {
+              const stubPath = fileURLToPath(new URL('./server/stubs/app-manifest-stub.ts', import.meta.url))
+              // Return absolute path to ensure it's resolved correctly
+              return stubPath
+            } catch (e) {
+              // Fallback: return null to let other resolvers handle it
+              return null
+            }
+          }
+          return null
+        },
+        load(id) {
+          // Load the stub file content directly
+          if (id && id.includes('app-manifest-stub')) {
+            return 'export default {}'
+          }
+          return null
+        }
+      },
       // Custom plugin to handle @nuxt/ui/dist/module.mjs import protection
       // Must run before import-protection plugin (enforce: 'pre' ensures this)
       {
@@ -1096,6 +1142,12 @@ export default defineNuxtConfig({
               warning.message?.includes('could not be resolved')) {
             return
           }
+          // Suppress #app-manifest resolution errors (handled by plugin and stub)
+          if (warning.message?.includes('#app-manifest') || 
+              (warning.message?.includes('Failed to resolve import') && 
+               warning.message?.includes('#app-manifest'))) {
+            return
+          }
           warn(warning)
         },
         external: (id) => {
@@ -1188,6 +1240,8 @@ export default defineNuxtConfig({
         'vue-i18n': require.resolve('vue-i18n/dist/vue-i18n.esm-bundler.js'),
         // Stub to avoid nuxt-simple-sitemap trying to load @nuxt/content server during prerender on some environments
         '#content/server': require.resolve('./server/stubs/content-server-stub.ts'),
+        // Handle #app-manifest alias - Nuxt internal alias that may not be available during pre-transform
+        '#app-manifest': fileURLToPath(new URL('./server/stubs/app-manifest-stub.ts', import.meta.url)),
         // Fallback shim to avoid Vite resolving error for flag-icons CSS (actual styles are loaded via CDN in app.head.link)
         'flag-icons/css/flag-icons.min.css': flagIconsShimPathNorm,
         'flag-icons/css/flag-icons.css': flagIconsShimPathNorm,
@@ -1904,6 +1958,14 @@ export default defineNuxtConfig({
           // Suppress warnings about imported but could not be resolved
           if (warning.message?.includes('is imported by') && 
               warning.message?.includes('could not be resolved')) {
+            return
+          }
+          // Suppress #app-manifest resolution errors (handled by plugin and stub)
+          if (warning.message?.includes('#app-manifest') || 
+              (warning.message?.includes('Failed to resolve import') && 
+               warning.message?.includes('#app-manifest')) ||
+              (warning.message?.includes('Pre-transform error') && 
+               warning.message?.includes('#app-manifest'))) {
             return
           }
           warn(warning)
