@@ -16,6 +16,8 @@ export SHARP_IGNORE_GLOBAL_LIBVIPS=1
 export NODE_OPTIONS="--max-old-space-size=16384 --no-deprecation"
 export NUXT_ENABLE_PWA=false
 export SUPPRESS_SHARP_WARNINGS=true
+export SUPPRESS_OBJECT_ENTRIES_WARNINGS=true
+export SUPPRESS_WARNINGS=true
 
 # Check Node.js version
 echo "📋 Checking Node.js version..."
