@@ -32,7 +32,7 @@ pkill -f "npm.*startPORT" 2>/dev/null
 pkill -f "nuxt.*start" 2>/dev/null
 
 # 3. Start dengan ecosystem config yang benar
-pm2 start ecosystem.ubuntu.config.js --env production
+pm2 start ecosystem.ubuntu.config.cjs --env production
 
 # 4. Save config
 pm2 save
@@ -71,7 +71,7 @@ Process `jp-gd` dijalankan dengan command **SALAH**:
 pm2 start npm --name "jp-gd" -- startPORT=5000
 
 # ✅ BENAR
-pm2 start ecosystem.ubuntu.config.js --env production
+pm2 start ecosystem.ubuntu.config.cjs --env production
 ```
 
 ## 📝 Notes

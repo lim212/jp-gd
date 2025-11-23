@@ -11,7 +11,7 @@ pkill -f "npm.*startPORT" 2>/dev/null
 pkill -f "nuxt.*start" 2>/dev/null
 
 # Start dengan ecosystem config yang benar
-pm2 start ecosystem.ubuntu.config.js --env production
+pm2 start ecosystem.ubuntu.config.cjs --env production
 
 # Save config
 pm2 save

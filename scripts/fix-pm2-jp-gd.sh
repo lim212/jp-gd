@@ -36,7 +36,10 @@ fi
 # 4. Cek ecosystem config
 echo ""
 echo "4️⃣  Checking ecosystem config..."
-if [ -f "ecosystem.ubuntu.config.js" ]; then
+if [ -f "ecosystem.ubuntu.config.cjs" ]; then
+    ECOSYSTEM_FILE="ecosystem.ubuntu.config.cjs"
+    echo "✅ Found: ecosystem.ubuntu.config.cjs"
+elif [ -f "ecosystem.ubuntu.config.js" ]; then
     ECOSYSTEM_FILE="ecosystem.ubuntu.config.js"
     echo "✅ Found: ecosystem.ubuntu.config.js"
 elif [ -f "ecosystem.config.cjs" ]; then
