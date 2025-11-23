@@ -125,6 +125,8 @@
     "pm2:setup-log-rotation": "chmod +x scripts/setup-pm2-log-rotation.sh && ./scripts/setup-pm2-log-rotation.sh",
     "pm2:monitor-logs": "node scripts/monitor-pm2-logs.js",
     "pm2:flush-logs": "pm2 flush",
+    "pm2:fix-start": "node scripts/fix-pm2-start.js",
+    "pm2:check-website": "node scripts/check-website-status.js",
     "disk:check": "chmod +x scripts/check-disk-usage.sh && ./scripts/check-disk-usage.sh",
     "disk:cleanup": "chmod +x scripts/cleanup-disk-space.sh && ./scripts/cleanup-disk-space.sh",
     "disk:auto-cleanup": "node scripts/auto-cleanup-disk.js",

@@ -2,7 +2,9 @@ module.exports = {
   apps: [
     {
       name: 'jasapembayaran-new',
-      script: '.output/server/index.mjs',
+      // Use start.js for port auto-detection, or .output/server/index.mjs for direct start
+      script: 'start.js',  // Using start.js for better port handling
+      // Alternative: script: '.output/server/index.mjs',
       instances: 1,
       exec_mode: 'fork',
       env: {
