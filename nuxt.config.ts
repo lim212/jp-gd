@@ -1656,6 +1656,16 @@ export default defineNuxtConfig({
     minify: process.env.NODE_ENV === 'production',
     // Disable asset compression to prevent ENOENT errors on Ubuntu
     compressPublicAssets: false,
+    // Ensure static files are served correctly
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: 'public',
+        maxAge: 31536000
+      }
+    ],
+    // Serve static files from .output/public
+    static: true,
     experimental: {
       wasm: false,
       payloadExtraction: false
