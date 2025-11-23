@@ -61,6 +61,10 @@ fi
 # 6. Start PM2 dengan config yang benar
 echo ""
 echo "6️⃣  Starting PM2 with correct config..."
+# Ensure we use .cjs file if available
+if [ -f "ecosystem.ubuntu.config.cjs" ]; then
+    ECOSYSTEM_FILE="ecosystem.ubuntu.config.cjs"
+fi
 pm2 start $ECOSYSTEM_FILE --env production
 
 if [ $? -eq 0 ]; then

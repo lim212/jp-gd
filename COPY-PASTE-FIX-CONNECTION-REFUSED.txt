@@ -1,0 +1,35 @@
+# COPY-PASTE INI DI SERVER UNTUK FIX CONNECTION REFUSED
+
+cd /home/nuxt/jp-gd
+
+# 1. Stop dan delete semua PM2 processes
+pm2 stop all
+pm2 delete all
+
+# 2. Kill any remaining processes
+pkill -f "npm.*startPORT" 2>/dev/null
+pkill -f "nuxt.*start" 2>/dev/null
+
+# 3. Cek build output
+ls -la .output/server/index.mjs
+
+# 4. Start dengan .cjs file (BENAR)
+pm2 start ecosystem.ubuntu.config.cjs --env production
+
+# 5. Save config
+pm2 save
+
+# 6. Check status
+pm2 status
+
+# 7. Check logs
+pm2 logs --lines 30
+
+# 8. Check port listening
+netstat -tulpn | grep :3000
+netstat -tulpn | grep :5000
+
+# 9. Test website
+# http://119.47.89.109:3000
+# http://119.47.89.109:5000
+
