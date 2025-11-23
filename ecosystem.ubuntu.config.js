@@ -29,16 +29,18 @@ module.exports = {
       interpreter: 'node',
       node_args: '--max-old-space-size=4096 --no-deprecation',
       
-      // Logging with rotation to prevent disk space issues
+      // Logging with rotation to prevent disk space issues - BATASI KETAT
       log_file: './logs/combined.log',
       out_file: './logs/out.log',
       error_file: './logs/error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
-      // Log rotation to prevent disk space issues
-      max_size: '10M',      // Max log file size
-      retain: 7,            // Keep last 7 log files
-      compress: true,       // Compress old logs
+      // Log rotation - BATASI KETAT untuk mencegah disk penuh (40GB)
+      max_size: '5M',        // Max 5MB per file (dikurangi dari 10M)
+      retain: 3,            // Keep hanya 3 file terakhir (dikurangi dari 7, total max ~15MB)
+      compress: true,        // Compress old logs untuk hemat space
+      // Disable excessive logging
+      disable_logs: false,
       
       // Advanced features
       autorestart: true,
