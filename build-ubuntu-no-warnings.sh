@@ -68,10 +68,19 @@ echo ""
 echo "🔨 Rebuilding sharp for Linux..."
 npm rebuild sharp 2>&1 | grep -v "WARN" || echo "   ℹ️  Sharp rebuild completed (warnings filtered)"
 
+# Clean previous builds and check disk space
+echo ""
+echo "💾 Checking disk space..."
+df -h . | tail -1
+
 # Clean previous builds
 echo ""
 echo "🧹 Cleaning previous builds..."
 rm -rf .nuxt .output .output-build dist node_modules/.cache 2>/dev/null || true
+
+# Clean old logs (keep last 7 days) to prevent disk space issues
+echo "   Cleaning old logs..."
+find logs -name "*.log" -type f -mtime +7 -delete 2>/dev/null || true
 
 # Run cleanup script
 echo "   Running cleanup script..."

@@ -70,3 +70,4 @@ console.log(`   Already exists: ${skipped}`)
 console.log(`   Missing: ${missing}`)
 console.log(`\n✅ Public assets preparation completed!`)
 
+

@@ -29,12 +29,16 @@ module.exports = {
       interpreter: 'node',
       node_args: '--max-old-space-size=4096 --no-deprecation',
       
-      // Logging
+      // Logging with rotation to prevent disk space issues
       log_file: './logs/combined.log',
       out_file: './logs/out.log',
       error_file: './logs/error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
+      // Log rotation to prevent disk space issues
+      max_size: '10M',      // Max log file size
+      retain: 7,            // Keep last 7 log files
+      compress: true,       // Compress old logs
       
       // Advanced features
       autorestart: true,

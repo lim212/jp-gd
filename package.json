@@ -120,7 +120,11 @@
     "fix:ubuntu-build": "chmod +x fix-ubuntu-build.sh && ./fix-ubuntu-build.sh",
     "pm2:ubuntu": "pm2 start ecosystem.ubuntu.config.js --env production",
     "pm2:ubuntu-restart": "pm2 restart jasapembayaran-new",
-    "pm2:ubuntu-stop": "pm2 stop jasapembayaran-new"
+    "pm2:ubuntu-stop": "pm2 stop jasapembayaran-new",
+    "disk:check": "chmod +x scripts/check-disk-usage.sh && ./scripts/check-disk-usage.sh",
+    "disk:cleanup": "chmod +x scripts/cleanup-disk-space.sh && ./scripts/cleanup-disk-space.sh",
+    "disk:auto-cleanup": "node scripts/auto-cleanup-disk.js",
+    "disk:setup-cron": "chmod +x scripts/setup-auto-cleanup-cron.sh && ./scripts/setup-auto-cleanup-cron.sh"
   },
   "dependencies": {
     "@axiomhq/axiom-node": "^0.12.0",

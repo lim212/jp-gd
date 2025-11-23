@@ -21,6 +21,10 @@ rm -rf .nuxt .output .output-build dist node_modules/.cache || true
 echo "🧹 Running cleanup script..."
 node scripts/clean-output.js || echo "⚠️  Cleanup script had issues, continuing..."
 
+# Prepare public assets before build (fixes social-card.png error)
+echo "📦 Preparing public assets..."
+node scripts/prepare-public-assets.js || echo "⚠️  Public assets preparation had issues, continuing..."
+
 # Run build and filter out cosmetic warnings
 echo "🔨 Building application..."
 npm run build:ubuntu 2>&1 | \

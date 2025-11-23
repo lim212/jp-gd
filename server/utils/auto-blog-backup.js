@@ -3,7 +3,7 @@
 class AutoBlogBackup {
   constructor() {
     this.backupDir = path.join(process.cwd(), 'backups');
-    this.maxBackups = 30; // Keep 30 days of backups
+    this.maxBackups = 7; // Keep only 7 days of backups to save disk space (reduced from 30)
   }
 
   async createBackup() {
